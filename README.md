@@ -16,7 +16,7 @@ All operations to create multi-tenant platform environments, as well as managing
 * AWS Elasticache - Managed redis cluster providing the redis service required for CKAN versions 2.7 and above.
 * AWS RDS - Managed PostgreSQL service providing database backend for CKAN and CKAN DataStore instances
 
-## Kubernetes
+### Kubernetes
 * Traefik - Internal cluster load balancer with Letsencrypt automated SSL certificates support
 * CCA - CKAN Cloud API providing the necessary functionalities to create, manage and delete CKAN Instances. The following CCA features enable fully automated CKAN Instance management:
   * CKAN versions support - Manage CKAN dependencies (SOLR schema, database schema, etc.) for specific versions
