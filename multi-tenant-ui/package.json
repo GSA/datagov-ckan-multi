@@ -1,0 +1,33 @@
+{
+  "name": "multi-tenant-ui",
+  "version": "1.0.0",
+  "description": "Multi-tenant CKAN platform mockups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GSA/datagov-ckan-multi.git"
+  },
+  "author": "Goce Mitevski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSA/datagov-ckan-multi/issues"
+  },
+  "homepage": "https://github.com/GSA/datagov-ckan-multi#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "material-design-icons": "^3.0.1",
+    "material-icons": "^0.2.3",
+    "popper.js": "^1.12.9",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release"
+  }
+}
