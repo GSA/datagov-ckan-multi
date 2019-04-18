@@ -1,0 +1,14 @@
+name: BSP GSA
+schema_version: 3.0.0
+satisfies:
+- control_key: CP-4 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: BSP coordinates CP Testing with application tenants.
+- control_key: CP-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The BSP Contingency Plan, section 6 - Recovery, addresses the testing process
+      by which recovery activities are completed and normal system operations are
+      resumed.

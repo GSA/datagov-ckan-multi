@@ -1,0 +1,112 @@
+name: OSSEC-HIDS
+schema_version: 3.0.0
+satisfies:
+- control_key: AU-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: >
+      The GSA IT Security Operations provides a rationale for adequacy of the auditable
+      events for GSA to support after-the-fact investigations of security incidents,
+      per CIO P2100.1I Chapter 5(3); “Security Procedural Guide Auditing & Monitoring,
+      OCIO-IT Security-01-08”.  In order to fully understand and track an attacker
+      through logs certain items (attributes) must be captured within each log so
+      that multiple logs can be linked together to track the attackers activities.
+      SecTools systems run either Trend Micro Deep Security agents or OSSEC HIDS agents.   Both
+      of these agents have log monitoring functions which monitor audit log files,
+      parsing them against rulesets and generating events of varying severity.   These
+      security agent events are correlated in the Enterprise Logging Platform (SecTools)
+      and are used to support after-the-fact security investigations.   The agents
+      and correlation in the Enterprise Logging Platform enhance and automate the
+      critical audit log identification process. SecTools customers are responsible
+      for the installation of Trend and OSSEC security agents when they deploy and
+      maintain their systems.  Customers are responsible for coordinating with the
+      GSA SecOps team to create initial agent configurations to match their environment
+      and keeping agents running.
+  - key: d
+    text: SecTools customers are responsible for the installation of Trend and OSSEC
+      security agents when they deploy and maintain their systems.  Customers are
+      responsible for coordinating with the GSA SecOps team to create initial agent
+      configurations to match their environment and keeping agents running. SecTools
+      customers must follow GSA's Audit and Accountability guide and the supplementary
+      "GSA Logging and Audit Compliance Guidance" document to configure audit logging
+      for their systems.
+- control_key: AU-6
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: planned
+  narrative:
+  - key: a
+    text: >
+      The SecTools customer holds a shared responsibility for audit log review.  The
+      customer is responsible for reviewing any audit records which the Trend or OSSEC
+      security agents do not support.  This will include things like applications
+      and databases running on the OS but may also include other information components.  The
+      SecTools customer should have their own weekly process for on-system audit record
+      review to monitor account and system activity.
+- control_key: AU-6(1)
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: planned
+  narrative:
+  - text: >
+      SecTools employs the OSSEC Manager to monitor OS audit logs in real time, feeding
+      analysis-based information to dashboards and email alerts communicating to the
+      ENS SecOps team.  The ServiceNow ticketing system for reporting suspicious activities
+      is used to integrate audit review, analysis, and the reporting processes.
+- control_key: PL-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      HA has been deployed in the environment where it is required at this time.   There
+      are some tools or systems which SecOps have deemed HA is not required for due
+      to compensations from overall enterprise architecture or that other failure
+      mitigations are built-in. For OSSEC HA not required at present due to minimal
+      use agent event pooling, EBS volume snapshot and restore procedure
+  - key: c
+    text: "As part of the regular reviews, SecTools system owner and ISSO will ensure\
+      \ that the SSP aligns with the current implementations and is updated regularly\
+      \ to accurately reflect the current operational system.   When significant changes\
+      \ to the System are being planned in advance the SecTools will work with GSA\
+      \ IS to ensure plans are acceptable and once approved document the SSP and any\
+      \ other relevant documentation to reflect these changes. OSSEC Managers can\
+      \ deploy second OSSEC managers to provide HA.   This has not been implemented\
+      \ because OSSEC usage is very light.   At this time it is not necessary to have\
+      \ an HA deployment.   EBS volume snapshots are taken multiple times each day\
+      \ and OSSEC managers are replaced in the event of failure.   If a manager fails\
+      \ log and event data pools on individual hosts and is sent to the manager when\
+      \ it’s back online. \n"
+- control_key: SC-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Security Operations team utilizes a combination of Trend Micro Deep
+      Security and OSSEC agents to perform HIDS / HIPS services on instances running
+      in the SecTools environment.   These agents generate actionable events based
+      on rules which trigger when suspicious or malicious activity is detected on
+      the host.   Events from these agents are sent to the Enterprise Logging Platform
+      (SecTools boundary) for correlation and review of actionable events. GSA Security
+      Operations Customers are responsible for utilizing the established VPN tunnels
+      for interconnections and appropriately ensuring the secure transmission of all
+      HTTPS interfaces.   Customers are responsible for the installation of Trend
+      or OSSEC security agents and for keeping them running.   Customers are responsible
+      for requesting the creation of Trend firewall policies and changes to them.   These
+      changes should be submitted using the Firewall Change Request option in GSA’s
+      Service Catalog available in ServiceNow.   Customers are responsible for working
+      with the SecOps team to troubleshoot agent issues when notified of them by SecOps.
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      SecTools customers are responsible for the installation of Trend and OSSEC security
+      agents when they deploy and maintain their systems.  EIther the the OSSEC agent
+      (prefered) or the Trend Micro client must be installed on every host in the
+      FISMA system environment.  Customers are responsible for working with the GSA
+      SecOps team to create initial agent configurations to match their environment
+      and keeping agents running.
+- control_key: SI-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      OSSEC or Trend Micro agents are installed on all supported Operating systems which includes file integrity monitoring functionality

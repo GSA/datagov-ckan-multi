@@ -1,0 +1,206 @@
+name: FY18 ATO Assessment Finding
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: 'DATA-C-2018-1: Configure Data.gov to automatically disable inactive accounts
+      after 90 days.'
+- control_key: AC-2 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      DATA-C-2018-2: Configure Data.gov to automatically audit account actions, such as creation, modification, enabling, disabling, and removal.
+      Configure Data.gov to notify the Data.gov PMO of user account actions.
+- control_key: AC-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: 'DATA-C-2018-3: Provide evidence that data.gov is configured to terminate
+      user sessions after 15 minutes of inactivity.'
+- control_key: AU-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: 'DATA-C-2018-4: Provide evidence that data.gov''s audit record storage capacity
+      is 16GB as defined in the SSP.'
+- control_key: AU-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: 'DATA-C-2018-5: Configure Data.gov to shut down, overwrite, or stop generating
+      audit records when there is an audit processing failure.'
+- control_key: AU-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: 'DATA-C-2018-6:  Provide evidence that audit logs are retained for at least
+      6 months.'
+- control_key: CM-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: 'DATA-C-2018-7: Develop and implement a configuration management plan that
+      establishes the process for defining configuration items and identifies the
+      items that are under configuration management control, and ensure the configuration
+      management plan is protected from unauthorized disclosure and modification.'
+- control_key: CM-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: 'DATA-C-2018-8: Establish, implement, and document a process for tracking
+      software licenses.'
+- control_key: CP-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-9: Develop a thorough Contingency Plan and document the contingency
+      roles, responsibilities, and contact information, defines personnel or roles
+      that review and approve the contingency plan.
+
+      Establish and document a process for coordinating contingency planning activities
+      and incident handling activities.
+- control_key: CP-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-10: Establish , implement, and document the following:
+
+      Time period for when users should be provided with contingency planning training
+      after assuming a contingency planning responsibility.
+
+      A process for implementing contingency planning training when there are system
+      changes.
+
+      A process for implementing annual contingency planning training.
+
+      A process for implementing contingency planning training when there are system
+      changes.
+- control_key: CP-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      DATA-C-2018-11: Establish and document the following:
+      Tests that will determine the effectiveness of the contingency plan.
+      A process for testing the effectiveness of the contingency plan.
+- control_key: CP-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-16: Define a frequency for conducting backups and establish and
+      implement a process for conducting backups of user level information and system
+      documentation.
+- control_key: CP-9 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      DATA-C-2018-17: Coordinate with BSP to ensure that backup tests are performed as requested.
+- control_key: IR-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      DATA-C-2018-12: Establish and implement a process to ensure that incident response
+      testing is conducted annually and is coordinated with other organizations.
+- control_key: IR-3 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      DATA-C-2018-12: Establish and implement a process to ensure that incident response
+      testing is conducted annually and is coordinated with other organizations.
+- control_key: IR-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: >
+      DATA-C-2018-13: Establish, implement, and document a process for incorporating
+      lessons learned from ongoing incident handling activities.
+
+      Establish and implement a process for implementing changes from incident response
+      procedures, training, and testing/exercises.
+- control_key: PL-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: d
+    text: |
+      DATA-C-2018-25: Update the SSP with information that accurately reflects the implementation of the control.
+- control_key: RA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: d
+    text: >
+      DATA-C-2018-14: Establish, implement, and document a process that ensures critical
+      and high vulnerabilities are remediated within 30 days as defined in GSA policy.
+- control_key: SA-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-15: Develop acquisition contracts that include the IT security requirements
+      for the system.
+
+      Establish and document the level of detail that the developers are required
+      to provide in the design and implementation of the security controls to be employed.
+- control_key: SA-4 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      DATA-C-2018-15: Develop acquisition contracts that include the IT security requirements
+      for the system.
+
+      Establish and document the level of detail that the developers are required
+      to provide in the design and implementation of the security controls to be employed.
+- control_key: SA-4 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      DATA-C-2018-15: Develop acquisition contracts that include the IT security requirements
+      for the system.
+
+      Establish and document the level of detail that the developers are required
+      to provide in the design and implementation of the security controls to be employed.
+- control_key: SA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: >
+      DATA-C-2018-16: Establish and document the attempts to access nonexistent or
+      unavailable documentation and the actions that should be taken after there is
+      a documented attempt to obtain nonexistent or unavailable documentation.
+- control_key: SA-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: >
+      DATA-C-2018-17: Establish, implement, and document a process that ensures developers
+      are performing integration, regression, unit and UAT testing for all applications.
+
+      Establish, implement, and document a process that documents the results from
+      developer testing.
+- control_key: SC-18
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      DATA-C-2018-18: Establish and implement a process for monitoring Data.gov mobile code.
+- control_key: SI-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: >
+      DATA-C-2018-19: Establish and implement a process for testing firmware and software
+      updates prior to being pushed to the production environment.
+- control_key: SI-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-14: Establish, implement, and document a process that ensures critical
+      and high vulnerabilities are remediated within 30 days as defined in GSA policy.
+- control_key: SI-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      DATA-C-2018-24: Configure Data.gov to generate error messages that include corrective
+      actions that does not include information that can be exploited.

@@ -1,0 +1,295 @@
+name: Other
+schema_version: 3.0.0
+satisfies:
+- control_key: CM-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+- control_key: CM-2 (7)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      N/A
+- control_key: CM-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+  - key: d
+    text: |
+      See Part a.
+- control_key: CM-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+- control_key: CP-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      There is no alternate storage site for data.gov.  This is an AWS cloud environment.
+  - key: b
+    text: |
+      There is no alternate storage site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-6 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      There is no alternate storage site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-6 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      There is no alternate storage site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      There is no alternate processing site for data.gov.  This is an AWS cloud environment.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+- control_key: CP-7 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      There is no alternate processing site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-7 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      There is no alternate processing site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-7 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      There is no alternate processing site for data.gov.  This is an AWS cloud environment.
+- control_key: CP-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a
+  - key: c
+    text: |
+      See Part a
+- control_key: IA-5 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      This control is inherited from OMB MAX. MAX GSS validates certificates by constructing
+      a certification path with status information to an accepted trust anchor, which
+      is provided by OA with PIV.
+  - key: b
+    text: |
+      This control is inherited from OMB MAX. Not applicable, MAX GSS does not have private keys, since PIV is inherited from OA.
+  - key: c
+    text: |
+      This control is inherited from OMB MAX. MAX GSS maps the authenticated identity to the user account.
+- control_key: PS-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: f
+    text: |
+      See Part b.
+- control_key: SA-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+  - key: d
+    text: |
+      See Part a.
+  - key: e
+    text: |
+      See Part a.
+- control_key: SA-22
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+- control_key: SC-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Discuss below.
+- control_key: SI-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+  - key: d
+    text: |
+      See Part a.
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: |
+      See Part a and Part b
+- control_key: AR-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Officer develops privacy policies and manages the GSA privacy
+      program.  GSA also has a designated Senior Agency Official for Privacy (SAOP).
+  - key: b
+    text: >
+      The GSA SAOP monitors federal privacy laws and policy, allocates sufficient
+      resources to implement and operate the organization-wide privacy program, and
+      develops a strategic organizational privacy plan for implementing applicable
+      privacy controls, policies, and procedures.
+  - key: c
+    text: >
+      The GSA SAOP monitors federal privacy laws and policy, allocates sufficient
+      resources to implement and operate the organization-wide privacy program, and
+      develops a strategic organizational privacy plan for implementing applicable
+      privacy controls, policies, and procedures.
+  - key: d
+    text: >
+      The GSA SAOP monitors federal privacy laws and policy, allocates sufficient
+      resources to implement and operate the organization-wide privacy program, and
+      develops a strategic organizational privacy plan for implementing applicable
+      privacy controls, policies, and procedures.
+  - key: e
+    text: >
+      The Privacy Office develops, disseminates, and implements operational privacy
+      policies and procedures that govern the appropriate privacy and security controls
+      for programs, information systems, or technologies involving PII.
+  - key: f
+    text: |
+      The GSA Privacy Office updates the privacy plan, policies, and procedures at least biennially.
+- control_key: AR-5
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  GSA has developed, implemented, and regularly updates develops, implement,
+      and updates IT Security Awareness and Privacy 101 Training and Privacy Training
+      201, a comprehensive training and awareness strategy aimed at ensuring that
+      personnel understand privacy responsibilities.
+  - key: b
+    text: >
+      All GSA account holders electronically sign the GSA Information Technology (IT)
+      Rules of Behavior – GSA Order CIO 2104.1A CHGE 1 in conjunction with taking
+      privacy training. GSA privacy training includes targeted role-based privacy
+      training for personnel having responsibility for PII.
+  - key: c
+    text: >
+      GSA privacy training includes targeted role-based privacy training for personnel
+      having responsibility for PII and ensures that personnel certify acceptance
+      of responsibilities for privacy requirements.
+- control_key: AR-6
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: >
+      The GSA Privacy Office develops, disseminates, and updates quarterly FISMA reports
+      and works with other program offices to respond to OMB, Congress, and other
+      oversight bodies, as appropriate to demonstrate accountability with specific
+      statutory and regulatory privacy program mandates, and to senior management
+      and other personnel with responsibility for monitoring privacy program progress
+      and compliance.
+- control_key: AR-8
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: |
+      Sub 1
+  - key: b
+    text: |
+      See Part a, Sub 1
+  - key: c
+    text: |
+      See Part a, Sub 1
+- control_key: DI-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  GSA documents processes to ensure the integrity of PII through existing
+      security controls in the GSA Directive OAD P 5420.1 Central Office GSA Committee
+      Handbook.
+  - key: b
+    text: >
+      The GSA Data Integrity Board headed by the SAOP oversees organizational Computer
+      Matching Agreements and ensures that those agreements comply with the computer
+      matching provisions of the Privacy Act.
+- control_key: IP-3
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: >
+      The GSA Privacy Office provides a process for individuals to have inaccurate
+      PII maintained by the organization corrected or amended, as appropriate; and,
+      establishes a process for disseminating corrections or amendments of the PII
+      to other authorized users of the PII, such as external information-sharing partners,
+      and where feasible and appropriate, notifies affected individuals that their
+      information has been corrected or amended. For additional information, refer
+      to the GSA Privacy Act Program CIO P 1878.1.
+- control_key: IP-4
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  GSA implements a process for receiving and responding to complaints,
+      concerns, or questions from individuals about GSA privacy practices. More information
+      about PII complaint management can be found in CFR Part 105-64 GSA Privacy Act
+      Rules.
+       14.6        Security
+- control_key: SE-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office has established a Privacy IRP. For additional information,
+      refer to the GSA Privacy Act Program CIO P 1878.1 and the GSA Information Breach
+      Notification 9297.1 HCO.
+  - key: b
+    text: >
+      The GSA Privacy Office has established a Privacy IRP and provides an organized
+      and effective response to privacy incidents in accordance with 9297.1 HCO GSA
+      Information Breach Notification Policy.
+       14.7        Transparency
+- control_key: TR-3
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. The GSA Privacy Act Rules ensure that the public has access to information
+      about GSA privacy activities and is able to communicate with the GSA SOAP. For
+      additional information regarding dissemination of privacy program, refer to
+      41 CFR Part 105-64 Privacy Act Rules.
+  - key: b
+    text: |
+      GSA privacy practices are publicly available on GSA.gov.
+       14.8        Use Limitation

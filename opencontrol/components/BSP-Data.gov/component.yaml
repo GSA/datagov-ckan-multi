@@ -1,0 +1,12 @@
+name: BSP/Data.gov
+schema_version: 3.0.0
+satisfies:
+- control_key: IA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: j
+    text: Group accounts are not established for BSP and/or Data.gov.
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: AC-2
+  narrative:
+  - text: blah
