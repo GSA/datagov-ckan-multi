@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ansible = "*"
+rtyaml = "*"
+jinja2 = "*"
+docker = "*"
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+test ="molecule test"

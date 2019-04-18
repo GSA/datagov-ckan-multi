@@ -1,0 +1,161 @@
+name: GSA Security
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: GSA Security manages and controls the NetScaler firewall policies which
+      are a single point of ingress/egress for the BSP platform from both the GSA
+      VPN interconnection as well as the Internet.
+- control_key: AC-6 (9)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: GSA Security provides auditing capabilities for privileged BSP user accounts.
+      All applicable logs are fed into the GSA SIEM.
+- control_key: AU-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: GSA Security has implemented a GSA Enterprise Enterprise Logging Platform
+      tool used to collect security logs from GSA Information Systems as an enterprise
+      log/audit monitoring solution for GSA.  Through this process GSA Security is
+      able to identify, plan, and coordinate with all organizational entities via
+      the GSA Security Auditing and Monitoring guidance to ensure selection of auditable
+      events is adequate.
+  - key: d
+    text: >
+      All events are aggregated, parsed and shared with GSA IT SecOps for processing
+      streams coming from AWS cloudtrail and fluentd aggregators identified within
+      part (a) of this control are audited by BSP on a continual basis.
+- control_key: AU-6(3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      GSA Security correlates and analyzes all events detected by the SIEM tool to
+      obtain organization-wide contextual understanding of audit records and events
+      within the infrastructure.
+- control_key: CM-7(2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      GSA Security Tools through GSA Security implementations provides BSP with host
+      service management component for securing services through the implementation
+      of appropriate TrendMicro policies.
+- control_key: CM-7 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      GSA Security Tools through GSA Security implementations provides BSP with host
+      service (software) management component for securing services through the implementation
+      of TrendMicro.
+  - key: b
+    text: >
+      GSA Security Tools through GSA Security implementations provides BSP with host
+      service (software) management component for securing services through the implementation
+      of TrendMicro.
+  - key: c
+    text: >
+      GSA Security Tools through GSA Security implementations provides BSP with host
+      service (software) management component for securing services through the implementation
+      of TrendMicro.
+- control_key: CM-8 (6)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes the approved OS Hardening configurations by GSA, and component
+      configurations are assessed by GSA Secops through bi-weekly scans.
+- control_key: IA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: f
+    text: >
+      GSA Directory Services policies establish minimum and maximum lifetime restrictions
+      and reuse conditions for authenticators and the GTD domain enforces these restrictions
+      within the BSP environment.
+- control_key: RA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Security Division manages, monitors, and maintains the GSA Enterprise
+      security tools utilized to perform security scans against Data.gov.  These activities
+      include regular security scans of the Operating Systems, Database, and Web Application
+      as deemed required by GSA Policy.  Currently, the following scans are being
+      conducted for Data.gov:
+
+      Weekly NESSUS OS/DB Scans
+
+      Bi-weekly CIS Compliance Scans
+
+      Monthly Unauthenticated NetSparker Scans
+
+      Annual and Release Based Authenticated NetSparker Scans
+  - key: b
+    text: The GSA Security Division implements and utilizes security tools and techniques
+      to support Data.gov for vulnerability scanning which align with the required
+      standards for enumerations, checklists, testing procedures, and vulnerability
+      impact.
+  - key: c
+    text: The GSA Security Division performs general analysis following scans to validate
+      successful security scans were conducted and to report the findings identified
+      so that corrective action can be taken when necessary.
+  - key: e
+    text: The GSA Security Division utilizes Enterprise security tools to collect
+      and monitor flaws throughout all of the Agency Systems.  This allows GSA Security
+      to identify and report similar vulnerabilities found within multiple Systems
+      including Data.gov.
+- control_key: RA-5 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: Both Tenable Security Center (TSC) and NetSparker include features to update
+      vulnerability signatures automatically or on-demand.
+- control_key: RA-5 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: Both TSC and HP WebInspect include features to update vulnerability signatures
+      automatically on a weekly basis.
+- control_key: RA-5 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      TSC is configured to scan with equivalent to local admin (via Active Directory groups) or root (via SSH certificates) privileges.
+- control_key: SC-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: >
+      GSA Security provides and supports the necessary managed interfaces by which
+      BSP and its Tenants can connect to external Systems via the Internet.  GSA Security
+      manages these interfaces IAW GSA policy and the organizational security architecture.
+- control_key: SI-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      GSA Security scans BSP assets for flaws with automated security tools to identify,
+      categorize, and report flaws in a high, medium and low status.  These scans
+      and frequencies are outlined within the RA-5 control of the BSP SSP.  POA&Ms
+      created in reference to each valid finding which tracks the status.
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: e
+    text: >
+      GSA Security facilitates and communicates any necessary enhancements to monitoring
+      should there be a threat based need.  Monitoring of events is heightened as
+      warranted through SecOps’ discovery of application and/or platform specific
+      vulnerabilities of suspicious activities or through alerts from external sources,
+      such as US-CERT.
+  - key: f
+    text: >
+      GSA Security monitors activities to ensure they are in accordance with applicable
+      federal laws, Executive Orders, directives, policies, or regulations.  GSA Security
+      is responsible for ensuring activities align with GSA policy. All legal matters
+      related to the application monitoring will be reviewed by SecOps management.  If
+      it is deemed legal action is necessary, the IAW director is responsible for
+      obtaining legal counsel when   appropriate.
+- control_key: SI-4 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      GSA Security manages and monitors all ingress/egress traffic.

@@ -1,0 +1,2443 @@
+name: Data.gov
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov has the following types of users:
+
+      Public users do not need an account to access data or provide comments or ask
+      questions.
+
+      General users (mostly agency open data leads) could have the following access:
+
+      WordPress editing privileges for Data.gov Topics content
+
+      Admin access to catalog.data.gov (CKAN) to control their catalog harvesting
+
+      A separate CKAN instance, called inventory.data.gov, allows agencies that use
+      that system to manage their metadata access to that agency’s metadata only.
+      Agency users can be either admin or editor on inventory.data.gov, to the agency’s
+      own metadata.
+
+      Data.gov PMO members have admin access to the application (WordPress, CKAN)
+      in order to edit the content on the Data.gov site and also grant privileges
+      to the CKAN applications to agency users.
+  - key: b
+    text: For general users, i.e. the agency open data leads, they must first have
+      an account through the OMB MAX system, which requires a .gov email address.
+      After a MAX account is created, the general user sends an email to the Data.gov
+      PMO requesting the particular permission-whether it is editing content, managing
+      a data harvest source, or using inventory.data.gov. The Data.gov PMO confirms
+      the required access and then sets the applicable permissions in WordPress or
+      CKAN.
+  - key: c
+    text: >
+      For general users (agency open data leads), the Data.gov PMO sets the conditions
+      for granting access. The agency open data leads are generally well-known to
+      the Data.gov PMO through past interaction on Data.gov issues and regular biweekly
+      meetings held with the Data.gov PMO, OMB, and the open data leads. For editing
+      content on Data.gov (WordPress), permissions are limited to the Data.gov PMO
+      and a very small number of agency open data leads who have a need to regularly
+      edit content on topic pages for which they remain responsible for maintaining
+      current content. For managing data harvest sources (catalog.data.gov), access
+      is limited to agency open data leads who require access to harvest sources for
+      changing harvest frequency or running a manual harvest. On inventory.data.gov,
+      accounts are limited to the agencies that choose to use inventory.data.gov for
+      metadata management, and the specific individuals from that agency that require
+      access to the system to manage their agency’s metadata. The determination of
+      access to inventory.data.gov is made by the Data.gov PMO  working with agency
+      open data leads who determine which individuals at their agencies need  access
+      to inventory.data.gov.
+  - key: d
+    text: >
+      Any user with privileged access to Data.gov, whether general user (agency lead)
+      or application administrator (Data.gov PMO members and support contractors),
+      first have to authenticate through the OMB MAX system. The MAX system requires
+      each user to register a .gov email address. Once a user has authenticated through
+      MAX, the user requests the privileges from the Data.gov PMO. Currently, the
+      application administrator accounts are limited to three Data.gov government
+      employees: hyon.kim@gsa.gov, philip.ashlock@gsa.gov, john.jediny@gsa.gov, and
+      the Data.gov technical support contractors from REI Systems, Inc., who access
+      the system through their gsa.gov email addresses (and OMB MAX).
+  - key: e
+    text: >
+      For general users (agency open data leads), users must first obtain an OMB MAX
+      account, authenticate through OMB MAX, and then seek permission from the Data.gov
+      PMO for privileged access. Currently, the communication is via email and is
+      documented through a private GitHub repository as the ticketing system.
+  - key: f
+    text: >
+      General users (agency open data leads) request accounts on Data.gov/catalog.data.gov/inventory.data.gov
+      by contacting the Data.gov PMO. The Data.gov PMO determines whether the agency
+      user requires the particular access and grants the permissions in WordPress
+      or CKAN. The Data.gov PMO periodically reviews and confirms the access lists
+      with the agency open data leads and removes any accounts that are no longer
+      needed. Agencies can also contact Data.gov PMO to request deletions or changes
+      to access, as when there is a change in personnel. Review and changes to access
+      are maintained via email and documented through a private GitHub repository.
+  - key: g
+    text: >
+      Changes to general users such as addition, deletion, or change in access are
+      initiated by the agencies through email to the Data.gov PMO.  OMB MAX has a
+      role in the account monitoring process. The OMB MAX System Administrator monitors
+      the use of accounts (for failed login, unauthorized access). The MAX system
+      handles the account lockout process for unused accounts and password failures.
+      Additionally, within the WordPress portion of Data.gov there is an additional
+      audit plugin that allows the application to monitor user access activity and
+      records that activity in a log file.
+  - key: h
+    text: >
+      For general users (agency open data leads), when a federal user separates from
+      their agency, the agency is responsible for notifying the Data.gov PMO via email
+      to ensure the user’s access roles are removed from Data.gov. The Data.gov PMO
+      is responsible for removing the user account and access to the application.
+      Termination of the MAX account is handled at the MAX system level.
+  - key: i
+    text: >
+      For general users (agency open data leads), they must first be approved and
+      have an account through OMB MAX, which requires a current .gov email address.
+      Once the general user has a MAX account, the user requests the applicable permission
+      from the Data.gov PMO, which approves the access as needed. For WordPress, the
+      Data.gov PMO limits access to a small number of open data leads who need to
+      maintain content on one of the topic pages that is active on Data.gov. For the
+      catalog, the Data.gov PMO determines whether the general user manages a data
+      harvest source that requires access to the catalog admin functions for managing
+      the harvest schedule. For inventory.data.gov, the Data.gov PMO determines whether
+      the user is from an agency using inventory.data.gov for managing its metadata.
+      The Data.gov PMO works with the lead from each agency for any additional users
+      of the inventory.data.gov system.
+  - key: j
+    text: >
+      Before accessing any privileged functions on Data.gov, the general user has
+      to authenticate through OMB MAX. The MAX system reviews system accounts for
+      compliance and completes an annual user recertification to ensure access to
+      MAX is still required. The Data.gov PMO also conducts an annual user recertification
+      process to ensure that general users from the agencies still require the applicable
+      access to Data.gov.
+  - key: k
+    text: |
+      Within Data.gov, there are no shared user accounts.
+- control_key: AC-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      In order to gain privileged access to Data.gov, users have to authenticate through
+      OMB MAX, which requires a .gov email address. OMB MAX is the automated mechanism
+      that supports the data.gov account management process.
+- control_key: AC-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application does not have any temporary or emergency accounts.
+- control_key: AC-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      All privileged users on Data.gov authenticate through OMB MAX. The OMB MAX system requires a password reset every 30 days.
+- control_key: AC-2 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov uses GSA Github as its audit log for onboarding/offboarding application
+      accounts and serving as the audit log. https://github.com/GSA/datagov-account-management
+
+      Data.gov applications will be configured to automatically notify Data.gov PMO
+      on user account actions.
+
+      The Data.gov WordPress application www.data.gov will be configured via a plugin
+      to notify Data.gov PMO on user account actions.
+
+      Data.gov CKAN applications Catalog.data.gov and Inventory.data.gov will be configured
+      via a custom CKAN plugin to notify Data.gov PMO on user account actions.
+
+      Labs CRM and the Dashboard applications (https://labs.data.gov/crm and https://labs.data.gov/dashboard)
+      will be configured via a CodeIgnitor framework custom code to notify Data.gov
+      PMO on user account actions.
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov is a public website providing access to US Government Open Data approved
+      for public release. Access to view the website is not password protected. There
+      are administrative logins for Content Administrators and these accounts are
+      password protected and are for the strict purpose of updating the information
+      on the website(s).
+
+      MAX.gov will be used to manage access to the web applications and all system
+      users will be required to enable MAX.gov 2 factor authentication using their
+      SMS registration or PIV card.
+- control_key: AC-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov separates user roles as follows.
+
+      Public users do not need an account to access data or provide comments or ask
+      questions.
+
+      General users (mostly agency open data leads) could have the following access:
+
+      WordPress editing privileges for Data.gov Topics content
+
+      Admin access to catalog.data.gov (CKAN) to control their catalog harvesting
+
+      A separate CKAN instance, called inventory.data.gov, allows agencies that use
+      that system to manage their metadata access to that agency’s metadata only.
+      Agency users can be either admin or editor on inventory.data.gov, to the agency’s
+      own metadata.
+
+      Data.gov PMO members have admin access to the application (WordPress, CKAN)
+      in order to edit the content on the Data.gov site and also grant privileges
+      to the CKAN applications to agency users.
+  - key: b
+    text: >
+      Documentation on the different roles is described in the User Roles Guide.  In
+      addition, Table 9.3.2 in this document outlines the application roles. .
+  - key: c
+    text: |
+      See part a.
+- control_key: AC-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov has processes to follow the principle of least privilege. On the WordPress
+      application, privileged access is limited to the Data.gov PMO members and a
+      small number of agency users (<5) who regularly update content on their topic
+      areas on Data.gov. On catalog.data.gov, the practice is to not grant accounts
+      to agency users in most cases, as agencies that simply host data.json files
+      for contributing metadata to the Data.gov catalog have no need for admin access
+      to the catalog. Catalog access is limited to a smaller number of agency users
+      that require admin access to set harvesting frequencies for geospatial harvest
+      sources. On inventory.data.gov, access is limited to only those agencies that
+      choose to use inventory.data.gov for managing their metadata. Inventory.data.gov
+      is designed so that agencies can only access the metadata that agency maintains
+      in the system, not any other agency’s data. Privileged access is limited to
+      Editor for most users, with a smaller number of agency users (usually the open
+      data lead), with admin access to their agency’s metadata on the system.
+- control_key: AC-6 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Manage.data.gov access is integrated with OMB MAX MFA and is also associated
+      with the GSA Administration group, which is a controlled group where the Data.gov
+      PMO can assign individuals access.  Any user logged into  Manage.data.gov will
+      not be able to see the Dashboard, unless they are associated with the GSA administration
+      group in the MAX system.  Currently manage.data.gov is accessible only within
+      the GSA network,  which is another added layer of security to view the dashboard.
+
+      New Relic access to view Data.gov applications’ data is managed by the GSA IT
+      Team, and is not part of Data.gov scope.  Manage.data.gov (Kibana/Fluentd/Elasticsearch)
+      and New Relic  only permits read-only access to logs/metrics which are accessible
+      by the Data.gov PMO only.
+- control_key: AC-6 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Other than the privileged users that require OMB MAX authentication and permissions
+      set by the Data.gov PMO, there are no other accounts for “least privilege” or
+      lesser uses. Public functions such as downloading datasets, asking questions
+      or leaving comments do not require an account.
+- control_key: AC-6 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      See Table 9.3.1. General Users - by Application which outlines least privilege
+      for general user accounts at the application level, in addition to the following
+      Google doc: https://docs.google.com/document/d/1nMPEKpmXTofHOAlrsF5PsTqzoKw3v8-yGqD4ORj9WbI/edit#
+      .
+
+      The number of privileged users on Data.gov applications is limited. On the WordPress
+      site, there are approximately 20  accounts with access to post and edit content,
+      consisting mainly of the Data.gov PMO and a few agency leads of Data.gov topics.
+      Accounts on catalog.data.gov are limited. For most agencies with data.json files
+      for their metadata inventories, the harvest location of their metadata is fixed
+      at agency.gov/data.json and there is no need for the agency open data leads
+      to have accounts on catalog.data.gov. For geospatial data sources, agency leads
+      can have privileged access to manage the harvest source of that agency. The
+      account does not permit the agency lead to do anything else on catalog.data.gov.
+      For agencies using inventory.data.gov, the users are limited to their own agency’s
+      metadata, and do not have privileges to affect metadata belonging to any other
+      agency.
+- control_key: AC-6 (10)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Non-privileged users on the Data.gov applications (such as members of the public)
+      can submit a question or leave a comment and do not have accounts. Privileged
+      users on the Data.gov application are limited in performing certain functions
+      and do not have access to affect security safeguards/countermeasures. WordPress
+      users on Data.gov can post or edit content.
+- control_key: AC-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Login for privileged users is through OMB MAX. OMB MAX sets the password lockout at 6 failed attempts.
+  - key: b
+    text: >
+      Login for privileged users is through OMB MAX. After 6 failed attempts user
+      would have to go through the password reset process with OMB MAX.
+- control_key: AC-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Any privileged use of the Data.gov application requires authentication through
+      OMB MAX. When users log in to the Data.gov application for privileged use, they
+      are redirected to the OMB MAX login page. Users are then notified that they
+      are entering a US Government information system, that usage may be monitored,
+      recorded or subject to audit and that unauthorized use subjects the user to
+      criminal or civil penalties.
+  - key: b
+    text: >
+      The notification to the user remains on the screen until the user progresses
+      to the next step of logging into OMB MAX by clicking the “OK” link.
+  - key: c
+    text: |
+      Privileged use of the Data.gov application is restricted to approved agencies and Data.gov PMO users; it is not publicly accessible.
+- control_key: AC-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The OMB MAX authentication endures for 2 hours.  However, Data.gov has a session
+      lock implemented that would initiate after 15 minutes of inactivity on all the
+      Data.gov applications.
+  - key: b
+    text: |
+      Data.gov has a session lock that would initiate after 15 minutes of inactivity on all the Data.gov applications.
+- control_key: AC-11 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The application will prevent further access to the system by initiating a session
+      lock after 15 minutes of inactivity.  Once the session lock is initiated, the
+      information previously visible to the user is no longer available.
+- control_key: AC-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      All Data.gov applications are configured to auto logout after 15 minutes of inactivity.
+- control_key: AC-14
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The general public’s use of Data.gov does not require identification or authentication.
+      Users can browse and download datasets from the Data.gov catalog without an
+      account. Users can also make comments about a dataset, request a new dataset
+      that does not exist on Data.gov, or ask a question. Users can choose to provide
+      an email address in order to receive a direct response but are not required
+      to provide a name, email address or create an account.
+  - key: b
+    text: >
+      The fact that public users can use data, ask questions, leave comments, etc.
+      without providing a name, email address or creating an account is documented
+      in the website policy at the footer of all Data.gov pages.
+- control_key: AC-19
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      There are no mobile devices associated with Data.gov other than GSA phones issued to Data.gov PMO members who are GSA employees.
+  - key: b
+    text: >
+      There are no mobile devices associated with the Data.gov system other than the
+      fact that PMO members who are GSA employees have GSA issued phones.
+- control_key: AC-19 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The only mobile devices belonging to the Data.gov PMO are the GSA mobile phones
+      issued to the three government FTEs working on Data.gov. All GSA-issued devices
+      have MaaS360 Mobile Device Management installed and any other GSA requirements
+      for mobile devices.
+- control_key: AC-20
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The only external information system to Data.gov is OMB MAX, which is used for
+      authentication of privileged users. The terms and conditions for OMB MAX accessing
+      a GSA system that uses MAX authentication are set forth in a MOU between GSA
+      and the US Department of Education (which is the Managing Partner for the line
+      of business encompassing OMB MAX) dated June 12, 2017.
+  - key: b
+    text: >
+      OMB MAX is used for authentication of privileged users. There is no transmittal
+      or storage of GSA information (Data.gov) in an external information system.
+      The terms and conditions for the Data.gov use of OMB MAX authentication are
+      set forth in the MOU between GSA and the US Department of Education (the Managing
+      Partner for the line of business operating OMB MAX) dated June 12, 2017.
+- control_key: AC-20 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov does not permit the usage of an external information system to access Data.gov to process, store or transmit information.
+- control_key: AC-20 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The data.gov application is not designed to allow external information systems or portable storage devices to connect to the application.
+- control_key: AC-21
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov does not have any information sharing arrangements with a sharing partner.
+  - key: b
+    text: |
+      N/A
+- control_key: AC-22
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Posting content to the Data.gov site (WordPress) is limited to the Data.gov
+      PMO and a small number of agency leads who are responsible for one of the topic
+      pages on Data.gov.
+  - key: b
+    text: >
+      All members of the Data.gov PMO who have access to post content are GSA employees
+      or contractors and are required to undergo the annual GSA IT Security and Privacy
+      training that covers protecting non public information.
+  - key: c
+    text: >
+      Any member of the Data.gov PMO posting content to the website for public access
+      reviews the content before posting. In general, the content to be posted includes
+      blog posts and event announcements, such as dates, descriptions, and locations
+      of data-related events such as hackathons, and does not include sensitive information.
+  - key: d
+    text: >
+      The Data.gov PMO reviews the content on the public pages regularly and removes
+      information that is incorrect or outdated (such as a post with a broken link).
+      If any information is discovered that has been inappropriately posted, the Data.gov
+      PMO will immediately remove the information.
+- control_key: AT-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      GSA Internal users receive initial security awareness training via GSA OLU within
+      30 days of receiving network access.  All other external privileged users are
+      federal agency users and they go through their agency specific security awareness
+      training.
+  - key: b
+    text: |
+      Security awareness training could be required due to a major system change; however this situation has not occurred.
+  - key: c
+    text: |
+      Security awareness training is an annual requirement for all GSA internal users.
+- control_key: AT-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      GSA Internal users receive security awareness training via GSA OLU which includes
+      insider threat indicators.  All other external privileged users are federal
+      agency users and they go through their agency specific security awareness training.
+- control_key: AT-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: >
+      If an application change was made that could modify the security responsibilities
+      of the Data.gov team, an application specific training session would be held
+      to communicate that change.  GSA OCISO would have no control over this specialized
+      training.
+- control_key: AU-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov Wordpress application has an “Activity Log” plugin installed, which
+      captures the successful login events and the user activity of the logged in
+      user.  Data.gov CKAN applications (Catalog.data.gov and Inventory.data.gov)
+      have audit logs that capture user activity of the logged in user. Unsuccessful
+      account login is inherited/handled by OMB Max for all Data.gov applications.
+
+      TrendMicro is installed on every host operating system (AWS ec2 instance). BSP
+      and SecOps manages the configuration and the following items are monitored:  successful
+      and unsuccessful ssh  logon events through auditd/fluentd/elastalert. Account
+      management events, object access, policy change, privilege functions, process
+      tracking, and system events are monitored by the New Relic agent and alerts
+      are configured to notify personnel on suspicious activity (i.e., multiple failed
+      application errors on apache and nginx web servers).
+  - key: b
+    text: >
+      The Data.gov PMO, IT Contractor REI Systems, and BSP coordinate the security
+      audit functions with other GSA entities such as the Office of Chief Information
+      Security Officer (OCISO) requiring audit related information, to help guide
+      and enhance the usefulness of the selected auditable events.
+  - key: d
+    text: |
+      Data.gov provides a native audit trail capability. The Event Logging Audit Trail supports after-the-fact investigations of how, when, and why normal operations ceased. The audit trail specifically provides:
+      Type of event;
+      When the event occurred;
+      User ID associated with the event;
+      Description of the event;
+      System module the event occurred in
+      Application logs are captured in real time, on an ongoing basis from the following:
+      MySQL
+      Postgresql
+      Nginx
+      Tomcat
+      Apache
+      CKAN
+      Wordpress
+      Solr
+      Specific Application log filters are maintained by the Data.gov PMO in the following Github repository:
+      https://github.com/GSA/datagov-deploy/tree/master/ansible/roles/monitoring/fluentd/td-agent/templates
+- control_key: AU-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov PMO reviews the list of auditable application events at least annually
+      during the SSP review process.   If the log criteria needs to change, the PMO
+      will communicate that information to the development vendor to implement any
+      modifications.
+- control_key: AU-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application audits the following:
+      Type of event;
+      When the event occurred;
+      User ID associated with the event;
+      Description of the event; and
+      System module the event occurred in
+- control_key: AU-3 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The audit records (application, operating systems and web application) are captured
+      by the fluentd agents and are sent over to the management VPC and GSA IT SecOps.
+      Capturing database queries is the responsibility of GSA BSP since the application
+      is using the RDS managed system. All required log metadata/attributes per Parameter
+      AU-3 (1) are collected by the Data.gov logging stack but RDS connections are
+      only accessible by BSP Devops team upon request.
+- control_key: AU-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov application log partition is set to 16GB (this partition includes
+      audit logs). All logs are rotated on disk and are live streamed to the Data.gov
+      management VPC and GSA IT SecOps concurrently.
+- control_key: AU-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      At the application level, there is no automated way to respond to audit processing
+      failures. The manual responsibility lies on the Data.gov PMO and IT Contractor
+      (REI Systems).
+  - key: b
+    text: >
+      In the unlikely event that the log partition becomes full, various alerts are
+      generated through NewRelic as well as elastalert. Based on those alerts, the
+      System Owner will act based on the following options: shut down the system,
+      overwrite the oldest audit records, or stop generating audit records.
+- control_key: AU-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov application team reviews application specific audit records (including
+      user activity logs) on a weekly basis and all reviews are documented in the
+      following spreadsheet: https://docs.google.com/spreadsheets/d/1z6lqmyNxC7s5MiTt9f6vT41IS2DLLJl4HwEqXvvft40/edit#gid=0
+  - key: b
+    text: >
+      If suspicious activity is identified it is reported  to the Data.gov ISSO immediately.
+      After further investigation, if the activity is indeed classified as a security
+      incident, the ISSO will notify the GSA Incident Response Team.
+- control_key: AU-6(1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov streams audit and OS logs to GSA Enterprise SIEM.
+- control_key: AU-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      BSP leverages the GSA SIEM tool to provide on-demand audit review, analysis,
+      reporting, and after-the-fact investigation support for data.gov security incidents.
+
+      The GSA SIEM tool consumes data.gov specific audit logs and records as-is with
+      no modification to content. The as-is content is available for reporting and
+      auditing in its original form and chronology from within the SIEM Tool.
+- control_key: AU-7(1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov wordpress application has an “Activity Log” plugin which captures
+      successful login/logout and unsuccessful login events. It also captures the
+      logs for content/posts created, updated, deleted, etc.
+
+      The Data.gov CKAN catalog and inventory applications captures  all admin activity
+      and revision logs capture who created, updated, or deleted datasets.  Such logs
+      are kept in the database until they are hard deleted, which is being planned
+      to run every 90 days.  However, the CKAN application currently does not capture
+      the logon and logout actions.  The team will be implementing CKAN plugins to
+      capture these events. Labs CRM and the Dashboard applications will implement
+      an auditing capability to capture administration activities which will be implemented
+      by adding a CodeIgniter plugin to the application.
+- control_key: AU-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov implements logging mechanisms that utilize the BSP/AWS NTP service to provide date and time data for each logging event.
+  - key: b
+    text: |
+      Data.gov captures the UTC zone for all audit logs.
+- control_key: AU-8 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov uses the BSP Amazon NTP pool.
+- control_key: AU-9 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Audit information is limited to the Data.gov PMO members (government employees)
+      and the contractors directly supporting Data.gov (who have GSA badges).
+- control_key: AU-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Audit records are retained IAW Federal and GSA requirements (for at least six (6) months).
+- control_key: AU-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov follows the requirements established under the “GSA Logging and Audit Compliance Guidance”
+      https://docs.google.com/document/d/1MkaYZr6633vobLkYpNZcqPfQTvCUgR4XNahcmeryXgg/edit
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+- control_key: CA-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: >
+      GSA conducts a Security Assessment every three (3) years or when a major change
+      occurs for Data.gov.  In addition, annual FISMA self-assessments are performed
+      to determine the extent to which the security controls are implemented correctly.
+  - key: c
+    text: >2
+       The security assessor produces, as a culmination of its efforts, a formal Security
+      Assessment Report (SAR) that details the results of the assessment. The last
+      SAR was completed on March 21, 2017 for the 1 Year LATO assessment.
+  - key: d
+    text: |
+      The SAR is disseminated to the PM, System Owner, ISSM, ISSO, AO and other designated stakeholders.
+- control_key: CA-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      GSA has engaged Valiant Solutions, LLC as the independent third party (Assessor)
+      for the Data.gov security assessment and penetration testing.
+- control_key: CA-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      A Memorandum of Understanding has been created between GSA as the requesting
+      agency and Department of Education as the servicing agency (and managing partner
+      for the line of business that includes OMB MAX). The agreement states the terms
+      and conditions for GSA application authentication services through OMB MAX.
+  - key: b
+    text: >
+      The MOU between GSA and the Department of Education provides the terms and conditions
+      for GSA application authentication services using OMB MAX including the connections,
+      security requirements, and information communicated.
+  - key: c
+    text: >
+      The agreement will be reviewed at least annually.  Since the duration of the
+      agreement is 12 months, the agreement will have to be amended or a new agreement
+      entered into if GSA wants to continue to use OMB MAX.
+- control_key: CA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov POA&M is maintained by the ISSO and contains all sources of technical
+      risk (vulnerability scans, internal reviews, external audits, etc.). The ISSO,
+      along with the program team has developed a mitigation strategy and milestone
+      dates for completing each POA&M item.
+  - key: b
+    text: >
+      The Data.gov POA&M is reviewed and updated by the program team along with the
+      ISSO during the monthly security meeting. The POA&M spreadsheet is maintained
+      by the ISSO and is submitted to the GSA Office of the CISO on a quarterly basis
+      via the FISMA guidance portal (https://sites.google.com/a/gsa.gov/fisma/ist/ocsc/tts/data-gov/fy17-poa-m-submissions).
+- control_key: CA-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      There is a senior level executive that has been designated as the Authorizing
+      Official (AO) for all TTS systems. (See Section 4 for details).
+  - key: b
+    text: |
+      The Data.gov Limited Authority to Operate (LATO) is dated March 29, 2017 and has been signed by the AO.
+  - key: c
+    text: |
+      The Data.gov limited authorization expires in 1 year; however the next assessment performed for the application will be a full 3 year ATO.
+- control_key: CA-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov has not been admitted to the Continuous Monitoring Program, and until
+      such time, Data.gov will continue to undergo the 3 year ATO process and the
+      Annual FISMA Self-Assessments.
+  - key: b
+    text: >
+      Each fiscal year the OCISO sends a FISMA self-assessment spreadsheet containing
+      a predetermined list of NIST 800-53 test cases that each PBS FISMA reportable
+      system must complete. If the minimum requirements are not met then each deficiency
+      must be tracked through the POA&M process.  The most recent assessment was completed
+      on July 31, 2017.
+  - key: c
+    text: >
+      The Data.gov application undergoes continuous monitoring through annual FISMA
+      self-assessments, quarterly POA&Ms, and vulnerability scans conducted by the
+      OCISO.
+  - key: d
+    text: >
+      The Data.gov Project Manager performs continuous monitoring activities including
+      configuration management and ongoing annual assessments.  This control component
+      is inherited through enterprise guidance through the GSA Procedural Guide: Continuous
+      Monitoring Program (CIO-IT Security-12-66).
+  - key: e
+    text: |
+      GSA OCISO performs vulnerability scans monthly, weekly, by release, and upon request including:
+      ●        OS Host Vulnerability Scans (weekly)
+      ●        System Inventory Reconciliation (monthly)
+      ●        Unauthenticated Host Scans (weekly)
+      ●        NetSparker Authenticated Scans (by request or release)
+      ●        NetSparker Unauthenticated Scans (monthly)
+      Additionally, there is a monthly security meeting between the  Data.gov PM, ISSO, and Development Team to review security related items, and the POA&M is updated and submitted quarterly.
+  - key: f
+    text: |
+      All vulnerabilities noted during continuous monitoring activities are tracked on the Data.gov POA&M spreadsheet.
+  - key: g
+    text: >
+      The Data.gov ISSO is responsible for completing the self-assessment spreadsheet.  Once
+      all controls are addressed, the completed spreadsheet is sent to the Data.gov
+      PM  for final review.  Once approved by all necessary parties, the final copy
+      is sent to OCISO.  In addition, POA&Ms are submitted to the POA&M Management
+      Site (https://sites.google.com/a/gsa.gov/fisma/home?pli=1) on a quarterly basis,
+      which provides a status of the system’s security posture.
+- control_key: CA-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All systems hosted within GSA facilities must conduct independent penetration
+      testing annually to ensure compliance with all vulnerability mitigation procedures.
+      In addition, penetration tests are performed during security assessments.
+- control_key: CA-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov does not connect to any other internal information systems.
+  - key: b
+    text: |
+      See Part a.
+- control_key: CM-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov uses Ansible to configure, manage,  and provision application components:
+      Host Operating System (Configured to the GSA Security Benchmark for  Ubuntu
+      14.04 CIS Level 1 Benchmark - https://github.com/GSA/ansible-os-ubuntu-14).
+- control_key: CM-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Baseline reviews are conducted on an annual basis by the application team or when significant changes occur.
+  - key: c
+    text: >
+      Data.gov uses Github and Ansible to configure, manage, audit, and provision
+      the application components and maintain the baseline configurations. All changes
+      made are reviewed as a Pull Request and at least one other member of the Data.gov
+      PMO is required to review said change.
+- control_key: CM-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov uses Github and Ansible to configure, manage, audit, and provision
+      the application components and maintain the baseline configurations.
+- control_key: CM-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Records of configuration controlled changes are retained within git history.
+      Each change is timestamped and shows the audit trail of who proposed the change,
+      what code changed, and who reviewed/approved the change.
+- control_key: CM-2 (7)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov PMO members do not travel with any GSA devices outside of the United States.
+- control_key: CM-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The following  configuration items are identified as part of the configuration change process for Data.gov:
+      Application vendored software (e.g. Wordpress)
+      Database
+      Plugins additions or upgrades
+      All changes are passed through the Github protected branch process which requires review and approval from another member of the Data.gov PMO, other than the member that proposed the change.
+  - key: b
+    text: >
+      Patch management is currently being accomplished through a manual process when
+      product advisories are published either through the respective open source community
+      or a security advisory from the GSA OCISO.   Any production impacts to security
+      are immediately addressed by rolling back to the previous Software configuration.  Changes
+      to the BSP IaaS are coordinated through the Data.gov PMO before applied patches
+      are moved from development to test, and finally into the production environment.  Patch
+      management and implementation of patch changes follows the process identified
+      in Part a of this control. The content management system (WordPress) is updated
+      quarterly to the  major release and on demand when there are security issues.
+  - key: c
+    text: >
+      All proposed changes (approved, delayed, or denied) are documented within Github.
+      Github also provides version control. Only the Data.gov Project Management Office
+      (PMO) can approve the changes to be committed to the production environment.
+      All approvals and rejections of changes as well as the listing of what is changed
+      per version is logged within Github.
+
+      IaaS and networking changes are managed through ServiceNow requests and managed
+      according to BSP’s Change Management process. BSP then reviews the change request
+      to ensure it does not impact the performance or security of their cloud infrastructure
+      and once approved the change is then implemented into production.
+  - key: d
+    text: >
+      All proposed changes (approved, delayed, or denied) are documented within Github.
+      Github also provides version control. Only the Data.gov Project Management Office
+      (PMO) can approve the changes to be committed to the production environment.
+      All approvals and rejections of changes as well as the listing of what is changed
+      per version is logged within Github.
+
+      The Data.gov PMO and BSP are responsible for approving any changes to the configuration
+      baselines and settings within Data.gov. Additionally the IT Multisite Network
+      Administrator and BSP will update configuration baseline documents, as necessary,
+      to reflect the approved configuration changes and to meet new technical and/or
+      security requirements.
+  - key: e
+    text: |
+      The Data.gov PMO maintains all Software change records for a minimum of three years.
+  - key: f
+    text: >
+      All approvals and rejections of changes as well as the listing of what is changed
+      per version is logged within Github. All actions within Github are logged and
+      audited as needed.
+  - key: g
+    text: >
+      The Data.gov PMO is effectively the Change Control Board (CCB) and oversees
+      the entire configuration control process for the Data.gov system.  Data.gov
+      manages its privileged users as a part of a “team” under the GSA Github Organization.
+      The GSA github organization requires all members to enable 2-factor authentication
+      and is monitored through Github’s API to verify/audit that users have this enabled.
+- control_key: CM-3 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      See CM-3.
+- control_key: CM-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Patch management is currently being accomplished through a manual process when
+      product advisories are published either through the respective open source community
+      or a security advisory from the GSA OCISO.   Any production impacts to security
+      are immediately addressed by rolling back to the previous Software configuration.  Changes
+      to the BSP IaaS are coordinated through the Data.gov PMO before applied patches
+      are moved from development to test, and finally into the production environment.
+- control_key: CM-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov PMO is effectively the Change Control Board (CCB) and oversees
+      the entire configuration control process for the Data.gov system. Data.gov manages
+      its privileged users as a part of a “team” under the GSA Github Organization.
+      The GSA github organization requires all members to enable 2-factor authentication
+      which is enforced.
+- control_key: CM-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov uses industry standard security baselines from the Center for Internet
+      Security (CIS) Benchmarks for the official security baseline for all components.
+  - key: b
+    text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration on all systems. Ansible pushes the Playbooks to each
+      system on a regular basis and will re-configure any device that does not meet
+      the approved Baseline.
+
+      Data.gov configuration settings are implemented according to the application
+      baseline configurations identified in CM-2. The GSA IT change control process
+      (for which see the GSA IT Configuration Management Plan) requires documentation
+      of all changes, including exceptions.
+  - key: c
+    text: >
+      For any approved deviations within the Ansible Playbook, the deviation will
+      be tagged and a justification will be annotated within the associated task.
+      Non-approved deviations will be automatically detected and audited by Ansible.
+  - key: d
+    text: >
+      The configuration management process ensures that selected components are identified,
+      baselined, maintained, and that changes to them are controlled.  It also ensures
+      that releases into controlled environments are done on the basis of formal approvals.
+- control_key: CM-6 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration on all systems. Ansible pushes the Playbooks to each
+      system on a regular basis and will re-configure any device that does not meet
+      the approved Baseline.
+- control_key: CM-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov applications are configured to only allow the least amount of functionality
+      that allows its users to perform necessary actions.  Data.gov applications have
+      limited public user functionality with its main purpose to allow users of the
+      system to find the desired datasets in its catalog.
+  - key: b
+    text: >
+      Data.gov applications abide by these restrictions and specifically prohibits
+      or restricts the use of the functions, ports, protocols, and/or services that
+      are not used.  At the web application level, ports such as 80 and 443 are opened
+      for the BSP load balancer (Netscaler).
+- control_key: CM-7 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Data.gov abides by the reviewed and implemented restrictions implemented by GSA BSP Platform.
+  - key: b
+    text: >
+      Any changes to ports, protocols, and/or functions are coordinated with GSA BSP
+      team as needed. Data.gov PMO reviews this information quarterly for any changes
+      needed and coordinates these modifications with the BSP Team.
+- control_key: CM-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The data.gov ISSO is responsible for updating the Data.gov specific inventory
+      spreadsheet on a monthly basis.  This document is maintained for GSA Security
+      for vulnerability scanning purposes.
+  - key: b
+    text: >
+      The Data.gov PMO will review the system inventory on a monthly basis and provide
+      the updated information to the ISSO for incorporation into the SSP and inventory
+      spreadsheet.
+- control_key: CM-8 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov coordinates any changes in this way with GSA BSP as discussed in CM-3
+      and through the Data.gov PMO CCB.  Any application specific change that is made
+      will also result in an update of the system inventory list.
+- control_key: CM-8 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration on all systems. Ansible pushes the Playbooks to each
+      system on a regular basis and will re-configure any device that does not meet
+      the approved Baseline.
+- control_key: CM-8 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All Data.gov application specific repository changes are automatically notified
+      in the Data.gov Slack channel, and internal event alerts are generated from
+      application/instance Logging and Monitoring using Fluentd, Elastalert with ElasticSearch
+      for aggregation and alerting, and Kibana for visualization.
+  - key: b
+    text: >
+      The Data.gov PMO and application development team monitors the Slack channel
+      and Kibana dashboard for any unauthorized components. At the application level,
+      all the commits to the github repositories are notified in the Slack channel,
+      which helps in monitoring any unauthorized access to repositories.   In the
+      event unauthorized components are identified, the Data.gov ISSO and ISSM are
+      notified.
+- control_key: CM-8 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov operates within the restrictions discussed in the above GSA BSP control
+      implementation statement. All system components are managed as ansible playbooks
+      (https://github.com/gsa/datagov-deploy) and only those playbooks are applied
+      to the BSP managed static inventory of instances.
+- control_key: CM-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration Ansible pushes the Playbooks to each system on a regular
+      basis and will re-configure any device that does not meet the approved Baseline:
+      https://github/com/gsa/datagov-deploy
+- control_key: CM-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov utilizes 100% open source for our managed services, applications, and
+      3rd party libraries, and ensure the licenses are compatible with our use. The
+      only proprietary licensed software in use is New Relic and Trendmicro whose
+      usage is managed by the TTS contracting officer and BSP respectively.
+- control_key: CM-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration Ansible pushes the Playbooks to each system on a regular
+      basis and will re-configure any device that does not meet the approved Baseline:
+      https://github/com/gsa/datagov-deploy.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: >
+      All commits to https://github/com/gsa/datagov-deploy are notified in the Slack
+      channel, which helps in monitoring any unauthorized access to repositories.
+      In the event unauthorized components are identified, the Data.gov ISSO and ISSM
+      are notified.
+- control_key: CP-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The application specific essential missions and business functions are outlined
+      and prioritized in the Business Impact Analysis (BIA) and this document is reviewed
+      on an annual basis. Data.gov manages its incident response plan and contingency
+      management plan as a private repository only accessible to the Data.gov PMO
+      and development team here: https://github.com/gsa/datagov-incident-response
+  - key: b
+    text: >
+      In accordance with the GSA CP policy as defined in the GSA IT Security Policy
+      (CIO P 2100.1), theData.gov ISSO distributes copies of the contingency plan
+      to the AO, ISSM, CISO, and Emergency Response Coordinator (ERC).
+  - key: c
+    text: >
+      In accordance with the GSA IT Security Policy (CIO P 2100.1), theData.gov CP
+      Coordinator is responsible for coordinating contingency planning activities
+      with incident handling activities and incorporating the relevant application
+      teams during the process.
+  - key: d
+    text: >
+      The Data.gov  CP is reviewed annually by the  ISSO, PM, and approved stakeholders
+      to ensure necessary enhancements and lessons learned are applied.
+  - key: e
+    text: >
+      In accordance with GSA IT Security Policy (CIO P 2100.1), the Data.gov CP Coordinator
+      reviews and updates the contingency plan to address changes to the organization,
+      information system, or environment of operation and problems encountered during
+      contingency plan implementation, execution, or testing.
+  - key: f
+    text: >
+      In accordance with the GSA IT Security Policy (CIO P 2100.1), the Data.gov  CP
+      Coordinator communicates contingency plan changes to the AO, ISSM, CISO, and
+      Emergency Response Coordinator (ERC).
+  - key: g
+    text: >
+      Only key Data.gov personnel will have access to the Data.gov CP, which will
+      be maintained in the private repository: https://github.com/gsa/datagov-incident-response
+- control_key: CP-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov manages its incident response plan and contingency management plan
+      as a private repository only accessible to the Data.gov PMO and development
+      team here: https://github.com/gsa/datagov-incident-response.
+- control_key: CP-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov manages its incident response plan and contingency management plan
+      as a private repository only accessible to the Data.gov PMO and development
+      team here: https://github.com/gsa/datagov-incident-response
+- control_key: CP-2 (8)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov manages its incident response plan and contingency management plan
+      as a private repository only accessible to the Data.gov PMO and development
+      team here: https://github.com/gsa/datagov-incident-response
+
+      This plan includes critical components and their recovery steps.
+- control_key: CP-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov manages its incident response plan and contingency management plan
+      as a private repository only accessible to the Data.gov PMO and development
+      team here: https://github.com/gsa/datagov-incident-response
+- control_key: CP-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO will assist and participate in the BSP CP testing activities.
+      Thus far, CP testing has not been conducted for the Data.gov application. Data.gov
+      plans on participating in the next BSP CP test, tentatively scheduled for April
+      2018.
+  - key: b
+    text: |
+      The GSA OCISO CP Test template is utilized which incorporates success factors and lessons learned as part of the testing results.
+  - key: c
+    text: >
+      Areas of concern identified within the CP Test Report are reviewed and a plan
+      of action with milestones is formulated to enhance the CP activities based on
+      the identified lessons learned.
+- control_key: CP-4 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov PMO coordinates with GSA BSP and other support personnel to conduct the CP testing.
+- control_key: CP-9 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov PMO has requested BSP to test system backups annually and support
+      personnel will verify that the data has been restored properly.  Currently,
+      a test has not been performed.
+- control_key: CP-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Once the recovery actions have taken place, the Data.gov team is responsible
+      for testing and ensuring the system is operating as it should. This is ensured
+      by running the same ansible playbooks to achieve the exact previous state of
+      our applications.
+- control_key: CP-10 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is not transaction-based and therefore does not have a transaction recovery function within the system.
+- control_key: IA-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The identification and authentication of data.gov is considered a common control
+      and is inherited from the OMB MAX system.  A user must first have a MAX account
+      to reach the application home page.  The data.gov home page contains a login
+      button that will then redirect the user to the MAX system log on.  The MAX system
+      accepts username and password with two-factor authentication or PIV Card and
+      pin number for user authentication.  Once logged into the MAX system, single
+      sign on capabilities are utilized to authenticate access to the various modules.
+- control_key: IA-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov leverages BSP existing process and GSA 2-Factor solutions or GTD 2-factor
+      implementation for all access to infrastructure/platform/backend components
+      and services. Only the web application itself will utilize Max.gov and/or Github
+      for authentication.
+- control_key: IA-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The identification and authentication of data.gov is considered a common control
+      and is inherited from the OMB MAX system.  A user must first have a MAX account
+      to reach the application home page.  The data.gov home page contains a login
+      button that will then redirect the user to the MAX system log on.  The MAX system
+      accepts username and password with two-factor authentication or PIV Card and
+      pin number for user authentication.  Once logged into the MAX system, single
+      sign on capabilities are utilized to authenticate access to the various modules.
+- control_key: IA-2 (8)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      For privileged users of the Data.gov application, authentication is via OMB
+      MAX. Users must log in to OMB MAX using either a PIV card with PIN or a password
+      with 2 factor authentication.
+- control_key: IA-2 (11)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov uses OMB MAX for authentication. The 2FA under OMB MAX uses a mobile device separate from the system gaining access (mobile phone).
+- control_key: IA-2 (12)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      This control is considered an OMB MAX common control.  Data.gov inherits the
+      multifactor authentication policy and procedures for the non-privileged accounts
+      (i.e. front end users).  These users must log into the MAX system in order to
+      gain access to the  application. Following the authentication by MAX, the application
+      Wordpress or CKAN role assignments are enforced within Data.gov.  Currently
+      MAX PIV card authentication is supported but not enforced. Users can also use
+      a MAX password and 2 factor authentication.
+- control_key: IA-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: Data.gov does not have any devices that require unique identification or
+      authentication before connecting to Data.gov.
+- control_key: IA-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO receives requests from agency users for privileged access to
+      Data.gov applications. The Data.gov PMO determines whether agency users need
+      the particular access and sets the requested permissions as appropriate.
+  - key: b
+    text: |
+      Because Data.gov uses OMB MAX for authentication, the identifier for privileged users is the user’s .gov email address.
+  - key: c
+    text: >
+      Because Data.gov uses OMB MAX for authentication, the identifier for privileged
+      users of the Data.gov application is the user’s .gov email address and is automatically
+      assigned.
+  - key: d
+    text: >
+      Because Data.gov uses OMB MAX for authentication, the identifier for privileged
+      users of the application is the user’s .gov email address and cannot be reused
+      for any other user.
+  - key: e
+    text: |
+      The Data.gov PMO manually reviews the list of privileged users on a quarterly basis and disables accounts that are no longer needed.
+- control_key: IA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      This control is inherited from OMB MAX. MAX General Support Services (GSS) requires
+      new users to submit a New User Registration Form to the Data Management Team
+      for approval. If approved, an email message containing a unique link to a URL
+      where the user can compose a password will be sent to the email address entered
+      by the applicant as part of their registration. The user will be required to
+      establish a new password. Passwords must contain a minimum of 12 characters,
+      lower and upper case letters, numbers and special characters.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: >
+      MAX GSS ensures that authenticators contain contain a minimum of 12 characters,
+      lower and upper case letters, numbers and special characters.
+  - key: d
+    text: >2
+       This control is inherited from OMB MAX. MAX GSS has an Access Control policy
+      and IA policy that establishes and implements administrative procedures for
+      initial authenticator distribution, lost/compromised or damaged authenticators,
+      and revoking authenticators.
+  - key: e
+    text: |2
+       This control is inherited from OMB MAX. MAX GSS changes default content of
+      authenticators upon information system installation.
+  - key: f
+    text: |
+      This control is inherited from OMB MAX. Users cannot re-use any of the last 16 passwords.
+  - key: g
+    text: |
+      This control is inherited from OMB MAX. Passwords expire after 90 days and RSA authenticators change every 1 minute.
+  - key: h
+    text: |
+      This control is inherited from OMB MAX. MAX GSS protects the authenticator content from unauthorized disclosure and modification.
+  - key: i
+    text: >
+      This control is inherited from OMB MAX. MAX GSS requires users to take specific
+      measures to safeguard authenticators as detailed in the AC and IA policies.
+- control_key: IA-5 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      This control is inherited from OMB MAX.  MAX GSS passwords must contain a minimum
+      of 12 characters, lower and upper case letters, numbers and special characters
+      as detailed in the AC policy.
+  - key: b
+    text: |
+      At least 4 characters in the new password must be new as detailed in the AC policy.
+  - key: c
+    text: |
+      MAX passwords are encrypted in storage and transmission.
+  - key: d
+    text: |
+      Some passwords have a minimum lifetime and the maximum lifetime is 90 or more days as detailed in the AC policy.
+  - key: e
+    text: |
+      Users cannot re-use any of the last 16 passwords as detailed in the AC policy.
+  - key: f
+    text: |
+      This control is inherited from OMB MAX.
+- control_key: IA-5 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Privileged accounts on Data.gov are determined by the Data.gov PMO, working
+      with designated open data leads at each agency. Agency users contact the Data.gov
+      PMO, usually by email, to request a privileged account. Data.gov PMO reviews
+      the request and determines whether the access is needed. If so, Data.gov provides
+      instructions to authenticate through OMB MAX and then sets the applicable permissions
+      through WordPress or CKAN.
+
+      All accounts are managed and auditable upon request here: https://github.com/gsa/datagov-account-management
+- control_key: IA-5 (11)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      This control is inherited through OMB MAX; which provides HSPD-12 authentication as the optional form of 2FA.
+- control_key: IA-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is designed to obscure feedback authentication information.
+- control_key: IA-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      OMB MAX uses TLS 1.2 to encrypt authentication credentials.
+- control_key: IA-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is designed for an agency’s organizational users only.
+- control_key: IA-8 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application allows users from other federal agencies to use their assigned PIV cards.
+- control_key: IA-8 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is designed for an agency’s organizational users only.
+- control_key: IA-8 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is designed for an agency’s organizational users only.
+- control_key: IA-8 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application is designed for an agency’s organizational users only.
+- control_key: IR-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All internal Data.gov personnel are informed of the GSA incident handling policy
+      and procedures to ensure IT security incidents are properly reported, damage
+      is immediately identified and contained, and possible effects are minimized.
+      All authorized IT users are trained annually to promptly report suspected vulnerabilities,
+      security violations, and security incidents to the GSA helpdesk and/or ISSO.  Necessary
+      IR training is provided through the GSA OLU as part of the annual required security
+      awareness and privacy training.
+  - key: b
+    text: >
+      Additional IR training may be administered following any significant system
+      changes; however, to date, no significant changes have been made to initiate
+      subsequent IR training.
+  - key: c
+    text: |
+      IR training is conducted annually.
+- control_key: IR-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: Incident response (IR) testing should  take place on an annual basis; however,
+      to date, IR testing has not been conducted for the data.gov application.
+- control_key: IR-3 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application team will ensure incident response testing is coordinated with the ISSO and entities from GSA BSP.
+- control_key: IR-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: The Data.gov ISSO is notified by BSP or the application team should a security
+      incident occur. The System Owner/PM/ISSO are then responsible for documenting,
+      tracking, and reporting the incident to the GSA IR team.
+- control_key: IR-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov manages its Incident Response in a private github repository restricted
+      to the Data.gov PMO; but access can be granted for audit or review upon request
+      here: https://github.com/gsa/datagov-incident-response (in draft).
+- control_key: IR-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: >
+      All incidents must be immediately reported to the ISSO.  CAT 1 – CAT 3 incidents
+      must be reported to the OCISO (ISE) at the same time the incident is reported
+      to the BSP/Data.gov ISSO and ISE utilizes the ServiceNow system to track all
+      incident information.
+- control_key: IR-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov manages its Incident Response Plan as a private github repository restricted
+      to the Data.gov PMO; but access can be granted for audit or review upon request
+      here: https://github.com/gsa/datagov-incident-response (in draft form).
+- control_key: PL-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The System Security Plan (SSP) is written to be consistent with the GSA IT Security
+      Procedural Guide: Managing Enterprise Risk (CIO IT Security-06-30) and it has
+      been updated to NIST Revision 4.
+
+      The Data.gov boundary is defined in Sections 9.2 and the operational context
+      is defined in Sections 9.
+
+      The FIPS 199 categorization has resulted in a Moderate classification and the
+      rationale is described in the FIPS 199 documentation
+
+      System interconnections are described in Section 11.
+
+      Security controls are described in Section 13 of the SSP and these are all based
+      on NIST 800-53 Rev 4 and GSA control requirements.
+
+      Both planned and in place controls are described in Section 13. Tailoring or
+      alternate implementation details are provided as necessary. Planned and partially
+      implemented controls are also documented and tracked through the POA&M process.
+
+      The SSP is approved by the ISSM prior to implementation and assessment efforts.  It
+      is also reviewed and approved by the System Owner, PM, and ISSO on an annual
+      basis.
+  - key: b
+    text: >
+      The PM and ISSO are responsible for the distribution of the SSP to system.  The
+      SSP is also reviewed and distributed annually or when significant changes are
+      made to the environment.
+  - key: c
+    text: |
+      See Part b.
+  - key: d
+    text: >
+      The Data.gov SSP is revised, as necessary, after a) changes to the system/environment
+      or b) to address problems identified during security control assessments.
+  - key: e
+    text: >
+      The Data.gov SSP is stored on a shared drive with access restricted to system
+      stakeholders.  In addition, GSA uses the Active Directory access control list
+      and file permissions to protect the SSP from unauthorized disclosure or modification.
+- control_key: PL-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov PM and ISSO coordinates significant activities such as security
+      assessments, contingency or incident response testing, penetration testing,
+      and major planned outages with the appropriate personnel including BSP staff
+      to ensure necessary notifications and planning is conducted. The ISSO also hosts
+      a monthly security meeting to discuss all security related activities for Data.gov
+      and any outstanding POA&Ms.
+- control_key: PL-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov SSP has been developed in accordance with GSA IT Security Policy
+      2100.1, which describes protecting the confidentiality, integrity, and availability
+      of data.gov information. It describes and documents security common controls
+      integrated and inherited from the GSA/BSP enterprise architecture.  In addition,
+      data.gov does not utilize external services or interfaces/interconnects with
+      other major applications as detailed in Section 11.
+  - key: b
+    text: >
+      The Data.gov PM, application team, and ISSO are responsible for reviewing and
+      updating the information security architecture to ensure it reflects GSA Policy
+      and the enterprise architecture. The Data.gov security architecture is updated
+      along with the SSP, at least annually or following major system changes.
+  - key: c
+    text: >
+      Planned Data.gov architectural changes, once approved, are incorporated into
+      the SSP update cycle. In addition, any planned information security architecture
+      changes will be captured within the appropriate SSP control implementation write-up.
+- control_key: PS-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO ensures personnel terminations follow GSA IT Security Procedural
+      Guide: Termination and Transfer (CIO-IT Security-03-23) (this pertains to Agency
+      Administrators). The data.gov PMO members and application accounts onboarding
+      and offboarding is managed and auditable upon request here: https://github.com/gsa/datagov-account-management.  The
+      agencies using data.gov are responsible for disabling agency user accounts per
+      their agency’s processes and procedures.
+  - key: b
+    text: >
+      The Data.gov Agency supervisors are responsible for coordinating agency user
+      account terminations for all departing or resigning personnel per their agency’s
+      processes and procedures. The Data.gov Program Director is responsible for ensuring
+      the revocation of accounts for any federal staff or contractor who leaves their
+      employment or transfers to another program.
+  - key: c
+    text: >
+      The Data.gov Agencies follow their agency’s processes and procedures for conducting
+      exit interviews/security briefings upon termination and/or transfer. The Data.gov
+      Program Director is responsible for ensuring that a federal employee or contractor
+      leaving employment follows all applicable GSA requirements.
+  - key: d
+    text: >
+      The supervisor is responsible for the retrieval of all information system-related
+      property such as laptops and HDPS-12 cards. The Data.gov Program Director ensures
+      that property issued to a federal staff member or Data.gov contractor is returned
+      to GSA.
+  - key: e
+    text: The agency managers will retain access to the agency’s data controlled by
+      the terminated individual or appoint another individual to obtain the access
+      held by the terminated individual until duties are delegated or reassigned.
+      The Data.gov Program Director ensures that program information such as GSA google
+      drives assigned to a departing federal employee or contractor are transferred
+      so that the Data.gov PMO retains the information.
+- control_key: PS-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO is a small office with 3 government FTEs. System access is
+      limited to the PMO and a small number of technical support contractors who have
+      GSA badges and emails. In the event that a PMO member or a support contractor
+      with access leaves the program, Data.gov deletes any applicable accounts or
+      access. A contractor leaving the program would have badge/email rescinded through
+      the GSA off boarding process.
+
+      The Data.gov PMO members and Application accounts onboarding and offboarding
+      is managed and auditable upon request here: https://github.com/gsa/datagov-account-management
+  - key: b
+    text: |
+      Data.gov initiates the offboarding process as soon as it has notice of a termination or transfer.
+  - key: c
+    text: >
+      The data.gov application  team ensures that access authorizations are modified
+      as needed to correspond with any changes in operational need due to reassignment
+      or transfer.
+  - key: d
+    text: >
+      As soon as Data.gov becomes aware of a termination or transfer, the System Owner/PM
+      notifies the lead in the TTS Office of Products and Programs, who coordinates
+      the off-boarding process to ensure termination of GSA email, badge, etc.
+- control_key: PS-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All Data.gov PMO government staff and support contractors with GSA system access
+      must take the annual IT Security Training and agree to abide by the GSA Rules
+      of Behavior.
+  - key: b
+    text: |
+      Completing IT Security Training and the Rules of Behavior are annual requirements.
+  - key: c
+    text: >
+      All personnel accessing GSA systems must meet the Security Training and Rules
+      of Behavior requirements. Support contractors must also complete a separate
+      Non-Disclosure Agreement at the start of the contract or when they start supporting
+      Data.gov as part of an existing contract.
+- control_key: PS-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Third party providers (specifically Data.gov support contractors) provide their
+      services under a GSA contract that incorporates all the applicable standards
+      (such as HSPD-12 requirements for obtaining a badge and access to GSA systems,
+      as well as all applicable GSA and NIST standards).
+  - key: b
+    text: |
+      Contractors supporting Data.gov are required to abide by GSA personnel security policies as a term under the contract.
+  - key: c
+    text: |
+      The personnel and information security requirements are documented in the contract language between GSA and the support contractor.
+  - key: d
+    text: >
+      Contract language requires support contractors to notify the government of a
+      change in personnel and to go through the off boarding process, to return badges,
+      equipment, etc.
+  - key: e
+    text: >
+      As the Data.gov PMO is only 3 FTEs, with about 5 FTE support contractors, the
+      team is in daily contact and has timely notice of personnel changes to enforce
+      any offboarding procedures.
+- control_key: PS-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Any government PMO member who failed to comply with security procedures  would
+      be subject to discipline under GSA policies. Support contractors would be subject
+      to sanctions as provided by GSA policies and their applicable contract.
+  - key: b
+    text: |
+      The Data.gov PMO will notify TTS management if there is any event requiring employee sanctions for violating information security policies.
+- control_key: RA-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The PM/System Owner is responsible for determining the security categorization
+      of Data.gov. The application is categorized as a Moderate level system under
+      the FIPS 199 Security Categorization guidelines and the AO, ISSM, and ISSO have
+      reviewed the designated security categorization.
+  - key: b
+    text: >
+      Data.gov’s security categorization results are documented in Sections 2.1 and
+      2.2 of this document and within the Data.gov FIPS 199 documentation.
+  - key: c
+    text: >
+      The Data.gov security categorization is reviewed/approved by the ISSO, ISSM
+      and PM on an annual basis.  In addition, the categorization is reviewed by  the
+      authorizing official (AO) as a part of the ATO process.
+- control_key: RA-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: b
+    text: |2
+       The last Data.gov Risk Assessment was conducted on March 29, 2017. The results
+      from the risk assessment have been documented in the Data.gov Security Assessment Report (SAR) and the POA&M.
+  - key: c
+    text: >
+      The Data.gov Risk Assessment Report is completed as a part of the standard A&A
+      process.  The SAR is included in the final A&A package and presented to the
+      ISSM, AO and OCISO for review.  The ATO renewal is required every three (3)
+      years or when the system undergoes a major change.
+  - key: d
+    text: >
+      GSA disseminates the SAR to the PM, ISSO, ISSM and other designated stakeholders
+      as a part of the final A&A package.  The SAR is stored/archived in a central
+      repository (IST Google Drive) and is available to authorized personnel.
+  - key: e
+    text: >
+      The Data.gov Risk Assessment is updated as part of each Security Assessment,
+      which occurs every three (3) years or when a major system change occurs.
+- control_key: RA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      To support the completion of the security scans, the Data.gov PM/ISSO updates
+      an asset inventory spreadsheet on a monthly basis to appropriately reflect the
+      most current inventory.
+
+      Upon receiving security scan results, the ISSO reviews and tracks all vulnerabilities
+      within the Data.gov POA&M.
+  - key: c
+    text: >
+      Upon receiving NESSUS and NetSparker scan results from GSA Security, the Data.gov
+      ISSO reviews the results and distributes the reports to the application team
+      so they can begin remediation.  Any high and/or medium findings that have been
+      identified must be remediated by the application development team in accordance
+      with GSA policy. Highs must be remediated in 30 days and all medium/low issues
+      must be resolved within a 90 day time frame.
+  - key: d
+    text: >
+      Utilizing the remediation response activities outlined within Part C of this
+      control, Data.gov assesses each flaw and defines the necessary milestones to
+      address the finding within the time allotted by GSA Policy.  GSA Policy states
+      that findings with a CVSS Base Score of 7+ must be mitigated within 30 days
+      and all others within 90 days.  Due dates assigned to each flaw within the Data.gov
+      POA&M reflect this requirement.
+  - key: e
+    text: >
+      The Data.gov POA&M and associated JIRA tickets are utilized to track all findings.  These
+      mechanisms are also used to disseminate flaw information to all stakeholders
+      with a need-to-know.
+- control_key: SA-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO takes into account infrastructure requirements and upcoming
+      requirements for security accreditation in its budget planning process as well
+      as in requirements planning for vendor support.
+  - key: b
+    text: >
+      The infrastructure costs to the Data.gov program, including the costs of protecting
+      Data.gov infrastructure directly through program activities and indirectly through
+      the Data.gov IAA with the BSP program, have been accounted for in the program
+      budget as well as the budget of the Office of Products and Programs, the office
+      housing the Data.gov PMO.
+  - key: c
+    text: >
+      The Data.gov PMO budget as well as the budget of the larger organization (Office
+      of Products and Programs), has a line item for information security.
+- control_key: SA-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov PMO manages information system applications adhering to GSA IT security
+      considerations, incorporating the fixes from the Vulnerability and CIS Benchmark
+      scanning into the Data.gov Agile software development life cycle.
+  - key: b
+    text: >
+      The SSP identifies the information security roles and responsibilities and this
+      guideline is followed by IT Support contractor REI Systems in the Agile software
+      development life cycle.
+  - key: c
+    text: |
+      The SSP identifies the individuals that hold security roles and responsibilities.
+  - key: d
+    text: >
+      Data.gov PMO is integrated as part of the GSA IT and BSP information security
+      risk management process, and any activities from that will be incorporated into
+      the Agile software development life cycle.
+- control_key: SA-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All Data.gov PMO procurement documents, such as Statements of Work, include
+      reference to the security requirements of GSA information systems. Vendors are
+      required to comply with all GSA IT Security requirements and rules of behavior.
+  - key: f
+    text: >
+      Data.gov PMO acquisition materials such as Statements of Work include a detailed
+      description of the system including the development environment and the production
+      environment on BSP.
+  - key: g
+    text: >
+      Data.gov PMO acquisition materials such as Statements of Work include sections
+      on acceptance criteria describing the specific conditions that must be met before
+      vendor developed software is accepted.
+- control_key: SA-4 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      When procuring development support for Data.gov, the applicable FISMA requirements
+      and GSA IT Security Policies are included in the Statement of Work issued during
+      the acquisition process. The vendor seeking to support Data.gov must describe
+      how it will meet the security requirements in its technical approach statement.
+- control_key: SA-4 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      When procuring development support for Data.gov, the applicable FISMA requirements
+      and GSA IT Security Policies are included in the Statement of Work issued during
+      the acquisition process. The vendor seeking to support Data.gov must describe
+      how it will meet the security requirements in its technical approach statement.
+- control_key: SA-4 (9)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov PMO and IT Support Contractor (REI Systems) identify any required
+      ports, protocols, and services in its agile software development cycle, and
+      then coordinates all changes with the BSP team through GSA Service Now tickets.
+- control_key: SA-4 (10)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The Data.gov application requires authentication through OMB MAX, which uses government issued PIV cards as an optional for 2FA.
+- control_key: SA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov administration documentation is available in the corresponding Github
+      repositories, and additional standard operating procedures are documented at
+
+      https://docs.google.com/document/d/1jlfHKAw3XlSnGQqnKMImyc-FhRIK7KpAM-PK1q1RQ5Y/edit?usp=sharing
+  - key: b
+    text: >
+      For Data.gov PMO and support users, documentation is available in the Data.gov
+      GitHub repositories and in the Standard Operating Procedure documented at :
+
+      https://docs.google.com/document/d/1jlfHKAw3XlSnGQqnKMImyc-FhRIK7KpAM-PK1q1RQ5Y/edit?usp=sharing
+
+      For agency users, there are user guides provided at https://www.digitalgov.gov/resources/how-to-get-your-open-data-on-data-gov/
+      (guide on how datasets are added to Data.gov) and at https://www.digitalgov.gov/resources/inventory-data-gov-guide/
+      (Guide on using inventory.data.gov). As these guides do not currently contain
+      a specific section on responsibilities of privileged users, Data.gov will update
+      these user guides accordingly.
+  - key: c
+    text: >
+      Data.gov user documentation is available in the corresponding Github repositories,
+      and additional standard operating procedures are documented at
+
+      https://docs.google.com/document/d/1jlfHKAw3XlSnGQqnKMImyc-FhRIK7KpAM-PK1q1RQ5Y/edit?usp=sharing
+  - key: d
+    text: |
+      Applicable documentation is shared with the Data.gov PMO on GitHub and within the GSA Google Drive.
+  - key: e
+    text: |
+      See Part d.
+- control_key: SA-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration on all systems. Ansible pushes the Playbooks to each
+      system on a regular basis and will re-configure any device that does not meet
+      the approved Baseline.
+
+      The principles of least privilege apply to the Data.gov application using Software
+      Defined Architecture (as demonstrated here https://github.com/gsa/datagov-deploy)
+      and via access control (as managed here https://github.com/gsa/datagov-account-management)
+      .
+
+      Data.gov configuration settings are implemented according to the application
+      baseline configurations identified in CM-2. The GSA IT change control process
+      (for which see the GSA IT Configuration Management Plan) requires documentation
+      of all changes, including exceptions.
+- control_key: SA-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The Data.gov uses OMB MAX for authentication. OMB MAX meets the federal requirements and has achieved agency FEDRAMP approval.
+  - key: b
+    text: |
+      The roles and responsibilities are set forth in the GSA MOU with OMB MAX dated June 12, 2017.
+  - key: c
+    text: >
+      Data.gov does not monitor OMB MAX but the roles and responsibilities, including
+      OMB MAX’s requirement to maintain an ATO are set forth in the GSA OMB MAX MOU
+      dated June 12, 2017.
+- control_key: SA-9 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov inherits BSP/GSA NetOps use of Trendmicro’s internal firewall rules
+      to ensure least privilege is applied to only those ports required to be opened
+      by other application components in order to function. Egress access to the internet
+      is restricted to only those domains whitelisted for package management repositories
+      and only US egress by those instances performing data harvesting and link-checking.
+- control_key: SA-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The following  configuration items are identified as part of the configuration change process for Data.gov:
+      Application vendored software (e.g. Wordpress)
+      Database
+      Plugins additions or upgrades
+      All changes are passed through the Github protected branch process which requires review and approval from another member of the Data.gov PMO, other than the member that proposed the change.
+  - key: b
+    text: >
+      All proposed changes (approved, delayed, or denied) are documented within Github.
+      Github also provides version control. Only the Data.gov Project Management Office
+      (PMO) can approve the changes to be committed to the production environment.
+      All approvals and rejections of changes as well as the listing of what is changed
+      per version is logged within Github.
+
+      IaaS and networking changes are managed through ServiceNow requests and managed
+      according to BSP’s Change Management process. BSP then reviews the change request
+      to ensure it does not impact the performance or security of their cloud infrastructure
+      and once approved the change is then implemented into production.
+  - key: c
+    text: >
+      All proposed changes (approved, delayed, or denied) are documented within Github.
+      Github also provides version control. Only the Data.gov Project Management Office
+      (PMO) can approve the changes to be committed to the production environment.
+      All approvals and rejections of changes as well as the listing of what is changed
+      per version is logged within Github.
+  - key: d
+    text: |
+      See Part b.
+  - key: e
+    text: |
+      All security flaws and remediation are tracked in the data.gov POA&M and associated JIRA tickets.
+- control_key: SA-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All Data.gov application code is monitored in the vulnerability testing tools
+      such as SonarQube, MIR-SWAMP, and CodeDX.  Data.gov also participates in the
+      GSA executed Nessus Scans and Application vulnerability scans through NetSparker.   These
+      are documented in the overall project plan.
+  - key: b
+    text: >
+      The Data.gov PMO is in the process of conducting application integration, regression,
+      unit and UAT testing for all applications.  All of the code repositories are
+      configured for dependency checks.  In the near future, the team will  incorporate  automated
+      code coverage and selenium functional testing integration with the Jenkins pipeline.
+  - key: c
+    text: |
+      See Part a and b.
+  - key: d
+    text: >
+      All Data.gov application software versions are tracked from vendor subscriptions  and
+      email notifications are sent for necessary remediations that need to take place.
+  - key: e
+    text: |
+      See Part a and b.
+- control_key: SA-11 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The static code analysis tools will be employed using Fortify and/or Checkmarx
+      to identify common flaws and the Data.gov PMO will document the results of the
+      analysis.  Such analysis will be used to identify security vulnerabilities and
+      enforce security coding practices.  Each code change will be automatically scanned
+      for potential weaknesses.   Static code analysis is coordinated with the GSA
+      Office of the Chief Information Security Officer.   GSA IT will work with the
+      Program office to come up with a tentative date for implementing this control
+      process.
+- control_key: SA-22
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov utilizes various package management practices for all Software components
+      to ensure all dependencies are defined and be able to audit their status/versions:
+
+      All Python components use a “requirements.txt” and “requirements-freeze.txt”
+      file(s).
+
+      All PHP components use a “composer.json” file.
+
+      All Ruby components use a “Gemfile” file.
+
+      All Nodejs components use a “package.json” file
+
+      Other libraries and packages will be provided by the official Canonical/Debian
+      package manager.
+
+      Data.gov will review all packages on an annual basis review that are not maintained
+      by the official Debian/Canonical package manager to ensure all other dependencies
+      are upgraded to the latest version and reviewed for deprecation. In the event
+      that an application is found to be no longer supported, Data.gov will conduct
+      a thorough review of alternatives/replacement applications to ensure all consistent
+      functionality and security will remain in place. Once a suitable alternative
+      is selected it will be tested and then approved. All documentation and baselines
+      will  be updated to reflect the changes to the system.
+
+      If needed, all ongoing usage of unsupported components justified by a business
+      need are approved through the GSA Acceptance of Risk (AOR) process which is
+      used to outline the timeline, milestones, requirements, and justification necessary.  The
+      data.gov ISSO will work with the Authorizing Official (AO) to obtain the required
+      approval signatures for the AOR documentation.
+- control_key: SC-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      User interfaces (e.g. production website) use read-only replicas of the MySQL/PostgreSQL
+      database(s) and Solr search index. This is separated from the private network
+      where system management functions occur, such as harvesting, link checking,
+      re-indexing, etc.
+- control_key: SC-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      User interfaces (e.g. production website) use read-only replicas of MySQL/PostgreSQL
+      database(s) and Solr search index. This is separated from the private network
+      where system management functions occur, such as harvesting, link checking,
+      re-indexing, etc.In addition, user authentication prevents unauthorized and
+      unintended information transfer because, before such information is transferred,
+      the system verifies the user is authorized to receive it.
+- control_key: SC-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All information including user credentials are encrypted during data transmissions
+      using TLS 1.1 or higher enabled by FIPS 140-2 certified encryption modules,
+      which is in accordance with the SSL/TLS Implementation Guide CIO-IT Security
+      [14-69], Rev. 2. In addition, the ports and protocols used by the application
+      are referenced in Table 10-6.
+- control_key: SC-8 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All information including user credentials are encrypted during data transmissions
+      using TLS 1.1 or higher enabled by FIPS 140-2 certified encryption modules,
+      which is in accordance with the SSL/TLS Implementation Guide CIO-IT Security
+      [14-69], Rev. 2.
+- control_key: SC-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov has implemented a session lock that initiates after 15 minutes of inactivity on all Data.gov applications.
+- control_key: SC-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All SSH and SSL communications use the appropriate levels of encryption:
+
+      SSH uses SHA-256/512 via OpenSSH
+
+      SSL uses TLS 1.2 via GSA IT approved vendor
+
+      The web browser is required to use trusted certificates in order to communicate
+      with the Data.gov platform. No other forms of encryption are required at this
+      time. All applications were moved completely to HTTPS with HTTP Strict Transport
+      Security (HSTS) enabled, which greatly protects Data.gov from many cyber attacks
+      such as cookie hijacking or protocol downgrade attacks.
+- control_key: SC-13
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All SSH and SSL communications use the appropriate levels of encryption:
+
+      SSH uses SHA-256/512 via OpenSSH
+
+      SSL uses TLS 1.2 via GSA IT approved vendor
+
+      The web browser is required to use trusted certificates in order to communicate
+      with the Data.gov platform. No other forms of encryption are required at this
+      time. All applications were also moved completely to HTTPS with HTTP Strict
+      Transport Security (HSTS) enabled, which greatly protects Data.gov from many
+      attacks popular today, such as cookie hijacking or protocol downgrade attacks.
+- control_key: SC-15
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov PMO determined this control to be not applicable because currently
+      the application does not use or have the ability to connect to any collaborative
+      computing devices, including but not limited to cameras, microphones, stereo
+      speakers, etc, nor is remote activation allowed.
+  - key: b
+    text: |
+      See Part a.
+- control_key: SC-17
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov obtains its wildcard TLS certificate through GSA’s IT standard procurements of SSL certificates from reseller GoDaddy.com.
+- control_key: SC-18
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov only employs Javascript client-side code, this coupled with mobile
+      friendly CCS are the only accommodations for mobile code. No flash of mobile
+      native code is used.
+  - key: b
+    text: |
+      See Part a
+  - key: c
+    text: |
+      See Part a
+- control_key: SC-19
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The Data.gov PMO determined this control to be not applicable because currently VOIP is not used within Data.gov.
+  - key: b
+    text: |
+      See Part a.
+- control_key: SC-23
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov implemented a 15 minute user inactivity session lockout for all applications.  Once
+      a user successfully authenticates through Max.gov using 2FA they are issued
+      a session for 2 hours. If the user tries to login to Data.gov applications after
+      the 2 hours period, they are required to re-enter their credentials.
+- control_key: SC-28
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov encrypts data at rest through the use of encrypted and version controlled
+      s3 buckets, encrypted EBS Volumes, and encrypted RDS. The Solr search index
+      is not encrypted but it is all public data and only accessible to the public
+      via a read-only replica.
+- control_key: SC-28 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      All Usernames and Passwords are encrypted at the field level on the database
+      using sha-256 (5x salted) by default by the applications. Data.gov uses EBS
+      encryption and RDS encryption.
+- control_key: SC-39
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Data.gov uses the principles of Service Oriented Architecture (SOA) to isolate specific processes to specific instances.
+- control_key: SI-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The Data.gov team identifies flaws through weekly Nessus scans, issues identified
+      in GitHub, as well as its participation in the TTS Bug Bounty program. Data.gov
+      corrects all flaws and documents them in an Incident Response repository in
+      GitHub.
+  - key: b
+    text: |
+      Data.gov tests updates in the BSP Development environment for effectiveness before pushing to production.
+  - key: c
+    text: >
+      Data.gov performs release updates typically within a day of the release, but
+      definitely in accordance with the GSA IT security policy.  Any critical or high
+      risk security flaws related to software updates is remediated in 30  days and
+      any moderate or lower risks will be resolved within 90 days.
+  - key: d
+    text: |
+      Flaw remediation is managed via the current data.gov configuration management process.
+- control_key: SI-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov can account for time between flaw identification and remediation through
+      the time lapsed between the opening and closing of the applicable issue on GitHub.
+  - key: b
+    text: >
+      In most cases, the defined benchmark is set by GSA Security.  Any critical or
+      high risk security flaws related to software updates is remediated in 30  days
+      and any moderate or lower risks will be resolved within 90 days.
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov streams applicable security logs and events simultaneously to the GSA
+      Security SIEM solution and Data.gov’s managed EFK stack using fluentd log parsing.
+      Application errors are monitored using New Relic Application Performance Monitoring
+      (APM) which can detect abnormal activity with the applications normal functioning.
+  - key: b
+    text: >
+      Data.gov streams applicable security logs and events simultaneously to the GSA
+      Security SIEM solution and Data.gov’s managed EFK stack using fluentd log parsing.
+      Data.gov inherits network level controls from BSP/GSA NetOps for firewall, VPN
+      gateways, netscaler router, and host intrusion detection via Trendmicro.
+  - key: d
+    text: |
+      Access to kibana is protected via Max.gov authentication and the Data.gov PMO group provides authorization.
+  - key: g
+    text: |
+      Access to kibana is protected via Max.gov authentication and the Data.gov PMO group on Max.gov provides authorization.
+- control_key: SI-4 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov streams applicable security logs and events simultaneously to the GSA
+      Security SIEM solution and Data.gov’s managed EFK stack using fluentd log parsing.  Application
+      errors are monitored using New Relic Application Performance Monitoring (APM)
+      which can detect abnormal activity with the applications normal functioning.
+      Data.gov inherits network level controls from BSP/GSA NetOps for firewall, VPN
+      gateways, netscaler router, and host intrusion detection via Trendmicro.
+- control_key: SI-4 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov streams applicable security logs and events simultaneously to the GSA
+      Security SIEM solution and Data.gov’s managed EFK stack using fluentd log parsing.
+      Application errors are monitored using New Relic Application Performance Monitoring
+      (APM) which can detect abnormal activity with the applications functioning.
+      Data.gov inherits network level controls from BSP/GSA NetOps for firewall, VPN
+      gateways, netscaler router, and host intrusion detection via Trendmicro. Data.gov
+      participates in weekly Nessus scans for vulnerability detection and compliance
+      with GSA Operating System Benchmarks.
+
+      Data.gov uses Elastalert to send alerts to Slack for certain events like failed
+      ssh attempts and the use of su/sudo, see https://github.com/GSA/datagov-deploy/tree/master/ansible/roles/monitoring/elastalert/templates
+      .
+- control_key: SI-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The Data.gov PM, ISSO and ISSM receive security email alerts from ISE based on the security notifications mentioned above.
+  - key: c
+    text: >
+      The Data.gov PM,  ISSM and the ISSO reviews all alerts and the ISSO updates
+      the POA&M spreadsheet where necessary to track vulnerabilities until remediated.
+- control_key: SI-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate and manage all configuration settings.
+      The baseline for components of the system are imported into Ansible and “Playbooks”
+      are created. Tasks then apply the Playbooks to the desired systems; implementing
+      the approved Baseline Configuration Ansible pushes the Playbooks to each system
+      on a regular basis and will re-configure any device that does not meet the approved
+      Baseline: https://github/com/gsa/datagov-deploy
+- control_key: SI-7 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate all configuration settings. The baseline
+      for components of the system are imported into Ansible and “Playbooks” are created.
+      Tasks then apply the Playbooks to the desired systems; implementing the approved
+      Baseline Configuration Ansible pushes the Playbooks to each system on a regular
+      basis and will re-configure any device that does not meet the approved Baseline:
+      https://github/com/gsa/datagov-deploy
+- control_key: SI-7 (7)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov utilizes Ansible to automate and manage all configuration settings.
+      Unauthorized changes are monitored during the required review during each Pull
+      Request.
+- control_key: SI-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov inherits all authentication inputs from Max.gov for username and password
+      verification. Most of the Data.gov applications features do not have input forms;
+      however, for example the https://www.data.gov/contact page and https://inventory.data.gov/
+      application create/edit pages have input validations to ensure the correct information
+      is entered.
+- control_key: SI-11
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      Data.gov uses New Relic Application Performance Monitoring (APM) on all Python,
+      Java, and PHP runtime applications which monitors any errors. This is reviewed
+      along with the Apache/Nginx/Tomcat web server errors via Data.gov’s EFK stack
+      at least on a weekly basis.
+  - key: b
+    text: |
+      New Relic and the EFK stack are only accessible by the Data.gov PMO.
+- control_key: SI-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov maintains the metadata provided by the agencies to the Data.gov catalog
+      in accordance with the federal Open Data Policy. Data.gov maintains content
+      such as blog posts and interactions with public questions and comments in accordance
+      with the statutes and GSA policies covering retention of federal records.
+- control_key: SI-16
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov monitors process memory heaps for Tomcat/Apache/Nginx to ensure memory
+      buffer overflows do not occur.
+
+      14 Privacy Controls
+
+      This section describes the privacy controls in place and planned for the system.
+      This section covers authority and purpose (AP), accountability, audit, and risk
+      management (AR), data quality and integrity (DI), data minimization and retention
+      (DM), individual participation and redress (IP), security (SE), transparency
+      (TR) and use limitation (UL) controls.
+
+      Note: If the system does not use, collect, transmit, or maintain privacy data
+      this section can be removed from the SSP. The system’s PIA must support this
+      determination.
+- control_key: AP-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: |
+      The data.gov PIA documents the legal authority permitting the handling of PII.
+- control_key: AP-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: |
+      The data.gov includes the purpose(s) for collecting PII.
+- control_key: AR-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: |
+      Data.gov has a current Privacy Impact Assessment (PIA) that was been approved by the Privacy Officer.
+- control_key: AR-3
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: |
+      Section 5.5 in the Data.gov SOW outlines privacy requirements.
+- control_key: AR-4
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: >
+      As data.gov is periodically audited and assessed for security weaknesses, the
+      resulting SARs and POA&M reports are developed to monitor privacy controls and
+      internal privacy policies to ensure effective implementation.
+- control_key: AR-7
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: >
+      Data.gov implements secure coding and development best practices to support
+      and enhance privacy controls. Database encryption also enhances the security
+      and privacy of the PII processed and stored in the data.gov application.
+- control_key: AR-8
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: |
+      The information collected by Data.gov, email addresses and first/last names, are not Privacy Act System of Records; therefore a SORN is not required.
+      Sub 2
+      See Part a, sub 1
+- control_key: DI-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: |
+      The user is responsible for the accuracy, relevance, and completeness of the information entered into the system.
+  - key: b
+    text: |
+      Data.gov collects PII directly from the individual to the greatest extent practicable.
+  - key: c
+    text: >
+      The data.gov application team is not responsible for checking and correcting
+      as necessary, any inaccurate or outdated PII.  The user is responsible for verifying
+      the accuracy of their name and email address when entering the data.
+- control_key: DM-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: >
+      The data.gov system owner is responsible for limiting the collection and retention
+      of PII to the minimum elements necessary and for requesting assistance with
+      regard to data minimization questions involving privacy data.
+  - key: c
+    text: >
+      The data.gov system owner conducts an initial evaluation of PII holdings and
+      establishes and follows a schedule for regularly reviewing those holding to
+      ensure that only PII identified in the notice is collected and retained.
+- control_key: DM-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      If a user provides their name and email as part of a comment, request, question,
+      etc., the names and emails are retained as part of the feedback indefinitely.
+      The information is accessible only by content and site administrators.
+  - key: b
+    text: |
+      A records retention schedule is not required for the information collected in Data.gov application.
+  - key: c
+    text: |
+      When necessary, data.gov information will be deleted in accordance with the GSA Records Maintenance and Disposition System procedural guide.
+- control_key: DM-3
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: |
+      PII data is not used for testing, training and/or research.
+- control_key: IP-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      A privacy statement is displayed informing all users that Data.gov does not
+      collect personal information when a user visits the website unless they choose
+      to provide that information. It also states that all data provided other than
+      the user’s name and email address will be publicly visible.  The privacy policy
+      is located here: https://www.Data.gov/privacy-policy.
+
+      There are no available options to consent, decline, or opt out of the application.  The
+      user can either provide their name and email address or not.  Please note, the
+      information is not required in order to provide feedback.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+  - key: d
+    text: See Part a.
+- control_key: IP-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The information collected by Data.gov, email addresses and first/last names,
+      are not Privacy Act System of Records; therefore a SORN is not required.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+  - key: d
+    text: |
+      See Part a.
+- control_key: IP-3
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: |
+      Any information inputted by the general public is accepted as is.  Once submitted to the system this information cannot be modified.
+  - key: b
+    text: |
+      There is no notice sent to the user concerning procedures for correcting their personal identifiable information within the system.
+- control_key: SE-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: b
+    text: The PIA is updated annually which documents the PII inventory for the system
+      and this information is distributed to the Privacy Officer for approval.
+- control_key: TR-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: 'Data.gov’s Privacy Policy is located here: https://www.data.gov/privacy-policy'
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      Data.gov updates its public policy to reflect changes in practice or policy that affect PII.
+- control_key: TR-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      The information collected by Data.gov, email addresses and first/last names,
+      are not Privacy Act System of Records; therefore a SORN is not required.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+- control_key: UL-1
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - text: The system owner ensures that PII is shared internally only for the authorized
+      purposes identified in the Public Policy.
+- control_key: UL-2
+  standard_key: NIST SP 800-53 Revision 4 Privacy Controls
+  narrative:
+  - key: a
+    text: >
+      Identifiable information collected within Data.gov is shared with the appropriate
+      agencies.  For example,  if an inquiry concerning an EPA dataset is received
+      at Data.gov that inquiry is forwarded to the EPA open data lead by email, along
+      with the name and email address (if provided) of that user.
+  - key: b
+    text: Memoranda of Understanding are not required for the PII being captured by
+      data.gov.
+  - key: c
+    text: >
+      The Privacy Policy (https://www.data.gov/privacy-policy ) discusses the authorized
+      sharing of PII with third parties and on the consequences of unauthorized use
+      or sharing of PII
+  - key: d
+    text: >
+      If modifications to the PII being collected are required, the system owner will
+      evaluate any proposed new instances of sharing PII with external agencies to
+      assess whether the sharing is authorized.  However, to date, no changes to the
+      collected data have been requested.
