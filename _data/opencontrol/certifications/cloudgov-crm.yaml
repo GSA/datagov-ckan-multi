@@ -1,0 +1,96 @@
+---
+cloudgov-crm:
+    SC-8:
+      name: >
+        cloud.gov requires that customer applications use HTTPS.
+        HSTS is enabled by default.
+        Customers are responsible for enabling stricter HSTS settings if they need to.
+        Customers are responsible for selecting a name resolution service that fulfills this requirement
+        and for obtaining certificates for custom domains.
+      key:
+        - SC-20
+    SC-28:
+      name: >
+        cloud.gov EBS volumes, RDS, and S3 buckets are encrypted at rest.
+        Customers are responsible for further encrypting any sensitive information in their customer applications,
+        and for auditing the permissions their users have for managing their applications.
+      key:
+        - SC-28 (1)
+    AC-2 (3):
+      name: >
+        If customers use customer enterprise single-sign-on identity systems,
+        customers are responsible for configuring, monitoring, and managing their authentication systems.
+        This includes Monitoring (and handling or restricting) inactive accounts,
+        inactive authentication sessions, shared/group access, and invalid login attempts.
+        Implementing multi-factor authentication (MFA) for all accounts.
+        Handling identity verification, management, and authorization.
+        Managing authenticators. Conforming to FICAM-issued profiles, if applicable.
+      key:
+        - AC-2 (5)
+        - AC-2 (9)
+        - AC-2 (10)
+        - AC-7
+        - IA-2 (1)
+        - IA-2 (2)
+        - IA-4
+        - IA-4 (4)
+        - IA-5
+        - IA-5 (1)
+        - IA-5 (2)
+        - IA-5 (3)
+        - IA-5 (4)
+        - IA-5 (6)
+        - IA-8 (4)
+    RA-5:
+      name: "Customers are responsible for scanning for vulnerabilities in their applications."
+    AC-2:
+      name: >
+        Customers are responsible for managing the "External" roles listed in Table 9-1 User Roles and Privileges
+        (including Application System Owner, Org Manager, Org Auditor, Space Manager, Space Developer, and Space Auditor),
+        which are the roles available for customer Orgs, Spaces, and Applications.
+        Customer responsibility includes assigning personnel to those roles (using the principle of least privilege),
+        removing them from roles, and identifying non-organizational users with access.
+      key:
+        - AC-2 (7)
+        - AC-5
+        - AC-6
+        - IA-8
+    SC-4:
+      name: Customers are responsible for managing access to their customer application data.
+    IR-9:
+      name: Customers are responsible for identifying and handling information spills related to their applications, including identifying the specific information involved, alerting appropriate personnel, implementing procedures, and training personnel. Customers may request assistance from cloud.gov for handling information spills.
+      key: 
+        - IR-9
+        - IR-9 (1)
+        - IR-9 (2)
+        - IR-9 (3)
+        - IR-9 (4)
+    CM-7 (5):
+      name: >
+        Customers are responsible for identifying and authorizing the software programs within their application spaces.
+    SI-12:
+      name: >
+        Customers are responsible for fulfilling information handling and storage requirements in their applications
+        in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and operational requirements.
+    IA-5 (7):
+      name: >
+        Customers are responsible for ensuring that unencrypted static authenticators are not embedded in applications
+        or access scripts or stored on function keys.
+    CM-7 (2):
+      name: >
+        Customers are responsible for ensuring that their applications comply with the cloud.gov Rules of Behavior
+        ("Use your account responsibly" on https://cloud.gov/docs/getting-started/accounts/)
+        and all applicable federal and agency laws and policies.
+    AU-2:
+      name: >
+        Customers are responsible for ensuring that their application's activities are monitored and captured within audit logs,
+        and for reviewing and analyzing their application logs.
+        They may use cloud.gov's built-in logging features to help them fulfill this requirement.
+      key:
+        - AU-6
+        - AU-6 (3)
+        - AU-7 (1)
+    PS-6:
+      name: >
+        Customer agencies and cloud.gov have a shared responsibility to create, review,
+        and approve inter-agency agreements (IAAs) that allow customer agencies to access and use cloud.gov.

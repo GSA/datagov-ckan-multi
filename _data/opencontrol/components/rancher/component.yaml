@@ -1,0 +1,143 @@
+name: Rancher
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      SecTools Twistlock customers are responsible for securing the service account username and passkey supplied by the SecOps Team as described in AC-2(a). 
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: planned
+  narrative:
+  - text: >
+      Twistlock has added updating their API authentication mechanism to their development road map. 
+- control_key: RA-5
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: partial
+  narrative:
+  - key: a
+    text: >
+      Twistlock provides vulnerability information to developers as they deploy container images within their system.  
+- control_key: SI-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Security Operations Customer is responsible for the remediation of the flaws as identified in Part a. 
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The customer is responsible for the installation of Twistlock Defender agents on all Docker host systems and for ensuring the Defenders stay running.  
+
+https://releases.rancher.com/documents/security/latest/Rancher_Benchmark_Assessment.pdf
+
+
+# Role Based Access
+RKE installs with RBAC enabled by default. If you’re only using RKE, or any other standalone Kubernetes deployment, you’re responsible for configuring the accounts, roles, and bindings to secure your cluster.
+If you’re using Rancher, it not only installs secure clusters, but it proxies all communication to those clusters through the Rancher server. Rancher plugs into a number of backend authentication providers, such as Active Directory, LDAP, SAML, Github, and more. When connected in this way, Rancher enables you to extend your existing corporate authentication out to all of the Kubernetes clusters under Rancher’s umbrella, no matter where they’re running.
+Rancher enables roles at the global, cluster, and project level, and it makes it possible for administrators to define roles in a single place and apply them to all clusters.
+This combination of RBAC-by-default and strong controls for authentication and authorization means that from the moment you deploy a cluster with Rancher or RKE, that cluster is secure.
+
+# Namespaces
+Because of the special way that Kubernetes treats the default namespace, I don’t recommend that you use it. Instead, create a namespace for each of your applications, defining them as logical groups.
+
+Rancher defines an additional layer of abstraction called a Project. A Project is a collection of namespaces, onto which roles can be mapped. Users with access to one Project cannot see any or interact with any workload running in another Project to which they do not have access. This effectively creates single-cluster multi-tenancy.
+Using Projects makes it easier for administrators to grant access to multiple namespaces within a single cluster. It minimizes duplicated configuration and reduces human error.
+
+# Separate Sensitive Workloads
+Kubernetes allows you to set taints and tolerations, which control where a Pod might be deployed.
+
+Rancher also lets you control scheduling of workloads through Kubernetes labels. In addition to taints and tolerations, when deploying a workload you can set the labels that a host must have, should have, or can have for a Pod to land there. You can also schedule workloads to a specific node if your environment is that static.
+
+# Secure Cloud Metadata Access
+The only place this vulnerability might exist would be in a hosted Kubernetes service such as GKE. If you deploy RKE onto bare metal or cloud compute instances, either directly or via Rancher, you’ll end up with a cluster that cannot have credentials leaked via the cloud provider’s metadata API.
+
+If you’re using GKE, I recommend that you activate this feature to prevent any credentials from leaking via the metadata service.
+
+# Create and Define Cluster Network Policies
+RKE clusters, deployed directly or by Rancher, use Canal by default, although you can also choose Calico or Flannel. Both Canal and Calico include support for NetworkPolicies. Rancher-deployed clusters, when using Canal as a network provider, also support ProjectNetworkPolicies. When activated, workloads can speak to other workloads within their Project, and the System project, which includes cluster-wide components such as ingress controllers, can communicate with all projects.
+
+Earlier versions of Rancher enabled ProjectNetworkPolicies by default, but this created confusion for some users who weren’t aware of the extra security. To provide the best experience across the entire user base, this feature is now off by default but can be easily activated at launch time or later if you change your mind.
+
+# Run a Cluster-wide Pod Security Policy
+A Pod Security Policy (PSP) controls what capabilities and configuration Pods must have in order to run within your cluster. For example, you can block privileged mode, host networking, or containers running as root. When installing a cluster via Rancher or RKE, you choose if you want a restricted PSP enabled by default. If you choose to enable it, your cluster will immediately enforce strong limitations on the workload permissions.
+The restricted and unrestricted PSPs are the same within RKE and Rancher, so what they activate at install is identical. Rancher allows an unlimited number of additional PSP templates, all handled at the global level. Administrators define PSPs and then apply them to every cluster that Rancher manages. This, like the RBAC configuration discussed earlier, keeps security configuration in a single place and dramatically simplifies the configuration and application of the policies.
+
+# Harden Node Security
+This isn’t a Kubernetes-specific suggestion, but it’s a good general policy. Anything that interacts with traffic that you don’t control, such as user traffic hitting an application running within Kubernetes, should be running on nodes with a small attack surface. Disable and uninstall unneeded services. Restrict root access via SSH and require a password for sudo. Use passphrases on SSH keys, or use 2FA, U2F keys, or a service like Krypton to bind keys to devices that your users have. These are examples of basic, standard configurations for secure systems.
+
+Rancher requires nothing on the host beyond a supported version of Docker. RKE requires nothing but SSH access, and it will install the latest version of Docker supported by Kubernetes before continuing to install Kubernetes itself.
+
+If you want to reduce the attack surface even more, take a look at RancherOS, a lightweight Linux operating system that runs all processes as Docker containers. The System Docker runs only the smallest number of processes necessary to provide access and run an instance of Docker in userspace for the actual workloads. Both lightweight and secure, RancherOS is what an operating system should be secure by default.
+
+# Turn on Audit Logging
+The Rancher Server runs inside of an RKE cluster, so in addition to the Kubernetes audit logging, it’s important to activate audit logging for API calls to the server itself. This log will show all activities that users execute to any cluster, including what happened, who did it, when they did it, and what cluster they did it to.
+
+It’s also important to ship these logs off of the servers in question. Rancher connects to Splunk, Elasticsearch, Fluentd, Kafka, or any syslog endpoint, and from these you can generate dashboards and alerts for suspicious activity.
+
+Information on enabling audit logging for the Rancher Server is available in our documentation.
+
+
+Rancher 2.0 will be the most significant release since 1.0 was announced over two years ago. The following describes some of the innovations and improvements we are expecting to launch. While we are ambitious and confident in what we plan to do, the final feature set can change based on ideas and feedback from our user base. Unlike 1.x, we do plan to ship regular tech preview builds so that our community has a chance to look at what we are building and help shape the release.
+
+Clusters and Node Management - Rancher supports the ability to add your k8s cluster hosted by a cloud provider, create one using Rancher Kubernetes Engine (RKE), or simply by importing an existing cluster of your own.
+Cloud Providers - Full integrated experience of creating and managing your nodes of your k8s cluster from one of the major cloud providers
+Google Kubernetes Engine (GKE)
+Azure Container Service (AKS)
+Amazon's Elastic Kubernetes Service (EKS) - Unlikely to be in by GA as EKS is still in preview.
+Rancher Kubernetes Engine (RKE) - Allow you to create a Rancher supported k8s cluster anywhere, on any cloud or private infrastructure. You will be able to scale your hosts for your k8s deployment as you see fit through Rancher.
+Import - Import any existing k8s cluster. Only v1.8+.
+Authentication - Support for local auth, Github, and ActiveDirectory. After installing Rancher, you will be prompted to change your admin password.
+User Management - Rancher will support two default user types (admin and user) with respective default permissions. A custom user type will also be supported.
+Admin - Full global permissions (super admin)
+Standard User - standard user permissions including:
+only able to manage their own clusters including namespaces, user, projects, etc.
+can view catalogs and node drivers, but cannot manage them.
+cannot create roles but can assign them to users invited to their cluster and/or projects.
+Custom - custom user type role that you can use to define your own user type
+Role Based Access Control (RBAC) - Rancher allows you to create your own global cluster roles that can be easily assigned to any users to manage k8s clusters and projects. Rancher includes all out-of-box k8s roles and the ability to customize your own roles. Each custom role can be assigned to be assignable at a global, cluster, or project level.
+Project and Namespace Management - Users can create namespaces and assign them to projects. Projects are a new Rancher concepts that allows you to group a set of namespaces and assign a set of user permissions on those namespaces.
+Workload UX - Rancher is introducing a new Workload UX to create and manage their k8s workloads. Supported workload features:
+Ability to create workloads that will automatically translate into appropriate k8s resources (Pods, StatefulSets, Deployments, DaemonSets, etc.). Rancher will also automatically create an appropriate k8s service (NodePort, LoadBalance Service, ClusterIP) based on how the user wants to publish their ports. Rancher does the heavy lifting and translation for you. You do not need to know or understand k8s constructs before using this.
+Ability to create and use Ingress.
+Ability to generate DNS records for k8s services or external IP addresses.
+Ability to add authenticated registries
+Ability to manage k8s secrets
+Ability to manage your SSL certificates for Ingress.
+Ability to generate a public endpoint based on ports exposed by NodePort Services, LoadBalancer Services, Ingress, and HostPorts.
+Rancher CLI - CLI support for all Rancher 2.0 feature set.
+Pod Security Policies - Allow users to create their own pod security policy or policies that can be applied to roles.
+Catalog Support for Helm - Helm charts will be supported in the updated 2.0 catalog.
+HA and SSL support for Rancher server
+Rancher can be installed via docker run
+Rancher can be installed into an existing k8s cluster. This option will enable HA support as Rancher HA will be managed by the external k8s cluster.
+Alert Management
+Disabled by default. Enabling will install Prometheus AlertManager
+Support for basic out-of-box alert conditions (final list TBD)
+Support for following notifiers (Slack, Email, PagerDuty, Webhooks)
+Support for alert management including creating, deleting, disabling, and muting alerts
+Support for out-of-box system alerts (system services, networking, etc.) that can be configured with a notifier
+Support for selector labels on cluster and project-wide resources (pod, nodes, etc.)
+Support for "Test" notifier feature
+No support for "management" plane alerts (i.e Cluster 1 went down)
+Logging
+Disabled by default. Enabling will install Fluentd
+Support for ability to configure cluster-wide logging of stdout/err of containers and workloads
+Support for ability to configure project-wide logging of stdout/err of containers and workloads
+Support for ability to configure workload logging of a specific directory
+Support for following Log Targets
+Rancher embedded logging - Experimental and used for testing
+ElasticSearch
+Splunk
+Syslog
+Kafka
+CI/CD Pipelines - A simple integrated pipeline feature that allows users to create pipelines within projects for CI/CD
+Disabled by default. Enabling will install Jenkins
+Support for GitHub integration initially
+Support for creating pipelines through UI wizard, importing a YAML configuration file, or reading it the pipeline YAML directly from a GitHub project.
+Support for creating pipelines with multiple stages and steps within a stage.
+Support for automatic detection of language used to default to a container image with corresponding compiler, if required.
+Integrated with registries added into projects

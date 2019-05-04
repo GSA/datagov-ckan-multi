@@ -1,0 +1,170 @@
+---
+CRM_Akamai:
+    AC-1:
+      family: AC
+      name: "Customers access their configurations through the Luna Control Center, with accounts managed by their customer administrator. Customer implements their own access control policies."
+    AC-16:
+      family: AC
+      name: "The information used to build a cache key is controlled by the customer in the Luna Control Center.  Although the reference points to an internal document titled Akamai Secure Content Delivery, it is also applicable to the Content Delivery Network.  This document is available for review by a Third Party Assessor."
+    AC-17:
+      family: AC
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center. If a customer administrator creates a group role, then they are responsible for defining group membership. Customer administrators are responsible for identifying and authorizing appropriate access requests before granting access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.  Access to the customer Luna Control Center is through an https web portal.  Local access is not permitted."
+    AC-17 (3):
+      family: AC
+      name: "Access to the customer Luna Control Center is through an https web portal.  Local access is not permitted.  The customer is responsible for managing their own remote access points."
+    AC-17 (7):
+      family: AC
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership.  Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts."
+    AC-2:
+      family: AC
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership.  Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts."
+    AC-2 (3):
+      family: AC
+      name: "The Luna Control Center maintains user accounts that are managed by the Customer Administrator.  As a backup, inactive accounts on Luna are deleted every six (6) months, but primary account management is the responsibility of the Customer Administrator."
+    AC-2 (4):
+      family: AC
+      name: "The Luna Control Center automatically logs account creation, modification and termination, and is configured by the customer administrator to deliver those logs according to customer needs. Auditing access logs is the responsibility of the customer."
+    AC-2 (7):
+      family: AC
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership. Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts."
+    AC-22:
+      family: AC
+      name: "The Akamai CDN delivers content on behalf of the customer. Customers maintain and define what content is delivered, with what time to cache and within which geography. Customers are responsible for the data delivered by the Akamai CDN. Customers are responsible for maintaining the training and authorization of their employees around information acceptable to be transmitted through Akamai’s services. The Akamai CDN delivers content on behalf of the customer. Customers are responsible for reviewing data before it is hosted publically to be delivered by Akamai.The Akamai CDN delivers content on behalf of the customer. In the case where a customer has released improper data, Akamai can often assist in establishing which Luna Control Portal user configured the improper data to be released and can help limit the exposure of the data. "
+    AC-3:
+      family: AC
+      name: "Customer administrators and users performing content update and management procedures must log on to the Luna Control Center.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts."
+    AC-3 (3):
+      family: AC
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership. Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts."
+    AC-4:
+      family: AC
+      name: "Customers identify Luna Control Center Administrators, who create, manage, and maintain Luna and NetStorage user accounts and access. The Luna Portal is accessed via user login and password credentials. Users of the Portal must be authorized by the customer to change their service configurations. Customers load content to NetStorage through NetStorage Upload/Download accounts as described in Table 9.1 through SSH must provide their SSK key.  Customers are responsible for configuring their services in Luna to maintain CONUS-only data flow."
+    AC-5:
+      family: AC
+      name: "Customers are responsible for maintaining their own separation of duties regarding responsibilities on the Luna Control Center.  Customers are also responsible for maintaining their own separation of duties for responsibilities on the Luna Control Center as described in the supporting doumentationdocumentation within Luna."
+    AC-6:
+      family: AC
+      name: "Customer administrators are responsible for maintaining customer user accounts on the Luna Control Center according to Least Privilege."
+    AC-6 (2):
+      family: AC
+      name: "Customer administrators define the user accounts and permissions on the Luna Control Center.  These accounts are in the Akamai Luna Control Center only, and are separate from any customer system."
+    AC-7:
+      family: AC
+      name: "By default, the Customer’s users accessing Luna are locked out after three failed log in attempts in 15 minutes. The Customer’s administrator has the ability to modify this setting to three minutes."
+    AT-2:
+      family: AT
+      name: "Customers are responsible for ensuring that customer users of the Luna – https://control.akamai.com, are properly trained in the use of the Luna portal and the configuration options for the services that they have access to.  Akamai provides training videos and on-line help to support customer training.  Role based training is provided in the following link on Luna, https://control.akamai.com/dl/training/useradministration/player.html."
+    AT-3:
+      family: AT
+      name: "Customers are responsible for ensuring that customer users of the Akamai Luna Control Center, Luna – https://control.akamai.com, are properly trained in the use of the Luna portal and the configuration options for the services that they have access to.  Akamai provides training videos and on-line help to support customer training.  Role based training is provided in the following link on Luna, https://control.akamai.com/dl/training/useradministration/player.html.Luna Control Center"
+    AT-4:
+      family: AT
+      name: "Customers are provided administrative rights to Akamai’s LUNA control portal.  These administrators provide role based access to their users and are responsible for tracking their own training in the use of the Portal.  Akamai provides training videos and on-line help to support customer training.  Role based training is provided in the following link on LUNA, https://control.akamai.com/dl/training/useradministration/player.html.Customers are responsible for maintaining their own records of training on the Portal."
+    AU-11:
+      family: AU
+      name: "Customer logs are delivered to customers as per their implementation detail customers are responsible for retaining their own logs according to their own policies."
+    AU-12:
+      family: AU
+      name: "The Luna Control Center enables Customer access to generate Luna Control audit records for authorized users, as designated and configured via the portal."
+    AU-2:
+      family: AU
+      name: "The customer administrator defines the alerting requirements for origin SSL transaction failures, and logging requirements for the SSL certificate submitted by the client.The customer administrator may configure the Origin SSL Transaction Failure alert on Luna Control Center. Triggered alerts are logged by the SCDN, sent to the contacts specified by the customer in the alert, and are also available on the Luna Event Viewer. "
+    AU-6:
+      family: AU
+      name: "Customers are responsible for auditing their account access on Luna and reporting to their Customer Administrator and Akamai if improper account activity is identified."
+    AU-9:
+      family: AU
+      name: "The Luna Control Event Viewer is accessible to the Customer-configured Luna portal admin user. The Luna portal provides the Customer with the capability to customize permission level to its Luna user accounts. Customer can then define which of its users should and can have access to audit trail and logs, as well as view and/or edit its log configuration."
+    CM-4:
+      family: CM
+      name: "Customers are responsible for the configuration of their accounts and services, including the analysis of the security impact of any changes in account configuration, including caching configuration and content uploaded into NetStorage."
+    CP-10 (2):
+      family: CP
+      name: "Customers are responsibile for processing transactions at their origin."
+    CP-8:
+      family: AT
+      name: "Customers interacting with the Portal interface are responsible for ensuring their own access to the internet."
+    IA-2:
+      family: AT
+      name: "External Customers have the ability to require 2-factor authentication before allowing end-users to access their account in the Luna Control Center.  Although Luna itself does not challenge end-users for multiple authentication factors, it leverages the Security Assertion Markup Language (SAML) to delegate this optional functionality to the Customer’s Identity Provider.  SAML is an XML-based open standard data format for exchanging authentication and authorization data between parties, in particular, between an Identity Provider (e.g. US Government) and a Service Provider (e.g. Akamai Technologies, Inc.).   As a result, this solution enables the Customer to perform multi-factor authentication on their own before allowing access to Luna. If the end-user is authorized to access Luna, then the Customer’s Identity Provider will create a SAML assertion which is then validated by Luna. Since end-users are able to leverage existing credentials (john.doe@dhs.gov) to gain access to Luna, they don’t need to remember another password and their access is automatically revoked if/when they resign or leave their current organization. Customers interested in two-factor authentication for the Luna, will be guided through the SAML integration process by Akamai Solution Architects. NetStorage Specific:  For NetStorage, users are identified by NetStorage upload accounts, and authenticated based on the rules that the Customer administrator set up for that account.For non-secure access via FTP or rsync, users use the upload account name and password configured for their account via the LUNA control center. The type of access (Read/Write, directory restrictions, etc.), are also set up using that interface.To access NetStorage through secure means, a user must first send the public key for a security certificate to Akamai through the Luna Control Center as detailed in the document titled Managing Akamai NetStorage User Accounts. Each account that will be used for secure access must have one or more SSH keys uploaded; a single key cannot be assigned to more than one user name. Once an SSH key is associated with an upload account, that account cannot be used for non-secure NetStorage access. If a customer needs to use a combination of secure and non-secure access, they must create separate upload accounts for each. NetStorage Specific:  Akamai recommends using secure access (SSH) to connect to NetStorage. The NetStorage User Guide (Attachment 2) section “Using Secure Access” describes the procedures to configure secure access.  Once an upload account has beenis converted to secure, a user cannot use that account to connect via unnonsecure meansly.  For NetStorage, users are identified by NetStorage upload accounts, and authenticated based on the rules that the Customer administrator set up for that account.The following methods can be used to securely connect to NetStorage:• SFTP—Secure File Transfer Protocol• RSYNC—Remote Synchronization (if using SSH)• SSH—Secure Shell• SCP—Secure CopyEnd-users are required to use port 443 (SSL/TLS) to connect to the Luna control center.  Since SSL is required, the client and server each provide part of the random data used to generate the keys for a connection, therefore minimizing the risks of replay attacks.External Users (Customers), by default, use username and password to authenticate to the Luna Control Center Portal over 443 (SSL/TLS).Customers wanting a more secure Portal authentication model for their users will be able to use an industry standard, already in use by many organizations, called SAML, whereby when a non-authenticated user attempts to log into the portal, the portal delegates the authentication process to our customer, so that each customer can decide how to authenticate their users."
+    IA-3:
+      family: SI
+      name: "External user account creation is extended to the external customer to create and maintain account userids.  Customer user accounts are defined by the customer administrator and their policies."
+    IA-4:
+      family: SI
+      name: "External user account creation is extended to the external customer to create and maintain account userids.  Customer user accounts are defined by the customer administrator and their policies."
+    IA-5:
+      family: SI
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership.  Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts. Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts.Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership.  Customer administrators are responsible for identifying and authorizing appropriate access requests before granting access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required."
+    IA-7:
+      family: SI
+      name: 'When requested by the Customer, Akamai enforces the use of strong ciphers during the SSL handshake between end-users and the Customer''s origin server.  The Customer must specify which ciphers are preferred and which ciphers are required for the purpose of implementing strong cipher support. Customers define the upload method and are responsible for selecting secure methods. '
+    IR-6:
+      family: SI
+      name: "Customers have the responsibility to report incidents to US-CERT as specified in NIST Special Publication 800-61."
+    PL-4:
+      family: SI
+      name: "Akamai does not require customers (external users) to sign any policies, outside of their contractual paperwork, on paper or electronically.   Akamai’s Acceptable Use Policy (AUP) is publically available on the company website and through the Luna Control Center.   By signing contractual paper and then using the Akamai Network and Services, the customer acknowledges that it has read, understood and agrees to comply with the terms of this AUP.  The customer shall ensure that its users comply with this AUP and be responsible for violations of this AUP by the customer or its users.   Customers manage, maintain, and provisions Luna Control accounts.  Customers have the responsibility to ensure that users follow any government directed requirements.  For details on Akamai contractual requirements and policies available to Akamai customers (external users), please refer to Akamai CDN SSP Attachment Rules of Behavior, Section 3."
+    PS-3:
+      family: SI
+      name: "Personnel screening for government security clearances per a government contract are managed by Akamai’s Facility Security Officer."
+    PS-4:
+      family: SI
+      name: "When a customer user is terminated, the customer administrator is responsible for removing their account from the Luna Portal.If the customer administrator is terminated, then the customer should work with Akamai Customer Care to ensure that the customer administrator role is reassigned appropriately."
+    PS-5:
+      family: SI
+      name: "Customer (external users) administrators create and identify user account types according to Table 9.1 as needed for their use of Akamai services on the Luna Control Center.   If a customer administrator creates a group role, then they are responsible for defining group membership.  Customer administrators are responsible for identifying and authorizing appropriate access requests before giving access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required.Customer administrators and users must log on to the Luna Control Center to perform content update and management procedures.  Akamai obtains customer authorization prior to creating new customer administrator Luna accounts.  Once created, the customer administrator manages customer user Luna accounts.Customer administrators are responsible for verifying and managing the identities of all customer (external) users and their accounts. Customer administrators are responsible for identifying and authorizing appropriate access requests before granting access to customer user accounts on the Luna Control Center.  Customer administrators are responsible for regularly reviewing and terminating accounts that are no longer required."
+    PS-6:
+      family: SI
+      name: "Customers are responsible for ensuring that customer users of the Portal have signed appropriate access agreements."
+    PS-7:
+      family: SI
+      name: "All personnel that have routine access to customer Akamai configuration meet the contractual defined requirements."
+    SA-10:
+      family: SI
+      name: "Customers can configure many options on their Akamai services through the customer Portal. Customers are responsible for ensuring that those configuration settings reflect their security concerns."
+    SA-4 (7):
+      family: SI
+      name: "Customers can choose to disable non-secure protocols, such as (MD5 and RC4), by creating a functional work-alike to the FIPS module; however Akamai has a business need to support those protocols that are required to serve traffic to a sizeable minority of the internet."
+    SA-6:
+      family: SI
+      name: "All content delivered on behalf of a customer is the responsibility of the customer."
+    SA-9:
+      family: SI
+      name: "US government customers of Akamai’s CDN manage and maintain their Akamai Luna Portal accounts. FedRAMP oversight and external information system user roles and responsibilities are to be defined and documented by the government customer."
+    SC-11:
+      family: SI
+      name: "Customer administrators and users performing service management procedures must log on to the Luna Control Center.  The Akamai CDN obtains customer authorization prior to creating new portal accounts for the customer.  Once created, Customer manages portal accounts and their Akamai services via an SSL connection to https://control.akamai.com."
+    SC-13(1):
+      family: SI
+      name: "Customers are responsible for configuring behavior of Akamai services when met with non FIPS ciphers"
+    SC-20:
+      family: SI
+      name: "Customers have the ability to achieve or maintain DNSSEC compliance for the web sites delivered over the Akamai CDN by implementing Akamai’s Enhanced DNS- DNSSEC service.   Customers can chose to sign their zones and managed keys with Akamai serving the signed zones."
+    SC-20 (1):
+      family: SI
+      name: "Customers are responsible for verifying the chains of trust for their domains."
+    SC-7 (1):
+      family: SI
+      name: "The Content Delivery DSA Implementation (User) Guide, Attachment 1, section Step 3: Edge Server Configuration describes the options customers have to complete their configurations.  Customers are responsible for their own content. Other than the Secure Content Delivery Network, all services only support unrestricted data. Customers can establish custom mapping rules to control where their data flows geographically.   Customer data that has crossed a TIC to get to the Akamai network will maintain its inspected status."
+    SC-8 (1):
+      family: SI
+      name: "Customers are responsible for maintaining the integrity of their own content."
+    SC-9:
+      family: SI
+      name: "Customers have to select and configure the identification and authentication mechanisms that meet their requirements, and which are appropriate for their web application."
+    SI-10:
+      family: SI
+      name: "The Customer is responsible for content being served by the CDN, including content that is uploaded to NetStorage, to ensure the accuracy, completeness and validity of their information on the system."
+    SI-12:
+      family: SI
+      name: "It is the responsibility of the Customer to ensure the information provided is authorized for release to the public.  The Akamai CDN also provides web logs and traffic reports for Customer web sites it delivers, and relies on the Customer to archive copies per their retention requirements."
+    SI-3:
+      family: SI
+      name: "Customers are responsible for all of their content uploaded to NetStorage Akamai does not scan NetStorage for malicious content.  Akamai strongly recommends to the customer that they configure all of their accounts accessing Net Storage to do so securely, such as via SSH, RSYNC over SSH, SFTP.  This is documented in detail in the attached Akamai NetStorage User Guide.  Akamai does not routinely scan NetStorage for malicious code."
+    SI-4 (4):
+      family: SI
+      name: "The customer administrator is responsible for configuring, or requesting the configuration of, the Origin SSL Transaction Failure alert."
+    SI-9:
+      family: SI
+      name: "Customers are responsible for defining the source for delivery of their content. If a customer mis-publishes their configuration, it can impact their service.  The customer administrator of the LUNA control center should restrict its LUNA account users with appropriate access."

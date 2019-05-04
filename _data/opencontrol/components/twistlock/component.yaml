@@ -9,7 +9,7 @@ satisfies:
       The username and passkey are to be added to a supported CI/CD pipeline management system and stored only in a GSA-approved password vault system. Any unauthorized access to the user account must be reported to GSA SecOps and the GSA Incident Response Team immediately.
 - control_key: AC-3
   standard_key: NIST SP 800-53 Revision 4
-  implementation_status: Planned
+  implementation_status: planned
   narrative:
   - text: >
       Twistlock has added updating their API authentication mechanism to their development road map. 
@@ -20,6 +20,7 @@ satisfies:
       Upon delivery of updated Twistlock capabilities, GSA SecOps will implement the updates to improve the API security posture.
 - control_key: RA-5
   standard_key: NIST SP 800-53 Revision 4
+  implementation_status: partial
   narrative:
   - key: a
     text: >

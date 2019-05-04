@@ -1,0 +1,15 @@
+{% comment %} 
+This is used for just about every page, except the home page
+{% endcomment %}
+
+
+{% include header.html %}
+{% include menu.html primary_navigation=site.primary_navigation  secondary_navigation=site.secondary_navigation %}
+
+<main class="usa-layout-docs usa-section" id="main-content">
+  <div class="grid-container">
+    {{ content }}
+  </div>
+</main>
+
+{% include footer.html %}
