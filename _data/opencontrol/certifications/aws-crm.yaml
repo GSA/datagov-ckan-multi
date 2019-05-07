@@ -1,1780 +1,1778 @@
----
 -
     key: AC-2
-    component: 
-    name: Customers are responsible for all aspects of this control related to user account access to their compute instances, virtual networks, and block stores. Details of each aspect of EC2, VPC, and EBS are outlined below.
-    implementation_status: 
-    comment: 
-    fips: 
--
-    key: AC-2
-    component: EC2
-    name: Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS. 
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for all aspects of this control related to user account access to their compute instances, virtual networks, and block stores. Details of each aspect of EC2, VPC, and EBS are outlined below.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-2
     component: EC2
-    name: AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing some form of multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access). 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-2
     component: EC2
-    name: Additionally, customers should employ a privilege escalation mechanism with logging on a per-user basis. For example, if the guest OS is Linux, after hardening their instance, they should utilize certificate-based SSHv2 to access the virtual instance, disable remote root login, use command-line logging, and use ‘sudo’ for privilege escalation. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing some form of multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access).'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-2
     component: EC2
-    name: Customers should generate their own key pairs in order to guarantee that they are unique, and not shared with other customers or with AWS.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'Additionally, customers should employ a privilege escalation mechanism with logging on a per-user basis. For example, if the guest OS is Linux, after hardening their instance, they should utilize certificate-based SSHv2 to access the virtual instance, disable remote root login, use command-line logging, and use ‘sudo’ for privilege escalation.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
+-
+    key: AC-2
+    component: EC2
+    name: 'Customers should generate their own key pairs in order to guarantee that they are unique, and not shared with other customers or with AWS.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-2
     component: EBS
-    name: Once a customer creates an Amazon EBS volume, the customer can attach it to an Amazon EC2 instance. Once attached, it will appear as a mounted device similar to any hard drive or other block device. At that point, the instance can interact with the volume just as it would with a local drive, formatting it with a file system or installing applications on it directly. The customer controls which EC2 instance an EBS volume may be attached to.
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Once a customer creates an Amazon EBS volume, the customer can attach it to an Amazon EC2 instance. Once attached, it will appear as a mounted device similar to any hard drive or other block device. At that point, the instance can interact with the volume just as it would with a local drive, formatting it with a file system or installing applications on it directly. The customer controls which EC2 instance an EBS volume may be attached to.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-2
     component: VPC
-    name: Through the AWS Management Console, Amazon Virtual Private Cloud (Amazon VPC) lets customers provision a private, isolated section of the Amazon Web Services (AWS) Cloud where customers can launch AWS resources in the customer-defined virtual network. Customers can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet.  Implement VPC.
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Through the AWS Management Console, Amazon Virtual Private Cloud (Amazon VPC) lets customers provision a private, isolated section of the Amazon Web Services (AWS) Cloud where customers can launch AWS resources in the customer-defined virtual network. Customers can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet.  Implement VPC.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
-    component: 
-    name: Using the Apptis Portal and/or AWS management console, customers are responsible for:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Using the Apptis Portal and/or AWS management console, customers are responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
-    component: 
-    name: a.        Establishing and administering privileged user accounts in accordance with a role-based access scheme that organizes information system and network privileges into roles; and
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Establishing and administering privileged user accounts in accordance with a role-based access scheme that organizes information system and network privileges into roles; and'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
-    component: 
-    name: b.       Tracking and monitoring privileged role assignments.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Tracking and monitoring privileged role assignments.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
-    component: 
-    name: c.        Disabling temporary, emergency, inactive accounts after a defined time period (GSA requires after 90 days).
-    implementation_status: not_implemented 
-    comment: We use a 180 day window because a good majority of our users access the system only a few times a year.
-    fips: 
+    component: null
+    name: 'c.        Disabling temporary, emergency, inactive accounts after a defined time period (GSA requires after 90 days).'
+    implementation_status: not_implemented
+    comment: 'We use a 180 day window because a good majority of our users access the system only a few times a year.'
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
-    component: 
-    name: d.       Implementing auditing of account creation, modification, disabling, and termination actions and notifying, as required, appropriate individuals.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'd.       Implementing auditing of account creation, modification, disabling, and termination actions and notifying, as required, appropriate individuals.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-3
-    component: 
-    name: Customers are responsible for establishing groups and permissions in the management console, thereby, ensuring that the process is performed in accordance with the customer’s access control policy and the authorizations granted to the system users are approved as required.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for establishing groups and permissions in the management console, thereby, ensuring that the process is performed in accordance with the customer’s access control policy and the authorizations granted to the system users are approved as required.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-4
-    component: 
-    name: Customers are responsible for accessing AWS via SSL endpoints. These encrypted endpoints are accessible from both the Internet and from within Amazon EC2, ensuring that data are transferred securely both within AWS and to and from sources outside of AWS.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
--
-    key: AC-4
-    component: EC2
-    name: The EC2 compute instance inbound firewall is configured in a default deny mode. Customers are responsible for explicitly open any ports as needed to allow inbound traffic. 
-    implementation_status: not_implemented 
-    comment: Implemented via EC2 Security Group firewall
-    fips: 
+    component: null
+    name: 'Customers are responsible for accessing AWS via SSL endpoints. These encrypted endpoints are accessible from both the Internet and from within Amazon EC2, ensuring that data are transferred securely both within AWS and to and from sources outside of AWS.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-4
     component: EC2
-    name: The traffic may be restricted by protocol, by service port, as well as by source IP address (individual IP or CIDR block).  The firewall is controlled not by the host/instance itself, but requires the customer’s X.509 certificate and key to authorize changes, thus adding an extra layer of security.
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'The EC2 compute instance inbound firewall is configured in a default deny mode. Customers are responsible for explicitly open any ports as needed to allow inbound traffic.'
+    implementation_status: not_implemented
+    comment: 'Implemented via EC2 Security Group firewall'
+    fips: null
 -
     key: AC-4
     component: EC2
-    name: Customers are responsible for using API calls that can be encrypted with SSL to maintain confidentiality.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'The traffic may be restricted by protocol, by service port, as well as by source IP address (individual IP or CIDR block).  The firewall is controlled not by the host/instance itself, but requires the customer’s X.509 certificate and key to authorize changes, thus adding an extra layer of security.'
+    implementation_status: null
+    comment: null
+    fips: null
+-
+    key: AC-4
+    component: EC2
+    name: 'Customers are responsible for using API calls that can be encrypted with SSL to maintain confidentiality.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-4
     component: VPC
-    name: Customers are responsible for configuring end-to-end network isolation by using an IP address range of a customer agency’s choice, and routing all of network traffic between the customer agency’s virtual private cloud (VPC) and another network designated by the customer via an encrypted Internet Protocol security (IPsec) VPN.
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Customers are responsible for configuring end-to-end network isolation by using an IP address range of a customer agency’s choice, and routing all of network traffic between the customer agency’s virtual private cloud (VPC) and another network designated by the customer via an encrypted Internet Protocol security (IPsec) VPN.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-5
-    component: 
-    name: Customers are responsible for documenting and implementing the separation of duties of individuals as necessary, to prevent malevolent activity without collusion.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for documenting and implementing the separation of duties of individuals as necessary, to prevent malevolent activity without collusion.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-6, AC-6(1)(2)
-    component: 
-    name: Customers are responsible for employing the concept of least privilege, allowing only authorized accesses for their users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. Refer also to AC-5.
-    implementation_status: 
-    comment: 
-    fips: 
--
-    key: AC-7
-    component: 
-    name: Customers are responsible for:
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'AC-6, AC-6(1)(2)'
+    component: null
+    name: 'Customers are responsible for employing the concept of least privilege, allowing only authorized accesses for their users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. Refer also to AC-5.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-7
-    component: 
-    name: a.        Enforcing an agency defined limit of consecutive invalid access attempts by a user (GSA requires not more than ten during an agency defined time period (GSA requires 30 minutes); and 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for:'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-7
-    component: 
-    name: b.       Automatically locking the account for the organization’s defined time period (GSA requires 30 minutes), locking the account until it is released by an administrator, or delaying the next login prompt for the organization’s defined delay when the maximum number of unsuccessful attempts is exceeded.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Enforcing an agency defined limit of consecutive invalid access attempts by a user (GSA requires not more than ten during an agency defined time period (GSA requires 30 minutes); and'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
+-
+    key: AC-7
+    component: null
+    name: 'b.       Automatically locking the account for the organization’s defined time period (GSA requires 30 minutes), locking the account until it is released by an administrator, or delaying the next login prompt for the organization’s defined delay when the maximum number of unsuccessful attempts is exceeded.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-8
-    component: 
-    name: Customers are responsible for implementing their agency’s banner or a GSA defined system use notification banner to display upon login to their EC2 compute instances.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for implementing their agency’s banner or a GSA defined system use notification banner to display upon login to their EC2 compute instances.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-10
-    component: 
-    name: As required, customers are responsible for implementing their organization’s defined concurrent session control restrictions on their virtual machines (GSA limits this to one session).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'As required, customers are responsible for implementing their organization’s defined concurrent session control restrictions on their virtual machines (GSA limits this to one session).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-11, AC-11(1)
-    component: 
-    name: Customers are responsible for enabling session lock on their compute instances to meet the organization’s-defined parameter (GSA requires 15 minutes), and are responsible for ensuring the session lock mechanism, when activated on a device with a display screen, places a publicly viewable pattern onto the associated display, hiding what was previously visible on the screen.
-    implementation_status: 
-    comment: 
-    fips: 
--
-    key: AC-17
-    component: 
-    name: Customer connections to their compute instances in EC2, EBS, and VPC are accomplished through API calls or through the Apptis FedCloud Console. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the Amazon API endpoint or Apptis FedCloud Console. Once their compute instances are setup, the customer agency is responsible for: 
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'AC-11, AC-11(1)'
+    component: null
+    name: 'Customers are responsible for enabling session lock on their compute instances to meet the organization’s-defined parameter (GSA requires 15 minutes), and are responsible for ensuring the session lock mechanism, when activated on a device with a display screen, places a publicly viewable pattern onto the associated display, hiding what was previously visible on the screen.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17
-    component: 
-    name: a.        Documenting allowed methods of remote access to their compute instances;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customer connections to their compute instances in EC2, EBS, and VPC are accomplished through API calls or through the Apptis FedCloud Console. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the Amazon API endpoint or Apptis FedCloud Console. Once their compute instances are setup, the customer agency is responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17
-    component: 
-    name: b.       Establishing usage restrictions and implementation guidance for each allowed remote access method;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Documenting allowed methods of remote access to their compute instances;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17
-    component: 
-    name: c.        Monitoring for unauthorized remote access to their compute instances;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Establishing usage restrictions and implementation guidance for each allowed remote access method;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17
-    component: 
-    name: d.       Authorizes remote access to their compute instances prior to connection; and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Monitoring for unauthorized remote access to their compute instances;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17
-    component: 
-    name: e.       Enforces requirements for remote connections to their compute instances.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'd.       Authorizes remote access to their compute instances prior to connection; and'
+    implementation_status: null
+    comment: null
+    fips: null
+-
+    key: AC-17
+    component: null
+    name: 'e.       Enforces requirements for remote connections to their compute instances.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17(1)(2)(3)(4)(5)(7)(8)
-    component: 
-    name: Customer connections to their compute instances in EC2/VPC/EBS are accomplished through API calls or through the Apptis FedCloud Console. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the Amazon API endpoint or Apptis FedCloud Console. Once their compute instances are setup, the customer agency is responsible for: 
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customer connections to their compute instances in EC2/VPC/EBS are accomplished through API calls or through the Apptis FedCloud Console. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the Amazon API endpoint or Apptis FedCloud Console. Once their compute instances are setup, the customer agency is responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17(1)
-    component: 
-    name: Employing automated mechanisms to facilitate the monitoring and control of remote access methods to compute instances.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Employing automated mechanisms to facilitate the monitoring and control of remote access methods to compute instances.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AC-17(2)
-    component: 
-    name: Uses cryptography to protect the confidentiality and integrity of remote access sessions to compute resources.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Uses cryptography to protect the confidentiality and integrity of remote access sessions to compute resources.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-17(3) 
-    component: 
-    name: Routing all remote accesses through a limited number of managed access control points (AWS-provided API endpoints via the Apptis FedCloud Console).
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: AC-17(3)
+    component: null
+    name: 'Routing all remote accesses through a limited number of managed access control points (AWS-provided API endpoints via the Apptis FedCloud Console).'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: AC-17(4) 
-    component: 
-    name: Authorizing the execution of privileged commands and access to security-relevant information via remote access only for compelling operational needs and documents the rationale for such access in the security plan for the information system.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: AC-17(4)
+    component: null
+    name: 'Authorizing the execution of privileged commands and access to security-relevant information via remote access only for compelling operational needs and documents the rationale for such access in the security plan for the information system.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-17(5) 
-    component: 
-    name: Monitoring for unauthorized remote connections to their compute resources at the frequency determined acceptable by the organization and/or GSA requirements, and takes appropriate action if an unauthorized connection is discovered.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: AC-17(5)
+    component: null
+    name: 'Monitoring for unauthorized remote connections to their compute resources at the frequency determined acceptable by the organization and/or GSA requirements, and takes appropriate action if an unauthorized connection is discovered.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-17(7) 
-    component: 
-    name: Ensuring that remote sessions for accessing security functions match the organization’s policy and/or GSA guidance; and
-    implementation_status: 
-    comment: 
-    fips: 
+    key: AC-17(7)
+    component: null
+    name: 'Ensuring that remote sessions for accessing security functions match the organization’s policy and/or GSA guidance; and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-17(8) 
-    component: 
-    name: Disabling networking protocols deemed to be non-secure by the organization and/or GSA except for explicitly identified components in support of specific operational requirements.  (GSA requires the following to be disabled - * tftp, (trivial ftp) * X-Windows, Sun Open Windows * FTP * TELNET * IPX/SPX  * NETBIOS     * BlueTooth                                                                     * RPC-services, like NIS or NFS  * rlogin, rsh, rexec  * SMTP (Simple Mail Transfer Protocol) (except as required for normal system operations)  * RIP (Routing Information Protocol) (except as required for normal system operations)  * DNS (Domain Name Services) (except as required for normal system operations)  * UUCP (Unix-Unix Copy Protocol)  * NNTP (Network News Transfer Protocol)  * NTP (Network Time Protocol)  (except as required for normal system operations)   * Peer-to-Peer  *and as identified in GSA IT Security Hardening Guidelines).
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: AC-17(8)
+    component: null
+    name: 'Disabling networking protocols deemed to be non-secure by the organization and/or GSA except for explicitly identified components in support of specific operational requirements.  (GSA requires the following to be disabled - * tftp, (trivial ftp) * X-Windows, Sun Open Windows * FTP * TELNET * IPX/SPX  * NETBIOS     * BlueTooth                                                                     * RPC-services, like NIS or NFS  * rlogin, rsh, rexec  * SMTP (Simple Mail Transfer Protocol) (except as required for normal system operations)  * RIP (Routing Information Protocol) (except as required for normal system operations)  * DNS (Domain Name Services) (except as required for normal system operations)  * UUCP (Unix-Unix Copy Protocol)  * NNTP (Network News Transfer Protocol)  * NTP (Network Time Protocol)  (except as required for normal system operations)   * Peer-to-Peer  *and as identified in GSA IT Security Hardening Guidelines).'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: AU-2 
-    component: 
-    name: Customers are responsible for establishing, implementing, reviewing configuring and updating auditable events on their storage resources and virtual machines, based on a risk assessment and mission/business needs. The collection and protection of these audits belongs to the customer as well.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
-    fips: 
+    key: AU-2
+    component: null
+    name: 'Customers are responsible for establishing, implementing, reviewing configuring and updating auditable events on their storage resources and virtual machines, based on a risk assessment and mission/business needs. The collection and protection of these audits belongs to the customer as well.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
+    fips: null
 -
     key: AU-2(3)
-    component: 
-    name: Customers are responsible for reviewing and updating the list of auditable events annually or whenever there is a change in the threat environment.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for reviewing and updating the list of auditable events annually or whenever there is a change in the threat environment.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-2(4)
-    component: 
-    name: Customers are responsible for auditing the execution of privileged functions in the list of events to be audited by the information system
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for auditing the execution of privileged functions in the list of events to be audited by the information system'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: AU-3, AU-3(1)
-    component: 
-    name: Customers are responsible for ensuring the information system produces audit records that contain sufficient information to, at a minimum, establish what type of event occurred, when (date and time) the event occurred, where the event occurred, the source of the event, the outcome (success or failure) of the event, and the identity of any user/subject associated with the event.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'AU-3, AU-3(1)'
+    component: null
+    name: 'Customers are responsible for ensuring the information system produces audit records that contain sufficient information to, at a minimum, establish what type of event occurred, when (date and time) the event occurred, where the event occurred, the source of the event, the outcome (success or failure) of the event, and the identity of any user/subject associated with the event.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: AU-3, AU-3(1)
-    component: 
-    name: "Customers should also configure their information systems to audit for:                                                                                   (i) Session, connection, transaction, or activity duration.\n\n(ii) For client-server transactions, the number of bytes received and bytes sent.  This gives bidirectional transfer information that can be helpful during an investigation or inquiry.\n\n(iii) For client-server transactions, unique metadata or properties about the client initiating the transaction.  This could include properties such as an IP address, user name, session identifier or browser characteristics (e.g. a ‘User-Agent’ string).\n\n(iv) Details regarding the event ‘type’: the type of method (for HTTP: GET/POST/HEAD, etc) or action (Database INSERT, UPDATE, DELETE).\n\n(v) Characteristics that describe or identify the object or resource being acted upon.\n\n(vi) Additional informational messages to diagnose or identify the event."
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'AU-3, AU-3(1)'
+    component: null
+    name: "Customers should also configure their information systems to audit for:                                                                                   (i) Session, connection, transaction, or activity duration.\n\n(ii) For client-server transactions, the number of bytes received and bytes sent. \_This gives bidirectional transfer information that can be helpful during an investigation or inquiry.\n\n(iii) For client-server transactions, unique metadata or properties about the client initiating the transaction. \_This could include properties such as an IP address, user name, session identifier or browser characteristics (e.g. a ‘User-Agent’ string).\n\n(iv) Details regarding the event ‘type’: the type of method (for HTTP: GET/POST/HEAD, etc) or action (Database INSERT, UPDATE, DELETE).\n\n(v) Characteristics that describe or identify the object or resource being acted upon.\n\n(vi) Additional informational messages to diagnose or identify the event."
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AU-4
-    component: 
-    name: Customers should allocate sufficient audit record storage capacity and configure their auditing to reduce the likelihood of such capacity being exceeded.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers should allocate sufficient audit record storage capacity and configure their auditing to reduce the likelihood of such capacity being exceeded.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: AU-5
-    component: 
-    name: Customers should configure their information systems to:
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers should configure their information systems to:'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: AU-5
-    component: 
-    name: a.        Alert designated organizational officials in the event of an audit processing failure; and
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'a.        Alert designated organizational officials in the event of an audit processing failure; and'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: AU-5
-    component: 
-    name: b.       Shut down Moderate-impact systems.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'b.       Shut down Moderate-impact systems.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: AU-6
-    component: 
-    name: Customers are responsible for:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-6
-    component: 
-    name: a.        Reviewing and analyzing information system audit records at least weekly for indications of inappropriate or unusual activity, and report’s findings to designated organizational officials; and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Reviewing and analyzing information system audit records at least weekly for indications of inappropriate or unusual activity, and report’s findings to designated organizational officials; and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-6
-    component: 
-    name: b.       Adjusting the level of audit review, analysis, and reporting within the information system when there is a change in risk to organizational operations, organizational assets, individuals, other organizations, or the Nation based on law enforcement information, intelligence information, or other credible sources of information.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Adjusting the level of audit review, analysis, and reporting within the information system when there is a change in risk to organizational operations, organizational assets, individuals, other organizations, or the Nation based on law enforcement information, intelligence information, or other credible sources of information.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AU-8, AU-8(1)
-    component: 
-    name: Customers are responsible for configuring their information system to use internal system clocks to generate time stamps for audit records.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'AU-8, AU-8(1)'
+    component: null
+    name: 'Customers are responsible for configuring their information system to use internal system clocks to generate time stamps for audit records.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: AU-8, AU-8(1)
-    component: 
-    name: Customers are responsible for ensuring that their information system synchronizes internal information system clocks at a predetermined time (GSA requires at least hourly).
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'AU-8, AU-8(1)'
+    component: null
+    name: 'Customers are responsible for ensuring that their information system synchronizes internal information system clocks at a predetermined time (GSA requires at least hourly).'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: AU-9, 
-    component: 
-    name: Customers are responsible for ensuring their information system protects audit information and audit tools from unauthorized access, modification, and deletion.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'AU-9,'
+    component: null
+    name: 'Customers are responsible for ensuring their information system protects audit information and audit tools from unauthorized access, modification, and deletion.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-11
-    component: 
-    name: Customers are responsible for retaining audit records online for a predetermined time (GSA requires not less than 180 days) and should further preserve audit records off-line for a period that is in accordance with NARA requirements to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements.
-    implementation_status: not_implemented 
-    comment: Yes, stored online for 180 days, No, not stored offline. This control not included in LATO controls for Low systems
-    fips: 
+    component: null
+    name: 'Customers are responsible for retaining audit records online for a predetermined time (GSA requires not less than 180 days) and should further preserve audit records off-line for a period that is in accordance with NARA requirements to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements.'
+    implementation_status: not_implemented
+    comment: 'Yes, stored online for 180 days, No, not stored offline. This control not included in LATO controls for Low systems'
+    fips: null
 -
     key: AU-12
-    component: 
-    name: It’s the customer’s responsibility to ensure their information system:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'It’s the customer’s responsibility to ensure their information system:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-12
-    component: 
-    name: a.        Provides audit record generation capability for the list of auditable events defined in AU-2 at all information system components where audit capability is deployed.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Provides audit record generation capability for the list of auditable events defined in AU-2 at all information system components where audit capability is deployed.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-12
-    component: 
-    name: b.       Allows designated organizational personnel to select which auditable events are to be audited by specific components of the system; and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Allows designated organizational personnel to select which auditable events are to be audited by specific components of the system; and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: AU-12
-    component: 
-    name: c.        Generates audit records for the list of audited events defined in AU-2 with the content as defined in AU-3.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Generates audit records for the list of audited events defined in AU-2 with the content as defined in AU-3.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2
-    component: 
-    name: The customer is responsible for guest operating systems, deployed applications, and configuration control of select networking resources such as EC2 host firewalls, and VPC internal network configuration. The customer is not responsible for the underlying cloud infrastructure. For EC2, AWS provides a Linux Amazon Machine Image (AMIs) for the guest operating system. The installation will be the minimum installation of the operating system, with no configuration applied to the ISO image. AWS does not perform patch management, system hardening, and does not provide any application support within the image.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for guest operating systems, deployed applications, and configuration control of select networking resources such as EC2 host firewalls, and VPC internal network configuration. The customer is not responsible for the underlying cloud infrastructure. For EC2, AWS provides a Linux Amazon Machine Image (AMIs) for the guest operating system. The installation will be the minimum installation of the operating system, with no configuration applied to the ISO image. AWS does not perform patch management, system hardening, and does not provide any application support within the image.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2
-    component: 
-    name: At customer instantiation of an AMI, the vendor makes no warranties as to the patch level or configuration settings. Customer responsibility includes updating any instance to a recent patch level and configuring to suit specific needs.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'At customer instantiation of an AMI, the vendor makes no warranties as to the patch level or configuration settings. Customer responsibility includes updating any instance to a recent patch level and configuring to suit specific needs.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2
-    component: 
-    name: Upon deployment of AMIs, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary. AWS will not maintain administrator access to customer EC2 instances, EBS storage or VPCs.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Upon deployment of AMIs, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary. AWS will not maintain administrator access to customer EC2 instances, EBS storage or VPCs.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: The customer is responsible for establishing review policies for maintaining the baseline configuration for the Guest Operating System and any applications that they install on the instances EC2. These polices include, but are not limited to:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for establishing review policies for maintaining the baseline configuration for the Guest Operating System and any applications that they install on the instances EC2. These polices include, but are not limited to:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: a.        Reviewing the baseline configuration on an annual basis
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Reviewing the baseline configuration on an annual basis'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: b.       Defining the types of changes to the information system or the environment of operations that would require a review and update of the baseline configuration
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Defining the types of changes to the information system or the environment of operations that would require a review and update of the baseline configuration'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: c.        Retaining older versions of baseline configurations
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Retaining older versions of baseline configurations'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: d.       Defining the list of software programs allowed to operate on the virtual machine
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'd.       Defining the list of software programs allowed to operate on the virtual machine'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-2(1)(3)(5)
-    component: 
-    name: e.       Implementing an authentication policy that governs the execution of software on the virtual machine.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'e.       Implementing an authentication policy that governs the execution of software on the virtual machine.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: CM-3, CM3(2), CM-4
-    component: 
-    name: The customer is responsible for establishing a Configuration Change Control process for their information systems built on the AWS infrastructure. This includes controlling the configuration of the guest Operating System and any applications that are installed on the customer’s instances EC2.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'CM-3, CM3(2), CM-4'
+    component: null
+    name: 'The customer is responsible for establishing a Configuration Change Control process for their information systems built on the AWS infrastructure. This includes controlling the configuration of the guest Operating System and any applications that are installed on the customer’s instances EC2.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: CM-3, CM3(2), CM-4
-    component: 
-    name: Additionally, the customer is responsible for testing, validating, analyzing changes to their information system built on the AWS infrastructure to determine potential security impacts, and documenting changes to the information system before implementing the changes on their operational systems built on the AWS infrastructure.   This also includes the guest Operating System and any applications that are installed on the customer’s instances in EC2.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'CM-3, CM3(2), CM-4'
+    component: null
+    name: 'Additionally, the customer is responsible for testing, validating, analyzing changes to their information system built on the AWS infrastructure to determine potential security impacts, and documenting changes to the information system before implementing the changes on their operational systems built on the AWS infrastructure.   This also includes the guest Operating System and any applications that are installed on the customer’s instances in EC2.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-5
-    component: 
-    name: The customer is responsible for defining, documenting, approving, and enforcing logical access restrictions associated with changes to their information system built on the AWS infrastructure.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for defining, documenting, approving, and enforcing logical access restrictions associated with changes to their information system built on the AWS infrastructure.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-5(1)(5)
-    component: 
-    name: The customer is responsible for the following actions concerning their operational systems built on the AWS infrastructure:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for the following actions concerning their operational systems built on the AWS infrastructure:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-5(1)(5)
-    component: 
-    name: a.        Employing automated mechanisms to enforce access restrictions and support auditing of the enforcement actions.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'a.        Employing automated mechanisms to enforce access restrictions and support auditing of the enforcement actions.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: CM-5(1)(5)
-    component: 
-    name: b.       Limiting information system developer/integrator privileges to change operating system software and other software installed in their production environment.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'b.       Limiting information system developer/integrator privileges to change operating system software and other software installed in their production environment.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: CM-5(1)(5)
-    component: 
-    name: c.        Reviewing and reevaluating information system developer & integrator privileges per defined organizational policy (GSA requires at least quarterly).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Reviewing and reevaluating information system developer & integrator privileges per defined organizational policy (GSA requires at least quarterly).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-6
-    component: 
-    name: The customer is responsible for establishing, documenting, implementing, monitoring and controlling changes to configuration on their information systems built on the AWS infrastructure. This includes identifying, documenting, and approving exceptions from the mandatory configuration settings for customer instances within their information system. The customer is also responsible for the security configurations of guest operating systems, deployed applications, and configuration control (through automated mechanisms where possible) of select networking resources such as EC2 host firewalls, and VPC internal network configuration. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for establishing, documenting, implementing, monitoring and controlling changes to configuration on their information systems built on the AWS infrastructure. This includes identifying, documenting, and approving exceptions from the mandatory configuration settings for customer instances within their information system. The customer is also responsible for the security configurations of guest operating systems, deployed applications, and configuration control (through automated mechanisms where possible) of select networking resources such as EC2 host firewalls, and VPC internal network configuration.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-6
-    component: 
-    name: AMIs contain standard releases from OS vendors such as Windows Server, RHEL, SUSE Linux and Ubuntu Linux. It is the customer’s responsibility to install the latest security patches after creating instances from these AMIs.  The Amazon Linux AMI guest operating system is patched to a point in time, typically quarterly.  However, customer responsibility includes updating any instance to a recent patch level and configuring to suit specific needs. AWS does not perform patch management, system hardening, and does not provide any application support within the image.  
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'AMIs contain standard releases from OS vendors such as Windows Server, RHEL, SUSE Linux and Ubuntu Linux. It is the customer’s responsibility to install the latest security patches after creating instances from these AMIs.  The Amazon Linux AMI guest operating system is patched to a point in time, typically quarterly.  However, customer responsibility includes updating any instance to a recent patch level and configuring to suit specific needs. AWS does not perform patch management, system hardening, and does not provide any application support within the image.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-6
-    component: 
-    name: Upon deployment of AMIs, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary.  AWS will not maintain administrator access to customer EC2 instances, EBS storage or VPCs. Customers are responsible for establishing, documenting, implementing, monitoring, and enforcing the configuration settings on their virtual machines. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Upon deployment of AMIs, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary.  AWS will not maintain administrator access to customer EC2 instances, EBS storage or VPCs. Customers are responsible for establishing, documenting, implementing, monitoring, and enforcing the configuration settings on their virtual machines.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-6
-    component: 
-    name: Additionally the customer is responsible for incorporating a mechanism for the detection of unauthorized, security-relevant configuration changes into the customer’s incident response capability. The customer will also be responsible for controlling personnel/accounts that may change hardware/software and reviewing those privileges periodically.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Additionally the customer is responsible for incorporating a mechanism for the detection of unauthorized, security-relevant configuration changes into the customer’s incident response capability. The customer will also be responsible for controlling personnel/accounts that may change hardware/software and reviewing those privileges periodically.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-6(1)(3)
-    component: 
-    name: The customer is responsible for:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-6(1)(3)
-    component: 
-    name: a.        Employing automated mechanisms to centrally manage, apply, and verify configuration settings on the customer instances.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Employing automated mechanisms to centrally manage, apply, and verify configuration settings on the customer instances.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-6(1)(3)
-    component: 
-    name: b.       Incorporating detection of unauthorized, security-relevant configuration changes on the customer instances into the customers’ incident response capability to ensure that such detected events are tracked, monitored, corrected, and available for historical purposes
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Incorporating detection of unauthorized, security-relevant configuration changes on the customer instances into the customers’ incident response capability to ensure that such detected events are tracked, monitored, corrected, and available for historical purposes'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: CM-7, CM-7(1)
-    component: 
-    name: Customers are responsible for implementing least functionality, ensuring that only essential capabilities are used on the customer instances and that they specifically prohibit and/or restrict the use customer-defined/forbidden, ports, protocols, and/or services. 
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'CM-7, CM-7(1)'
+    component: null
+    name: 'Customers are responsible for implementing least functionality, ensuring that only essential capabilities are used on the customer instances and that they specifically prohibit and/or restrict the use customer-defined/forbidden, ports, protocols, and/or services.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: CM-7, CM-7(1)
-    component: 
-    name: The customer is responsible for performing a quarterly review of their customer instances to identify and eliminate unnecessary functions, ports, protocols, and/or services.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'CM-7, CM-7(1)'
+    component: null
+    name: 'The customer is responsible for performing a quarterly review of their customer instances to identify and eliminate unnecessary functions, ports, protocols, and/or services.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: CM-8
-    component: 
-    name: The customer is responsible for developing, documenting, and maintaining an inventory of customer instances.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for developing, documenting, and maintaining an inventory of customer instances.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: CM-8(1)(3)(5)
-    component: 
-    name: The customer is responsible for:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'The customer is responsible for:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-8(1)(3)(5)
-    component: 
-    name: ·         Updating the inventory of customer instances as an integral part of instance installation, removal, and information system updates.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: '·         Updating the inventory of customer instances as an integral part of instance installation, removal, and information system updates.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-8(1)(3)(5)
-    component: 
-    name: ·         Employing automated mechanisms to continuously detect the addition of unauthorized customer instances into the information system and disabling network access by such customer instances or notifying designated organizational officials.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: '·         Employing automated mechanisms to continuously detect the addition of unauthorized customer instances into the information system and disabling network access by such customer instances or notifying designated organizational officials.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: CM-8(1)(3)(5)
-    component: 
-    name: ·         Verifying that all customer instances within the authorization boundary of the information system, are either inventoried as a part of the system or recognized by another system as a component within that system.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: '·         Verifying that all customer instances within the authorization boundary of the information system, are either inventoried as a part of the system or recognized by another system as a component within that system.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: CP-9, CP-9(1), CP-9(3)
-    component: 
-    name: It is the responsibility of AWS customers to manage (and test) the backup and recovery of their information system built on AWS infrastructure. This can be implemented by taking EBS snapshots of the system at organizational defined intervals and storing those using S3 data storage.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'CP-9, CP-9(1), CP-9(3)'
+    component: null
+    name: 'It is the responsibility of AWS customers to manage (and test) the backup and recovery of their information system built on AWS infrastructure. This can be implemented by taking EBS snapshots of the system at organizational defined intervals and storing those using S3 data storage.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-2
     component: EC2
-    name: Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS. 
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-2
     component: EC2
-    name: AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access). 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access).'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2
     component: EC2
-    name: Additionally, customers should employ a privilege escalation mechanism with logging on a per-user basis. For example, if the guest OS is Linux, after hardening their instance, they should utilize certificate-based SSHv2 to access the virtual instance, disable remote root login, use command-line logging, and use ‘sudo’ for privilege escalation. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'Additionally, customers should employ a privilege escalation mechanism with logging on a per-user basis. For example, if the guest OS is Linux, after hardening their instance, they should utilize certificate-based SSHv2 to access the virtual instance, disable remote root login, use command-line logging, and use ‘sudo’ for privilege escalation.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2
     component: EC2
-    name: Customers should generate their own key pairs in order to guarantee that they are unique, and not shared with other customers or with AWS.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'Customers should generate their own key pairs in order to guarantee that they are unique, and not shared with other customers or with AWS.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2
     component: EBS
-    name: Once a customer creates an Amazon EBS volume, the customer can attach it to an Amazon EC2 instance. Once attached, it will appear as a mounted device similar to any hard drive or other block device. At that point, the instance can interact with the volume just as it would with a local drive, formatting it with a file system or installing applications on it directly. The customer controls the EC2 instance an EBS volume may be attached to.
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Once a customer creates an Amazon EBS volume, the customer can attach it to an Amazon EC2 instance. Once attached, it will appear as a mounted device similar to any hard drive or other block device. At that point, the instance can interact with the volume just as it would with a local drive, formatting it with a file system or installing applications on it directly. The customer controls the EC2 instance an EBS volume may be attached to.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-2
     component: VPC
-    name: Through the AWS Management Console, Amazon Virtual Private Cloud (Amazon VPC) lets customers provision a private, isolated section of the Amazon Web Services (AWS) Cloud where customers can launch AWS resources in the customer-defined virtual network. Customers can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    name: 'Through the AWS Management Console, Amazon Virtual Private Cloud (Amazon VPC) lets customers provision a private, isolated section of the Amazon Web Services (AWS) Cloud where customers can launch AWS resources in the customer-defined virtual network. Customers can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2(1)(2)(8)
-    component: 
-    name: AWS Multi-Factor Authentication (AWS MFA) provides an extra level of security that customer agencies apply to their AWS environment. Customer agencies can enable AWS MFA for their account and for individual users they have created under their account. With AWS MFA enabled a user that signs into the FedCloud Console will be prompted for their username and password, as well as for an authentication code from their MFA device. Taken together, these multiple factors provide increased security for customer agencies’ AWS account settings and resources.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'AWS Multi-Factor Authentication (AWS MFA) provides an extra level of security that customer agencies apply to their AWS environment. Customer agencies can enable AWS MFA for their account and for individual users they have created under their account. With AWS MFA enabled a user that signs into the FedCloud Console will be prompted for their username and password, as well as for an authentication code from their MFA device. Taken together, these multiple factors provide increased security for customer agencies’ AWS account settings and resources.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2(1)(2)(8)
-    component: 
-    name: Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Virtual EC2 instances are completely controlled by the customer agency. Customers have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to customer instances and cannot log into the guest OS.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-2(1)(2)(8)
-    component: 
-    name: AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access)
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'AWS recommends a base set of security best practices to include disabling password-only access to their servers, and utilizing multi-factor authentication to gain access to their instances (or at a minimum certificate-based SSH Version 2 access)'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: IA-3
-    component: 
-    name: Customers are responsible for creating and managing compute instances, virtual networks, and block stores. The customer’s list of specific devices and/or types of devices is the list of compute instances, virtual networks, and block stores.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for creating and managing compute instances, virtual networks, and block stores. The customer’s list of specific devices and/or types of devices is the list of compute instances, virtual networks, and block stores.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: Customers are responsible for managing all user and device authentication to customer virtual instances within EC2. As such, customers are responsible for defining procedures related to:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for managing all user and device authentication to customer virtual instances within EC2. As such, customers are responsible for defining procedures related to:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: a.        Receiving authorization from a designated organizational official to assign a user or device identifier;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Receiving authorization from a designated organizational official to assign a user or device identifier;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: b.       Selecting an identifier that uniquely identifies an individual or device;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Selecting an identifier that uniquely identifies an individual or device;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: c.        Assigning the user identifier to the intended party or the device identifier to the intended device;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Assigning the user identifier to the intended party or the device identifier to the intended device;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: d.       Preventing reuse of user or device identifiers for a defined time period (GSA S/SO or Contractor recommendation to be approved and accepted by the GSA AO); and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'd.       Preventing reuse of user or device identifiers for a defined time period (GSA S/SO or Contractor recommendation to be approved and accepted by the GSA AO); and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4
-    component: 
-    name: e.       Disabling the user identifier after a defined time period (GSA requires 90 days for User Level Accounts - GSA S/SO or Contractor recommendation to be approved and accepted by the GSA AO for non-user level accounts (device, token, smart cards, etc).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'e.       Disabling the user identifier after a defined time period (GSA requires 90 days for User Level Accounts - GSA S/SO or Contractor recommendation to be approved and accepted by the GSA AO for non-user level accounts (device, token, smart cards, etc).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-4(4)
-    component: 
-    name: Customer agencies restrict access to their compute instances, virtual networks, and block stores by applying user restrictions to the user account credentials used to access these.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customer agencies restrict access to their compute instances, virtual networks, and block stores by applying user restrictions to the user account credentials used to access these.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: Authentication of customer agency users to their virtual machines is outlined in the Customer Agency Authentication Path above under IA-2 and IA-2(1).
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'Authentication of customer agency users to their virtual machines is outlined in the Customer Agency Authentication Path above under IA-2 and IA-2(1).'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: Customer agencies own and manage authenticators for customer agency users, and should by:
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'Customer agencies own and manage authenticators for customer agency users, and should by:'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(a): Verifying, as part of the initial authenticator distribution, the identity of the individual and/or device receiving the authenticator;
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(a): Verifying, as part of the initial authenticator distribution, the identity of the individual and/or device receiving the authenticator;'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(d): Establishing and implementing administrative procedures for initial authenticator distribution, for lost/compromised or damaged authenticators, and for revoking authenticators;
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(d): Establishing and implementing administrative procedures for initial authenticator distribution, for lost/compromised or damaged authenticators, and for revoking authenticators;'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(e): Changing default content of authenticators upon information system installation;
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(e): Changing default content of authenticators upon information system installation;'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(f): Establishing minimum and maximum lifetime restrictions and reuse conditions for authenticators (if appropriate);
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(f): Establishing minimum and maximum lifetime restrictions and reuse conditions for authenticators (if appropriate);'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(g): Changing/refreshing authenticators at least as often as the GSA-defined parameter (GSA requires 90 days);
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(g): Changing/refreshing authenticators at least as often as the GSA-defined parameter (GSA requires 90 days);'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(h): Protecting authenticator content from unauthorized disclosure and modification; and
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(h): Protecting authenticator content from unauthorized disclosure and modification; and'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5
-    component: 
-    name: IA-5(i): Requiring users to take specific measures to safeguard authenticators.
-    implementation_status: not_implemented 
-    comment: Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems
+    component: null
+    name: 'IA-5(i): Requiring users to take specific measures to safeguard authenticators.'
+    implementation_status: not_implemented
+    comment: 'Auth to the virtual machines is done via SSH. MFA to AWS Console is managed via Google Authenticator. MFA for privileged access to the application is managed via SecureAuth. Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5(1)
-    component: 
-    name: Customers should configure their information systems for password-based authentication so that it:
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers should configure their information systems for password-based authentication so that it:'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-5(1)
-    component: 
-    name: a.        Enforces minimum password complexity of case sensitive characters (GSA requires a minimum of eight characters and must contain a combination of letters, numbers, and special characters).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Enforces minimum password complexity of case sensitive characters (GSA requires a minimum of eight characters and must contain a combination of letters, numbers, and special characters).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(1)
-    component: 
-    name: b.       Enforces at least one changed character when new passwords are created;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Enforces at least one changed character when new passwords are created;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(1)
-    component: 
-    name: c.        Encrypts passwords in storage and in transmission;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Encrypts passwords in storage and in transmission;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(1)
-    component: 
-    name: d.       Enforces password minimum and maximum lifetime restrictions (GSA requires one day minimum, 90 day maximum); and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'd.       Enforces password minimum and maximum lifetime restrictions (GSA requires one day minimum, 90 day maximum); and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(1)
-    component: 
-    name: e.       Prohibits password reuse for a predetermined time (GSA requires twenty four generations).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'e.       Prohibits password reuse for a predetermined time (GSA requires twenty four generations).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(2)
-    component: 
-    name: Customers that configure their information system for PKI-based authentication, should:
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers that configure their information system for PKI-based authentication, should:'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(2)
-    component: 
-    name: a.        Validate certificates by constructing a certification path with status information to an accepted trust anchor;
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'a.        Validate certificates by constructing a certification path with status information to an accepted trust anchor;'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(2)
-    component: 
-    name: b.       Enforce authorized access to the corresponding private key; and
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'b.       Enforce authorized access to the corresponding private key; and'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(2)
-    component: 
-    name: c.        Map the authenticated identity to the user account.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'c.        Map the authenticated identity to the user account.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(3)
-    component: 
-    name: Customers are responsible for requiring that the registration process to receive HSPD12 smart cards be carried out in person before a designated registration authority with authorization by a designated organizational official (e.g., a supervisor).
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for requiring that the registration process to receive HSPD12 smart cards be carried out in person before a designated registration authority with authorization by a designated organizational official (e.g., a supervisor).'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-5(6)
-    component: 
-    name: Customers are responsible for ensuring that critical information, such as privileged credentials, be encrypted in transit and at rest, and that they define requirements for access, access control, access logging and physical control.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers are responsible for ensuring that critical information, such as privileged credentials, be encrypted in transit and at rest, and that they define requirements for access, access control, access logging and physical control.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: IA-7
-    component: 
-    name: Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that they establish within their Virtual Machine environments.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that they establish within their Virtual Machine environments.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: IA-8
-    component: 
-    name: See IA-2 and IA-2(1) for the customer’s responsibility regarding agency authentication to their compute resources.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'See IA-2 and IA-2(1) for the customer’s responsibility regarding agency authentication to their compute resources.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: IR-4, IR-4(1)
-    component: 
-    name: Incident handling for customer storage, VMs, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented in the IR plan.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'IR-4, IR-4(1)'
+    component: null
+    name: 'Incident handling for customer storage, VMs, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented in the IR plan.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: IR-4, IR-4(1)
-    component: 
-    name: The customer is responsible for developing IR plans and testing that includes consideration for any controls deferred to the customer relating to shared touch points included in the AWS authorization boundary and any customer applications leveraging the AWS infrastructure.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'IR-4, IR-4(1)'
+    component: null
+    name: 'The customer is responsible for developing IR plans and testing that includes consideration for any controls deferred to the customer relating to shared touch points included in the AWS authorization boundary and any customer applications leveraging the AWS infrastructure.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: IR-6, IR-6(1)
-    component: 
-    name: Incident reporting for customer storage, virtual machines, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented and/or referenced in the IR plan.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'IR-6, IR-6(1)'
+    component: null
+    name: 'Incident reporting for customer storage, virtual machines, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented and/or referenced in the IR plan.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: IR-6, IR-6(1)
-    component: 
-    name: Customers should work with AWS to develop an agreed upon reporting process and method to receive notification of security incidents involving the potential breach of customer data. Please refer to IR-7 for notification details.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'IR-6, IR-6(1)'
+    component: null
+    name: 'Customers should work with AWS to develop an agreed upon reporting process and method to receive notification of security incidents involving the potential breach of customer data. Please refer to IR-7 for notification details.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: MP-2
-    component: 
-    name: Customers opting to use the AWS Import/Export services should utilize types of digital media consistent with their organization’s policies.  When preparing and/or receiving the media containing their imported/exported data from S3 or EBS, the customer should restrict media access to authorized individuals within their organization and define the appropriate security measures to be used to protect defined media types (i.e. encryption, controlled transport, and sanitization consistent with their organization’s policies.)
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers opting to use the AWS Import/Export services should utilize types of digital media consistent with their organization’s policies.  When preparing and/or receiving the media containing their imported/exported data from S3 or EBS, the customer should restrict media access to authorized individuals within their organization and define the appropriate security measures to be used to protect defined media types (i.e. encryption, controlled transport, and sanitization consistent with their organization’s policies.)'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: MP-3
-    component: 
-    name: It is the customer’s responsibility when opting to use AWS Import/Export services to label their media containing their imported/exported data from their S3 bucket or EBS in accordance with their organization’s data classification labels.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'It is the customer’s responsibility when opting to use AWS Import/Export services to label their media containing their imported/exported data from their S3 bucket or EBS in accordance with their organization’s data classification labels.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-4, MP-4(1)
-    component: 
-    name: EBS customers opting to use the AWS Import/Export service must physically control and securely store their digital media of choice containing their data for import/export using a FIPS 140-2 cryptography mechanism.  The customer should protect their information system media until the media is destroyed and/or sanitized using approved equipment, techniques, and procedures consistent with their organization’s policies.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-4, MP-4(1)'
+    component: null
+    name: 'EBS customers opting to use the AWS Import/Export service must physically control and securely store their digital media of choice containing their data for import/export using a FIPS 140-2 cryptography mechanism.  The customer should protect their information system media until the media is destroyed and/or sanitized using approved equipment, techniques, and procedures consistent with their organization’s policies.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-4, MP-4(1)
-    component: 
-    name: Customers opting to use the AWS Import/Export services must ensure that their preferred method of media storage is encrypted using a FIPS 140-2 validated encryption.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-4, MP-4(1)'
+    component: null
+    name: 'Customers opting to use the AWS Import/Export services must ensure that their preferred method of media storage is encrypted using a FIPS 140-2 validated encryption.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-5, MP-5(2)(4)
-    component: 
-    name: For EBS customers opting to use the AWS Import/Export service, it is the customer’s responsibility to protect and control their digital media of choice containing their imported/exported EBS region data during transport outside of controlled areas using FIPS 140-2 encryption methods.  During transport, the customer needs to maintain accountability for information system media and restrict the activities associated with transport of such media to authorized personnel.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-5, MP-5(2)(4)'
+    component: null
+    name: 'For EBS customers opting to use the AWS Import/Export service, it is the customer’s responsibility to protect and control their digital media of choice containing their imported/exported EBS region data during transport outside of controlled areas using FIPS 140-2 encryption methods.  During transport, the customer needs to maintain accountability for information system media and restrict the activities associated with transport of such media to authorized personnel.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-5, MP-5(2)(4)
-    component: 
-    name: For customers opting to use the AWS Import/Export service, they have the responsibility to document the restriction of activities associated with the transport of their imported/exported EBS data and to employ the appropriate encryption method (using a FIPS 140-2 validated cryptography mechanism) of their stored data during transport.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-5, MP-5(2)(4)'
+    component: null
+    name: 'For customers opting to use the AWS Import/Export service, they have the responsibility to document the restriction of activities associated with the transport of their imported/exported EBS data and to employ the appropriate encryption method (using a FIPS 140-2 validated cryptography mechanism) of their stored data during transport.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-6, MP-6(4)
-    component: 
-    name: It is the customer’s responsibility when opting to use the AWS Import/Export service to sanitize information system media containing their imported/exported EBS region data prior to disposal, release out of organizational control, or release for reuse.  The customer should employ sanitization mechanisms with strength and integrity commensurate with the classification or sensitivity of the information in accordance to their organization’s policy.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-6, MP-6(4)'
+    component: null
+    name: 'It is the customer’s responsibility when opting to use the AWS Import/Export service to sanitize information system media containing their imported/exported EBS region data prior to disposal, release out of organizational control, or release for reuse.  The customer should employ sanitization mechanisms with strength and integrity commensurate with the classification or sensitivity of the information in accordance to their organization’s policy.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: MP-6, MP-6(4)
-    component: 
-    name: Customers opting to use the AWS Import/Export service from their EBS region should sanitize media used for the import/export service (media of which is provided by the customer) in accordance to their federal organization’s classification policy and/or federal standards.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'MP-6, MP-6(4)'
+    component: null
+    name: 'Customers opting to use the AWS Import/Export service from their EBS region should sanitize media used for the import/export service (media of which is provided by the customer) in accordance to their federal organization’s classification policy and/or federal standards.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: RA-5, RA-5(1)(2)(3)(6)(9)
-    component: 
-    name: AWS operates under a model of shared responsibility between the customer and AWS. AWS provides AMIs for client VMs that, after instantiation, are fully the customer agency’s’ responsibility. These default images are not included in vulnerability scanning activities conducted by AWS. Additionally, AWS will not maintain administrator access to customer VMs. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'RA-5, RA-5(1)(2)(3)(6)(9)'
+    component: null
+    name: 'AWS operates under a model of shared responsibility between the customer and AWS. AWS provides AMIs for client VMs that, after instantiation, are fully the customer agency’s’ responsibility. These default images are not included in vulnerability scanning activities conducted by AWS. Additionally, AWS will not maintain administrator access to customer VMs.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: RA-5, RA-5(1)(2)(3)(6)(9)
-    component: 
-    name: Upon deployment of virtual machines, the customer assumes full administrator access and is responsible for performing additional application installation, configuration, patching, security hardening, operating system vulnerability scanning, web application vulnerability scanning, and database vulnerability scanning (as applicable) for assets with which they have implementation responsibility (above the hypervisor, within each instance) as necessary. Customer management of the security of their operating environment as well as conducting vulnerability scans and pen-tests shall be conducted in accordance with their own Risk Assessment, the AWS Acceptable Use Policy, and the AWS Vulnerability / Penetration Testing Request Form. 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'RA-5, RA-5(1)(2)(3)(6)(9)'
+    component: null
+    name: 'Upon deployment of virtual machines, the customer assumes full administrator access and is responsible for performing additional application installation, configuration, patching, security hardening, operating system vulnerability scanning, web application vulnerability scanning, and database vulnerability scanning (as applicable) for assets with which they have implementation responsibility (above the hypervisor, within each instance) as necessary. Customer management of the security of their operating environment as well as conducting vulnerability scans and pen-tests shall be conducted in accordance with their own Risk Assessment, the AWS Acceptable Use Policy, and the AWS Vulnerability / Penetration Testing Request Form.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: RA-5, RA-5(1)(2)(3)(6)(9)
-    component: 
-    name: Customers that want to conduct vulnerability scans and pen-tests of their operating environment must first contact AWS for permission To do so, AWS uses a web form to collect the information necessary to review security audit requests. In order to begin the authorization process, please visit the following AWS site: http://aws.amazon.com/security/penetration-testing/
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'RA-5, RA-5(1)(2)(3)(6)(9)'
+    component: null
+    name: 'Customers that want to conduct vulnerability scans and pen-tests of their operating environment must first contact AWS for permission To do so, AWS uses a web form to collect the information necessary to review security audit requests. In order to begin the authorization process, please visit the following AWS site: http://aws.amazon.com/security/penetration-testing/'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: RA-5, RA-5(1)(2)(3)(6)(9)
-    component: 
-    name: At the site, the customer selects the "AWS Vulnerability / Penetration Testing Request Form" link and completes the form as requested. This form also includes the AWS Terms and Policies with regard to testing. Once the form is completed and received by AWS, the authorization review process is conducted and normally takes 1-2 business days to complete.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'RA-5, RA-5(1)(2)(3)(6)(9)'
+    component: null
+    name: 'At the site, the customer selects the "AWS Vulnerability / Penetration Testing Request Form" link and completes the form as requested. This form also includes the AWS Terms and Policies with regard to testing. Once the form is completed and received by AWS, the authorization review process is conducted and normally takes 1-2 business days to complete.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: SA-6
-    component: 
-    name: Customers are responsible for using AWS-provided guest operating systems, software and associated documentation in accordance with contract agreements and copyright laws.  In addition, customers are responsible for implementing the Software Usage Restrictions control for the applications that the customer establishes within their Virtual Machine environments.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems. "Withdrawn: Incorporated into CM-10 and SI-7"
+    component: null
+    name: 'Customers are responsible for using AWS-provided guest operating systems, software and associated documentation in accordance with contract agreements and copyright laws.  In addition, customers are responsible for implementing the Software Usage Restrictions control for the applications that the customer establishes within their Virtual Machine environments.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems. "Withdrawn: Incorporated into CM-10 and SI-7"'
     fips: moderate
 -
     key: SC-4
-    component: 
-    name: Customer agencies are responsible for configuring their storage and compute resources within AWS to prevent unauthorized and unintended information transfer via shared system resources.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customer agencies are responsible for configuring their storage and compute resources within AWS to prevent unauthorized and unintended information transfer via shared system resources.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: SC-7
-    component: 
-    name: Customer agencies are responsible for maintaining host-based firewall on compute instances in order to protect against malicious communications at the external boundary of the system. In addition, where the customer agencies have established key internal boundaries within the system, the customer agency is responsible for the setup and configuration of their VPC in order to enforce communications rules between internal networks.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customer agencies are responsible for maintaining host-based firewall on compute instances in order to protect against malicious communications at the external boundary of the system. In addition, where the customer agencies have established key internal boundaries within the system, the customer agency is responsible for the setup and configuration of their VPC in order to enforce communications rules between internal networks.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: SC-7(1)(2)(3)(4)(5)(7)(8)
-    component: 
-    name: Customers may set up and configure a VPC in order to virtually allocate publicly accessible information system components to separate sub-networks with separate physical network interfaces.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers may set up and configure a VPC in order to virtually allocate publicly accessible information system components to separate sub-networks with separate physical network interfaces.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: (12)(13)(18)
-    component: 
-    name: VPC also provides customer agencies with an IPsec VPN. IPsec VPN is an IPsec VPN connection connects a customer’s VPC to another network designated by the customer.  IPsec is a protocol suite for securing Internet Protocol (IP) communications by authenticating and encrypting each IP packet of a data stream.  Amazon VPC customers can create an IPsec VPN connection to their VPC by first establishing an Internet Key Exchange (IKE) security association between their Amazon VPC VPN gateway and another network gateway using a pre-shared key as the authenticator.  
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'VPC also provides customer agencies with an IPsec VPN. IPsec VPN is an IPsec VPN connection connects a customer’s VPC to another network designated by the customer.  IPsec is a protocol suite for securing Internet Protocol (IP) communications by authenticating and encrypting each IP packet of a data stream.  Amazon VPC customers can create an IPsec VPN connection to their VPC by first establishing an Internet Key Exchange (IKE) security association between their Amazon VPC VPN gateway and another network gateway using a pre-shared key as the authenticator.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: SC-7
-    component: 
-    name: Upon establishment, IKE negotiates an ephemeral key to secure future IKE messages.  Proper establishment of an IKE security association requires complete agreement among the parameters, including SHA-1 authentication and AES 128-bit encryption.  Next, using the IKE ephemeral key, keys are established between the VPN gateway and customer gateway to form an IPsec security association.  Traffic between gateways is encrypted and decrypted using this security association.  IKE automatically rotates the ephemeral keys used to encrypt traffic within the IPsec security association on a regular basis to ensure confidentiality of communications.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Upon establishment, IKE negotiates an ephemeral key to secure future IKE messages.  Proper establishment of an IKE security association requires complete agreement among the parameters, including SHA-1 authentication and AES 128-bit encryption.  Next, using the IKE ephemeral key, keys are established between the VPN gateway and customer gateway to form an IPsec security association.  Traffic between gateways is encrypted and decrypted using this security association.  IKE automatically rotates the ephemeral keys used to encrypt traffic within the IPsec security association on a regular basis to ensure confidentiality of communications.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: SC-8, SC-8(1) 
-    component: 
-    name: Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their storage and virtual machine environments.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'SC-8, SC-8(1)'
+    component: null
+    name: 'Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their storage and virtual machine environments.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: SC-9, SC-9(1)
-    component: 
-    name: 
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'SC-9, SC-9(1)'
+    component: null
+    name: null
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: SC-12
-    component: 
-    name: Customers are responsible for establishing and managing cryptographic keys for required cryptography employed within their information system
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for establishing and managing cryptographic keys for required cryptography employed within their information system'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: SC-13, SC-13(1)
-    component: 
-    name: Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their Virtual Machine environments.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'SC-13, SC-13(1)'
+    component: null
+    name: 'Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their Virtual Machine environments.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: SC-23
-    component: 
-    name: Customers are responsible for ensuring the information system provides mechanisms to protect the authenticity of communications sessions.
-    implementation_status: 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers are responsible for ensuring the information system provides mechanisms to protect the authenticity of communications sessions.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: SC-28, SC-28(1)
-    component: 
-    name: Customers have complete control over their compute instances, virtual networks, and block stores in EC2, VPC, and EBS, respectively. Customers should configure their compute instances and block stores to protect the confidentiality and integrity of their information at rest.
-    implementation_status: 
-    comment: 
-    fips: 
+    key: 'SC-28, SC-28(1)'
+    component: null
+    name: 'Customers have complete control over their compute instances, virtual networks, and block stores in EC2, VPC, and EBS, respectively. Customers should configure their compute instances and block stores to protect the confidentiality and integrity of their information at rest.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
     key: SC-32
-    component: 
-    name: Customers are responsible for setting up, configuring and managing their computer systems into virtual private networks (VPCs) that partitions their information system into components residing in separate virtual domains (or environments) as deemed necessary.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'Customers are responsible for setting up, configuring and managing their computer systems into virtual private networks (VPCs) that partitions their information system into components residing in separate virtual domains (or environments) as deemed necessary.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: SI-2, SI-2(2)
-    component: 
-    name: Customers are responsible for performing operating system vulnerability scanning, web application, and database scanning (as applicable) for assets for which they have implementation responsibility (above the hypervisor). AWS provides Amazon Machine Images (AMIs) for client Virtual Machines (VMs) that after instantiation are fully the customer agencies responsibility.  Upon deployment of virtual machines, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary.  AWS will not maintain administrator access to customer VMs. These default images are not included in vulnerability scanning activities conduct by AWS or its Approved Scanning Vendor (ASV).
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'SI-2, SI-2(2)'
+    component: null
+    name: 'Customers are responsible for performing operating system vulnerability scanning, web application, and database scanning (as applicable) for assets for which they have implementation responsibility (above the hypervisor). AWS provides Amazon Machine Images (AMIs) for client Virtual Machines (VMs) that after instantiation are fully the customer agencies responsibility.  Upon deployment of virtual machines, the customer assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning and application installation, as necessary.  AWS will not maintain administrator access to customer VMs. These default images are not included in vulnerability scanning activities conduct by AWS or its Approved Scanning Vendor (ASV).'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: SI-3, SI-3(1)(2)(3)
-    component: 
-    name: Customers are responsible for installing, configuring, and maintaining anti-virus and malicious code protection on their virtual machines and related applications. Customers should centrally manages malicious code protection mechanisms and configure automatic updates including signature definitions. Customers should also ensure the information system prevents non-privileged users from circumventing malicious code protection capabilities.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'SI-3, SI-3(1)(2)(3)'
+    component: null
+    name: 'Customers are responsible for installing, configuring, and maintaining anti-virus and malicious code protection on their virtual machines and related applications. Customers should centrally manages malicious code protection mechanisms and configure automatic updates including signature definitions. Customers should also ensure the information system prevents non-privileged users from circumventing malicious code protection capabilities.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
-    key: SI-4, SI-4(2)(4)(5)(6)
-    component: 
-    name: Customers are responsible for monitoring alerts and identifying unauthorized use of information systems. In addition, customers are responsible for implementing the Information System Monitoring Tools and Techniques control for the applications that tenants establish within their Virtual Machine environments.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    key: 'SI-4, SI-4(2)(4)(5)(6)'
+    component: null
+    name: 'Customers are responsible for monitoring alerts and identifying unauthorized use of information systems. In addition, customers are responsible for implementing the Information System Monitoring Tools and Techniques control for the applications that tenants establish within their Virtual Machine environments.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: SI-6
-    component: 
-    name: 
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: null
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
-    key: SI-7, SI-7(1)
-    component: 
-    name: The customer is responsible for monitoring and detecting unauthorized changes to software and information within their information system as well as assessing the integrity of software and information by performing integrity scans of the information system at least quarterly
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    key: 'SI-7, SI-7(1)'
+    component: null
+    name: 'The customer is responsible for monitoring and detecting unauthorized changes to software and information within their information system as well as assessing the integrity of software and information by performing integrity scans of the information system at least quarterly'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: SI-9
-    component: 
-    name: The customer is responsible for restricting the capability to input information to the information system to authorized personnel.
-    implementation_status: not_implemented 
-    comment: Not included in LATO controls for Low systems
+    component: null
+    name: 'The customer is responsible for restricting the capability to input information to the information system to authorized personnel.'
+    implementation_status: not_implemented
+    comment: 'Not included in LATO controls for Low systems'
     fips: moderate
 -
     key: SI-10
-    component: 
-    name: Customers using the AWS EBS offering should develop a policy identifying acceptable data types to be stored. The customer is also responsible for defining field types, creating input validation rules for specific objects, as well as configuring any input restrictions and conducting any validity checks required on the information they place into the storage environment. In addition, the customer is responsible for ensuring only authorized individuals are designated as administrators within the management portal.
-    implementation_status: not_implemented 
-    comment: 
-    fips: 
+    component: null
+    name: 'Customers using the AWS EBS offering should develop a policy identifying acceptable data types to be stored. The customer is also responsible for defining field types, creating input validation rules for specific objects, as well as configuring any input restrictions and conducting any validity checks required on the information they place into the storage environment. In addition, the customer is responsible for ensuring only authorized individuals are designated as administrators within the management portal.'
+    implementation_status: not_implemented
+    comment: null
+    fips: null
 -
     key: AC-2
     component: s3
     name: "Customers are responsible for all aspects of this control related to user account access to objects stored in S3. Data stored in  S3 is secure by default and only customer agencies have access to S3 resources they create. \n\nS3 supports multiple access control mechanisms. Customer agencies have the flexibility to control who can access their data as well as how, when, and where they can access it. Amazon S3 provides various access control mechanisms: Identity and Access Management (IAM) policies, Access Control Lists (ACLs), bucket policies, and query string authentication.  \n\nIAM enables organizations with multiple employees to create and manage multiple users under a single AWS account. With IAM policies, customer agencies can grant IAM users granular control to  S3 buckets and objects. \n\nCustomer agencies can use ACLs to selectively add (grant) certain permissions on individual objects.  S3 Bucket Policies can be used to add or deny permissions across some or all of the objects within a single bucket. \n\nWith Query string authentication, customer agencies have the ability to share  S3 objects through URLs that are valid for a predefined expiration time. Customer’s agencies can securely upload/download data to  S3 via the SSL encrypted endpoints using the HTTPS protocol."
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
     component: s3
     name: "Customers are responsible for: \n- Establishing and administering privileged user accounts in accordance with a role-based access scheme that organizes information system and network privileges into roles\n"
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
     component: s3
-    name: - Tracking and monitoring privileged role assignments.
+    name: '- Tracking and monitoring privileged role assignments.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
     component: s3
-    name: - Disabling temporary, emergency, inactive accounts after a defined time period.
+    name: '- Disabling temporary, emergency, inactive accounts after a defined time period.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-2(1)(2)(3)(4)(7)
     component: s3
-    name: - Implementing auditing of account creation, modification, Disabling, and termination actions and notifying, as required, appropriat
+    name: '- Implementing auditing of account creation, modification, Disabling, and termination actions and notifying, as required, appropriat'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-3
     component: s3
-    name: Customers are responsible for establishing groups and permissions via API endpoints, thereby, ensuring that the process is performed in accordance with the customer’s access control policy and the authorizations granted to the system users are approved as required.
+    name: 'Customers are responsible for establishing groups and permissions via API endpoints, thereby, ensuring that the process is performed in accordance with the customer’s access control policy and the authorizations granted to the system users are approved as required.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-4
     component: s3
-    name: Customers are responsible for configuring their bucket and object-level access controls, with defaults that only permit authenticated access by the bucket and/or object creator.  
+    name: 'Customers are responsible for configuring their bucket and object-level access controls, with defaults that only permit authenticated access by the bucket and/or object creator.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-4
     component: s3
-    name: Customers are responsible for accessing  S3 via SSL endpoints. These encrypted endpoints are accessible from both the Internet and from within  S3 and EC2, ensuring that data are transferred securely both within AWS and to and from sources outside of AWS.e individuals.
+    name: 'Customers are responsible for accessing  S3 via SSL endpoints. These encrypted endpoints are accessible from both the Internet and from within  S3 and EC2, ensuring that data are transferred securely both within AWS and to and from sources outside of AWS.e individuals.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-5
     component: s3
-    name: Customers are responsible for documenting and implementing the separation of duties of individuals as necessary, to prevent malevolent activity without collusion.
+    name: 'Customers are responsible for documenting and implementing the separation of duties of individuals as necessary, to prevent malevolent activity without collusion.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-6, AC-6(1)(2)
+    key: 'AC-6, AC-6(1)(2)'
     component: s3
-    name: Customers are responsible for employing the concept of least privilege, allowing only authorized accesses for their users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. Refer also to AC-5.
+    name: 'Customers are responsible for employing the concept of least privilege, allowing only authorized accesses for their users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions. Refer also to AC-5.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-7
     component: s3
     name: "If applicable to the customer’s environment, customers are responsible for: \n- Enforcing an agency defined limit of consecutive invalid access attempts by a user during an agency defined time period; and  "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-7
     component: s3
-    name: - Automatically locking the account for the organization’s defined time period, locking the account until it is released by an administrator, or delaying the next login prompt for the organization’s defined delay when the maximum number of unsuccessful attempts is exceeded.
+    name: '- Automatically locking the account for the organization’s defined time period, locking the account until it is released by an administrator, or delaying the next login prompt for the organization’s defined delay when the maximum number of unsuccessful attempts is exceeded.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-8
     component: s3
-    name: If applicable to the customer’s environment, customers are responsible for implementing their agency’s banner or a system use notification banner to display upon login to their S3 storage.
+    name: 'If applicable to the customer’s environment, customers are responsible for implementing their agency’s banner or a system use notification banner to display upon login to their S3 storage.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-10
     component: s3
-    name: If applicable to the customer’s environment, customer agencies are responsible for implementing concurrent session control restrictions on their S3 storage.
+    name: 'If applicable to the customer’s environment, customer agencies are responsible for implementing concurrent session control restrictions on their S3 storage.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-11, AC-11(1)
+    key: 'AC-11, AC-11(1)'
     component: s3
-    name: Customers are responsible for enabling session lock on their compute instances to meet the organization’s-defined parameter, and are responsible for ensuring the session lock mechanism, when activated on a device with a display screen, places a publicly viewable pattern onto the associated display, hiding what was previously visible on the screen.
+    name: 'Customers are responsible for enabling session lock on their compute instances to meet the organization’s-defined parameter, and are responsible for ensuring the session lock mechanism, when activated on a device with a display screen, places a publicly viewable pattern onto the associated display, hiding what was previously visible on the screen.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17
     component: s3
     name: "Customer agency connections to their storage resources in S3 are accomplished through API calls to their storage buckets in S3. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the  API endpoint. As such, customer agencies are responsible for: \n- Documenting allowed methods of remote access to their objects stored in S3 as noted above; "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17
     component: s3
-    name: - Establishing usage restrictions and implementation guidance for remote access via API;
+    name: '- Establishing usage restrictions and implementation guidance for remote access via API;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17
     component: s3
-    name: - Setting up bucket logging in their customer storage buckets in order to monitor for unauthorized remote access to their objects stored in S3; and 
+    name: '- Setting up bucket logging in their customer storage buckets in order to monitor for unauthorized remote access to their objects stored in S3; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17
     component: s3
-    name: - Authorize remote access to their storage resources in S3 prior to connection by using signed API calls.
+    name: '- Authorize remote access to their storage resources in S3 prior to connection by using signed API calls.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17(1)(2)(3)(4)(5)(7)(8)
     component: s3
-    name: Customer agency connections to their storage resources in S3 are accomplished through API calls to their storage buckets in. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the  API endpoint. 
-    implementation_status: 
-    comment: 
-    fips: 
+    name: 'Customer agency connections to their storage resources in S3 are accomplished through API calls to their storage buckets in. These connections are considered “remote connections” because these connections are initiated from an external location (the customer’s location) via the Internet to the  API endpoint.'
+    implementation_status: null
+    comment: null
+    fips: null
 -
-    key: AC-17(1) 
+    key: AC-17(1)
     component: s3
-    name: Customers are responsible for employing automated mechanisms to facilitate the monitoring and control of remote access methods to storage resources in S3.
+    name: 'Customers are responsible for employing automated mechanisms to facilitate the monitoring and control of remote access methods to storage resources in S3.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17(2)
     component: s3
-    name: Customers are responsible for using cryptography to protect the confidentiality and integrity of remote access sessions to storage resources in S3.
+    name: 'Customers are responsible for using cryptography to protect the confidentiality and integrity of remote access sessions to storage resources in S3.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AC-17(3)
     component: s3
-    name: Customers are responsible for routing all remote accesses through a limited number of managed access control points (GovCloud API endpoints).
+    name: 'Customers are responsible for routing all remote accesses through a limited number of managed access control points (GovCloud API endpoints).'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-17(4) 
+    key: AC-17(4)
     component: s3
-    name: Customers are responsible for authorizing the execution of privileged commands and access to security-relevant information via remote access only for compelling operational needs and documents the rationale for such access in the security plan for the information system.
+    name: 'Customers are responsible for authorizing the execution of privileged commands and access to security-relevant information via remote access only for compelling operational needs and documents the rationale for such access in the security plan for the information system.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-17(5) 
+    key: AC-17(5)
     component: s3
-    name: Customers are responsible for monitoring for unauthorized remote connections to their storage resources within the system boundary at the frequency determined acceptable by the organization, and takes appropriate action if an unauthorized connection is discovered.
+    name: 'Customers are responsible for monitoring for unauthorized remote connections to their storage resources within the system boundary at the frequency determined acceptable by the organization, and takes appropriate action if an unauthorized connection is discovered.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-17 (7) 
+    key: 'AC-17 (7)'
     component: s3
-    name: Customers are responsible for ensuring that remote sessions for accessing security functions match the organization’s policy; and
+    name: 'Customers are responsible for ensuring that remote sessions for accessing security functions match the organization’s policy; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AC-17(8) 
+    key: AC-17(8)
     component: s3
-    name: Customers are responsible for disabling networking protocols deemed to be non-secure by the organization except for explicitly identified components in support of specific operational requirements.
+    name: 'Customers are responsible for disabling networking protocols deemed to be non-secure by the organization except for explicitly identified components in support of specific operational requirements.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AU-2 
+    key: AU-2
     component: s3
-    name: Customers are responsible for establishing, implementing, reviewing configuring and updating auditable events on their storage resources and virtual machines, based on a risk assessment and mission/business needs. The collection and protection of these audits belongs to the customer as well.
+    name: 'Customers are responsible for establishing, implementing, reviewing configuring and updating auditable events on their storage resources and virtual machines, based on a risk assessment and mission/business needs. The collection and protection of these audits belongs to the customer as well.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-2(3)
     component: s3
-    name: Customers are responsible for reviewing and updating the list of auditable events annually or whenever there is a change in the threat environment.
+    name: 'Customers are responsible for reviewing and updating the list of auditable events annually or whenever there is a change in the threat environment.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-2(4)
     component: s3
-    name: Customers are responsible for auditing the execution of privileged functions in the list of events to be audited by the information system.
+    name: 'Customers are responsible for auditing the execution of privileged functions in the list of events to be audited by the information system.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AU-3, AU-3(1)
+    key: 'AU-3, AU-3(1)'
     component: s3
-    name: Customers are responsible for ensuring the information system produces audit records that contain sufficient information to, at a minimum, establish what type of event occurred, when (date and time) the event occurred, where the event occurred, the source of the event, the outcome (success or failure) of the event, and the identity of any user/subject associated with the event. 
+    name: 'Customers are responsible for ensuring the information system produces audit records that contain sufficient information to, at a minimum, establish what type of event occurred, when (date and time) the event occurred, where the event occurred, the source of the event, the outcome (success or failure) of the event, and the identity of any user/subject associated with the event.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AU-3, AU-3(1)
+    key: 'AU-3, AU-3(1)'
     component: s3
-    name: Customers should configure their information systems to audit for session, connection, transaction, or activity duration; for client-server transactions, the number of bytes received and bytes sent; additional informational messages to diagnose or identify the event; characteristics that describe or identify the object or resource being acted upon.
+    name: 'Customers should configure their information systems to audit for session, connection, transaction, or activity duration; for client-server transactions, the number of bytes received and bytes sent; additional informational messages to diagnose or identify the event; characteristics that describe or identify the object or resource being acted upon.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-4
     component: s3
-    name: Customers should allocate sufficient audit record storage capacity and configure their auditing to reduce the likelihood of such capacity being exceeded.
+    name: 'Customers should allocate sufficient audit record storage capacity and configure their auditing to reduce the likelihood of such capacity being exceeded.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-5
     component: s3
     name: "Customers should configure their information systems to: \n- Alert designated organizational officials in the event of an audit processing failure; and "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-5
     component: s3
-    name: - Overwrite oldest audit records (low-impact systems); Shut down system (moderate-impact systems)
+    name: '- Overwrite oldest audit records (low-impact systems); Shut down system (moderate-impact systems)'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-6
     component: s3
     name: "Customers are responsible for: \n- Reviewing and analyzing information system audit records at least weekly for indications of inappropriate or unusual activity, and report’s findings to designated organizational officials; and "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-6
     component: s3
-    name: - Adjusting the level of audit review, analysis, and reporting within the information system when there is a change in risk to organizational operations, organizational assets, individuals, other organizations, or the Nation based on law enforcement information, intelligence information, or other credible sources of information.
+    name: '- Adjusting the level of audit review, analysis, and reporting within the information system when there is a change in risk to organizational operations, organizational assets, individuals, other organizations, or the Nation based on law enforcement information, intelligence information, or other credible sources of information.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AU-8, AU-8(1)
+    key: 'AU-8, AU-8(1)'
     component: s3
-    name: Customers are responsible for configuring their information system to use internal system clocks to generate time stamps for audit records. 
+    name: 'Customers are responsible for configuring their information system to use internal system clocks to generate time stamps for audit records.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: AU-8, AU-8(1)
+    key: 'AU-8, AU-8(1)'
     component: s3
-    name: Customers are responsible for ensuring that their information system synchronizes internal information system clocks at a predetermined time.
+    name: 'Customers are responsible for ensuring that their information system synchronizes internal information system clocks at a predetermined time.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-9
     component: s3
-    name: Customers are responsible for ensuring their information system protects audit information and audit tools from unauthorized access, modification, and deletion.
+    name: 'Customers are responsible for ensuring their information system protects audit information and audit tools from unauthorized access, modification, and deletion.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-11
     component: s3
-    name: Customers are responsible for retaining audit records online for a predetermined time and should further preserve audit records off-line for a period that is in accordance with NARA requirements to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements.
+    name: 'Customers are responsible for retaining audit records online for a predetermined time and should further preserve audit records off-line for a period that is in accordance with NARA requirements to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-12
     component: s3
     name: "It is the customer’s responsibility to ensure their information system: \n- Provides audit record generation capability for the list of auditable events defined in AU-2 at all information system components where audit capability is deployed. "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-12
     component: s3
-    name: - Allows designated organizational personnel to select which auditable events are to be audited by specific components of the system; and
+    name: '- Allows designated organizational personnel to select which auditable events are to be audited by specific components of the system; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: AU-12
     component: s3
-    name: - Generates audit records for the list of audited events defined in AU-2 with the content as defined in AU-3.
+    name: '- Generates audit records for the list of audited events defined in AU-2 with the content as defined in AU-3.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: CP-9, CP-9(1), CP-9(3)
+    key: 'CP-9, CP-9(1), CP-9(3)'
     component: s3
-    name: It is the responsibility of AWS customers to manage (and test) the backup and recovery of their information system built on GovCloud infrastructure. This can be implemented by taking EBS snapshots of the system at organizational defined intervals and storing those using S3 data storage.
+    name: 'It is the responsibility of AWS customers to manage (and test) the backup and recovery of their information system built on GovCloud infrastructure. This can be implemented by taking EBS snapshots of the system at organizational defined intervals and storing those using S3 data storage.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-2
     component: s3
     name: "Data stored in  S3 is secure by default. Only customer agencies have access to the S3 resources they create.  S3 supports multiple access control mechanisms and also provides Server Side Encryption (AES-256).  \n\nCustomer agencies have the flexibility to control who can access their data as well as how, when, and where they can access it.  S3 provides various access control mechanisms: Identity and Access Management (IAM) policies, Access Control Lists (ACLs), bucket policies, and query string authentication.  \n\nIAM enables organizations with multiple employees to create and manage multiple users under a single AWS account. With IAM policies, customer agencies can grant IAM users granular control to  S3 buckets and objects. \n\nCustomer agencies can use ACLs to selectively add (grant) certain permissions on individual objects.  S3 Bucket Policies can be used to add or deny permissions across some or all of the objects within a single bucket.  \n\nWith Query string authentication, customer agencies have the ability to share  S3 objects through URLs that are valid for a predefined expiration time. \n\nCustomer agencies can securely upload/download data to  S3 via the TLS encrypted endpoints using the HTTPS protocol.  "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: IA-2(1)(2)(8) 
+    key: IA-2(1)(2)(8)
     component: s3
-    name: Multi-Factor Authentication (MFA) provides an extra level of security that customer agencies apply to their GovCloud environment. Customer agencies should enable MFA for IAM users they have created under their account.
+    name: 'Multi-Factor Authentication (MFA) provides an extra level of security that customer agencies apply to their GovCloud environment. Customer agencies should enable MFA for IAM users they have created under their account.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-3
     component: s3
-    name: Customers are responsible for creating and managing buckets to store objects in S3. The customer’s list of specific devices and/or types of devices is composed of the list of S3 buckets where objects are stored.
+    name: 'Customers are responsible for creating and managing buckets to store objects in S3. The customer’s list of specific devices and/or types of devices is composed of the list of S3 buckets where objects are stored.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4
     component: s3
     name: "Authentication to customer-stored data within S3 is described in the Customer Responsibility section of IA-2. Authentication to customer data in S3 is managed via the customer’s account. As such, customers are responsible for defining procedures related to: \n- Receiving authorization from a designated organizational official to assign an S3 user account identifier; "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4
     component: s3
-    name: - Selecting an identifier that uniquely identifies an S3 individual user account; 
+    name: '- Selecting an identifier that uniquely identifies an S3 individual user account;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4
     component: s3
-    name: - Assigning the S3 user identifier to the intended party; 
+    name: '- Assigning the S3 user identifier to the intended party;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4
     component: s3
-    name: - Preventing reuse of S3 user accounts identifiers for a predetermined time; and 
+    name: '- Preventing reuse of S3 user accounts identifiers for a predetermined time; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4
     component: s3
-    name: - Disabling the user identifiers after a predetermined time.
+    name: '- Disabling the user identifiers after a predetermined time.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-4(4)
     component: s3
-    name: Customer agencies restrict access to their objects store in S3 by applying user restriction to the user account credentials used to access their objects.
+    name: 'Customer agencies restrict access to their objects store in S3 by applying user restriction to the user account credentials used to access their objects.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
     name: "Authentication of customer agency users to their objects in S3 is outlined in the Customer Agency Authentication Path above under IA-2 and IA-2(1). \nCustomer agencies own and manage authenticators for customer agency users, and are responsible for: \n- IA-5(a): Verifying, as part of the initial authenticator distribution, the identity of the individual and/or device receiving the authenticator; "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(d): Establishing and implementing administrative procedures for initial authenticator distribution, for lost/compromised or damaged authenticators, and for revoking authenticators; 
+    name: '- IA-5(d): Establishing and implementing administrative procedures for initial authenticator distribution, for lost/compromised or damaged authenticators, and for revoking authenticators;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(e): Changing default content of authenticators upon information system installation; 
+    name: '- IA-5(e): Changing default content of authenticators upon information system installation;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(f): Establishing minimum and maximum lifetime restrictions and reuse conditions for authenticators (if appropriate);
+    name: '- IA-5(f): Establishing minimum and maximum lifetime restrictions and reuse conditions for authenticators (if appropriate);'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(g): Changing/refreshing authenticators as required; 
+    name: '- IA-5(g): Changing/refreshing authenticators as required;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(h): Protecting authenticator content from unauthorized disclosure and modification; and 
+    name: '- IA-5(h): Protecting authenticator content from unauthorized disclosure and modification; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5
     component: s3
-    name: - IA-5(i): Requiring users to take specific measures to safeguard authenticators.
+    name: '- IA-5(i): Requiring users to take specific measures to safeguard authenticators.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(1)
     component: s3
     name: "Customers should configure their information systems for password-based authentication so that it: \n- Enforces minimum password complexity of case sensitive characters. "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(1)
     component: s3
-    name: - Enforces at least one changed character when new passwords are created; 
+    name: '- Enforces at least one changed character when new passwords are created;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(1)
     component: s3
-    name: - Encrypts passwords in storage and in transmission; 
+    name: '- Encrypts passwords in storage and in transmission;'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(1)
     component: s3
-    name: - Enforces password minimum and maximum lifetime restrictions; and 
+    name: '- Enforces password minimum and maximum lifetime restrictions; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(1)
     component: s3
-    name: - Prohibits password reuse for a predetermined time.
+    name: '- Prohibits password reuse for a predetermined time.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(2)
     component: s3
     name: "Customers that configure their information system for PKI-based authentication, should: \n- Validate certificates by constructing a certification path with status information to an accepted trust anchor; "
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(2)
     component: s3
-    name: - Enforces authorized access to the corresponding private key; and 
+    name: '- Enforces authorized access to the corresponding private key; and'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(2)
     component: s3
-    name: - Maps the authenticated identity to the user account.
+    name: '- Maps the authenticated identity to the user account.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(3)
     component: s3
-    name: Customers are responsible for requiring that the registration process to receive HSPD12 smart cards be carried out in person before a designated registration authority with authorization by a designated organizational official (e.g., a supervisor).
+    name: 'Customers are responsible for requiring that the registration process to receive HSPD12 smart cards be carried out in person before a designated registration authority with authorization by a designated organizational official (e.g., a supervisor).'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-5(6)
     component: s3
-    name: Customers are responsible for ensuring that critical information, such as privileged credentials, be encrypted in transit and at rest, and that they define requirements for access, access control, access logging and physical control.
+    name: 'Customers are responsible for ensuring that critical information, such as privileged credentials, be encrypted in transit and at rest, and that they define requirements for access, access control, access logging and physical control.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-7
     component: s3
-    name: Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that they establish within their S3 and Virtual Machine environments.
+    name: 'Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that they establish within their S3 and Virtual Machine environments.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: IA-8
     component: s3
-    name: See IA-2 and IA-2(1) for the customer’s responsibility regarding authentication to their storage resources.
+    name: 'See IA-2 and IA-2(1) for the customer’s responsibility regarding authentication to their storage resources.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: IR-4, IR-4(1)
+    key: 'IR-4, IR-4(1)'
     component: s3
-    name: Incident handling for customer storage, VMs, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented in the IR plan. 
+    name: 'Incident handling for customer storage, VMs, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented in the IR plan.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: IR-4, IR-4(1)
+    key: 'IR-4, IR-4(1)'
     component: s3
-    name: The customer is responsible for developing IR plans and testing that includes consideration for any controls deferred to the customer relating to shared touch points included in the AWS authorization boundary and any customer applications leveraging the GovCloud infrastructure.
+    name: 'The customer is responsible for developing IR plans and testing that includes consideration for any controls deferred to the customer relating to shared touch points included in the AWS authorization boundary and any customer applications leveraging the GovCloud infrastructure.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: IR-6, IR-6(1)
+    key: 'IR-6, IR-6(1)'
     component: s3
-    name: Incident reporting for customer storage, virtual machines, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented and/or referenced in the IR plan.
+    name: 'Incident reporting for customer storage, virtual machines, and applications is the responsibility of the customer unless caused by the AWS or an incident is the result of AWS action.  Customers are responsible for providing a point of contact and escalation plan to AWS in order to facilitate communication of statuses of ongoing incidents to government staff. These customer contacts will be documented and/or referenced in the IR plan.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: IR-6, IR-6(1)
+    key: 'IR-6, IR-6(1)'
     component: s3
-    name: Customers should work with AWS to develop an agreed upon reporting process and method to receive notification of security incidents involving the potential breach of customer data. Please refer to IR-7 for notification details.
+    name: 'Customers should work with AWS to develop an agreed upon reporting process and method to receive notification of security incidents involving the potential breach of customer data. Please refer to IR-7 for notification details.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: RA-5, RA-5(1)(2)(3)(5)(6)(9)
+    key: 'RA-5, RA-5(1)(2)(3)(5)(6)(9)'
     component: s3
-    name: "AWS operates under a model of shared responsibility between the customer and AWS. Upon deployment of S3 storage, the customer assumes full administrator access and is responsible for performing additional vulnerability scanning, web application vulnerability scanning, and database vulnerability scanning (as applicable) for assets with which they have implementation responsibility (above the hypervisor, within each instance) as necessary. Customer management of the security of their operating environment as well as conducting vulnerability scans and pen-tests shall be conducted in accordance with their own Risk Assessment, the AWS Acceptable Use Policy, and the AWS Vulnerability / Penetration Testing Request Form.  \n\nCustomers that want to conduct vulnerability scans and pen-tests of their operating environment must first contact AWS for permission to do so, AWS uses a web form to collect the information necessary to review security audit requests. In order to begin the authorization process, please visit the following AWS site: http://aws.amazon.com/security/penetration-testing/ \n\nAt the site, the customer selects the \\"AWS Vulnerability / Penetration Testing Request Form\\" link and completes the form as requested. This form also includes the AWS Terms and Policies with regard to testing. Once the form is completed and received by AWS, the authorization review process is conducted and normally takes 1-2 business days to complete."
+    name: "AWS operates under a model of shared responsibility between the customer and AWS. Upon deployment of S3 storage, the customer assumes full administrator access and is responsible for performing additional vulnerability scanning, web application vulnerability scanning, and database vulnerability scanning (as applicable) for assets with which they have implementation responsibility (above the hypervisor, within each instance) as necessary. Customer management of the security of their operating environment as well as conducting vulnerability scans and pen-tests shall be conducted in accordance with their own Risk Assessment, the AWS Acceptable Use Policy, and the AWS Vulnerability / Penetration Testing Request Form.  \n\nCustomers that want to conduct vulnerability scans and pen-tests of their operating environment must first contact AWS for permission to do so, AWS uses a web form to collect the information necessary to review security audit requests. In order to begin the authorization process, please visit the following AWS site: http://aws.amazon.com/security/penetration-testing/ \n\nAt the site, the customer selects the AWS Vulnerability Penetration Testing Request Form link and completes the form as requested. This form also includes the AWS Terms and Policies with regard to testing. Once the form is completed and received by AWS, the authorization review process is conducted and normally takes 1-2 business days to complete."
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SC-4
     component: s3
-    name: Customers are responsible for configuring their storage and compute resources within AWS to prevent unauthorized and unintended information transfer via shared system resources.
+    name: 'Customers are responsible for configuring their storage and compute resources within AWS to prevent unauthorized and unintended information transfer via shared system resources.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: "SC-8, SC-8(1)  \nSC-9, SC-9(1)"
     component: s3
-    name: Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their storage and virtual machine environments.
+    name: 'Customers are responsible for configuring their web browsers, mobile devices, etc., to enable communications through encryption. In addition, customers are responsible for implementing the Transmission Integrity, Transmission Confidentiality, Use of Cryptography, and Session Authenticity controls for the applications that customers establish within their storage and virtual machine environments.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SC-12
     component: s3
-    name: Customers are responsible for establishing and managing cryptographic keys for required cryptography employed within their information system.
+    name: 'Customers are responsible for establishing and managing cryptographic keys for required cryptography employed within their information system.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SC-23
     component: s3
-    name: Customers are responsible for ensuring the information system provides mechanisms to protect the authenticity of communications sessions.
+    name: 'Customers are responsible for ensuring the information system provides mechanisms to protect the authenticity of communications sessions.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: SC-28, SC-28(1)
+    key: 'SC-28, SC-28(1)'
     component: s3
-    name: Customers are responsible for encrypting their data prior to uploading to S3. Customer agencies may consider using  S3 Server Side Encryption (SSE) as outlined above in order to protect their data at rest in S3.
+    name: 'Customers are responsible for encrypting their data prior to uploading to S3. Customer agencies may consider using  S3 Server Side Encryption (SSE) as outlined above in order to protect their data at rest in S3.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SC-32
     component: s3
-    name: Customer agencies are responsible for setting up, configuring and managing their computer systems into virtual private networks (VPCs) that partitions their information system into components residing in separate virtual domains (or environments) as deemed necessary.
+    name: 'Customer agencies are responsible for setting up, configuring and managing their computer systems into virtual private networks (VPCs) that partitions their information system into components residing in separate virtual domains (or environments) as deemed necessary.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
-    key: SI-2, SI-2(2)
+    key: 'SI-2, SI-2(2)'
     component: s3
-    name: Customers are responsible for performing operating system vulnerability scanning, web application, and database scanning (as applicable) for assets for which they have implementation responsibility (above the hypervisor). 
+    name: 'Customers are responsible for performing operating system vulnerability scanning, web application, and database scanning (as applicable) for assets for which they have implementation responsibility (above the hypervisor).'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SI-9
     component: s3
-    name: Customers are responsible for restricting the capability to input information to the information system to authorized personnel.
+    name: 'Customers are responsible for restricting the capability to input information to the information system to authorized personnel.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
+    comment: null
+    fips: null
 -
     key: SI-10
     component: s3
-    name: Customers using the S3 storage offering should develop a policy identifying acceptable data types to be stored. The customer is also responsible for defining field types, creating input validation rules for specific objects, as well as configuring any input restrictions and conducting any validity checks required on the information they place into the storage environment. In addition, the customer is responsible for ensuring only authorized individuals are designated as administrators.
+    name: 'Customers using the S3 storage offering should develop a policy identifying acceptable data types to be stored. The customer is also responsible for defining field types, creating input validation rules for specific objects, as well as configuring any input restrictions and conducting any validity checks required on the information they place into the storage environment. In addition, the customer is responsible for ensuring only authorized individuals are designated as administrators.'
     implementation_status: not_implemented
-    comment: 
-    fips: 
-
+    comment: null
+    fips: null
