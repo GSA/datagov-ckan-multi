@@ -1,0 +1,97 @@
+name: CIS Kubernetes 1.3
+
+'1':
+  type: family
+  name: Master Node Security Configuration
+  description: >-
+    Master Node Security Configuration
+
+'2':
+  type: family
+  name: Worker Node Security Configuration
+  description: >-
+    Worker Node Security Configuration
+
+'1.1':
+  family: '1'
+  name: API Server
+  description: >-
+    This section contains recommendations for kube-apiserver configuration.
+
+    1.1.1 Ensure that the --anonymous-auth argument is set to false (Not Scored)
+    1.1.2 Ensure that the --basic-auth-file argument is not set (Scored)
+    1.1.3 Ensure that the --insecure-allow-any-token argument is not set (Scored)
+    1.1.4 Ensure that the --kubelet-https argument is set to true (Scored)
+    1.1.5 Ensure that the --insecure-bind-address argument is not set (Scored)
+    1.1.6 Ensure that the --insecure-port argument is set to 0 (Scored)
+    1.1.7 Ensure that the --secure-port argument is not set to 0 (Scored)
+    1.1.8 Ensure that the --profiling argument is set to false (Scored)
+
+'cis-kubernetes-1.1.1':
+  family: '1'
+  name: Ensure that the --anonymous-auth argument is set to false
+  description: >-
+    *Description*
+    Disable anonymous requests to the API server.
+    *Rationale*
+    When enabled, requests that are not rejected by other configured
+    authentication methods are treated as anonymous requests. These requests are
+    then served by the API server. You should rely on authentication to
+    authorize access and disallow anonymous requests. If you are using RBAC
+    authorization, it is generally considered reasonable to allow anonymous
+    access to the API Server for health checks and discovery purposes, and hence
+    this recommendation is not scored. However, you should consider whether
+    anonymous discovery is an acceptable risk for your purposes.
+
+'cis-kubernetes-1.1.2':
+  family: '1'
+  name: Ensure that the --basic-auth-file argument is not set
+  description: >-
+    *Description*
+    Do not use basic authentication.
+    *Rationale*
+    Basic authentication uses plaintext credentials for authentication.
+    Currently, the basic authentication credentials last indefinitely, and the
+    password cannot be changed without restarting API server. The basic
+    authentication is currently supported for convenience. Hence, basic
+    authentication should not be used.
+
+'cis-kubernetes-1.1.3':
+  family: '1'
+  name: Ensure that the --insecure-allow-any-token argument is not set (Scored)
+
+'cis-kubernetes-1.1.4':
+  family: '1'
+  name: Ensure that the --kubelet-https argument is set to true (Scored)
+
+'cis-kubernetes-1.1.5':
+  family: '1'
+  name: Ensure that the --insecure-bind-address argument is not set (Scored)
+
+'cis-kubernetes-1.2':
+  family: '1'
+  name: This section contains recommendations for kube-scheduler configuration.
+
+'cis-kubernetes-1.2.1':
+  family: '1'
+  name: Scheduler - Ensure that the --profiling argument is set to false
+
+'cis-kubernetes-1.2.2':
+  family: '1'
+  name: Scheduler - Ensure that the --address argument is set to 127.0.0.1
+
+'cis-kubernetes-2.1':
+  family: '2'
+  name: This section contains recommendations for kubelet configuration.
+
+'cis-kubernetes-2.1.1':
+  family: '2'
+  name: Ensure that the --allow-privileged argument is set to false.
+
+'cis-kubernetes-2.1.2':
+  family: '2'
+  name: Ensure that the --anonymous-auth argument is set to false.
+
+'cis-kubernetes-2.1.3':
+  family: '2'
+  name: Ensure that the --authorization-mode argument is not set to AlwaysAllow.
