@@ -25,5 +25,7 @@ components:
 - ./components/Other
 standards:
 - ./standards/NIST-SP-800-53-rev4.yaml
+- ./standards/cis-kubernetes-1.3.yaml
 certifications:
 - ./certifications/fisma-low-impact.yaml
+- ./certifications/cis-kubernetes.yaml
