@@ -1,0 +1,592 @@
+---
+system_security_plan:
+  title: System Security Plan (SSP) Moderate Baseline
+  version: '2.1'
+  date:
+    _iso-date: iso-date3
+    __text: '2018-09-25'
+  import:
+  - _href: https://github.com/usnistgov/OSCAL/raw/master/content/fedramp.gov/FedRAMP_HIGH-baseline_profile.xml
+  - include:
+      call:
+      - _subcontrol-id: cm-7.3
+      - _subcontrol-id: cm-7.4
+    _href: https://github.com/usnistgov/OSCAL/blob/master/content/nist.gov/SP800-53/rev4/NIST_SP-800-53_rev4_catalog.xml
+  publication_information:
+    sensitivity: Controlled Unclassified Information
+    org_name: Alpha - Cloud Service Processing
+    org_short_name: A-CSP
+    org_email: info@a-csp.com
+    org_website: https://www.a-csp.com
+    prepared_by:
+      org_id: org-02
+    prepared_for:
+      org_id: org-01
+  publication_history:
+    published:
+    - date:
+        _iso-date: iso-date3
+        __text: '2017-01-02'
+      version: '1.0'
+      notes: Initial publication.
+      _id: pub-1.0
+    - date:
+        _iso-date: iso-date3
+        __text: '2017-06-06'
+      version: '1.1'
+      notes: Updated to reflect new security widget in AC-2.
+      _id: pub-1.1
+    - date:
+        _iso-date: iso-date3
+        __text: '2018-03-08'
+      version: '2.0'
+      notes: Updated to reflect new active directory technology in IA-4.
+      _id: pub-2.0
+    - date:
+        _iso-date: iso-date3
+        __text: '2018-09-25'
+      version: '2.1'
+      notes: Updated to reflect new use of row-based database security in AC-5.
+      _id: pub-2.1
+  system_characteristics:
+    system_id: F12345
+    system_name: Alpha - Service and Automation System
+    system_name_short: A-SaaS
+    description:
+      p: A brief description of the function or purpose of the system (1 - 3 paragraphs)
+    system_sensitivity_level: moderate
+    system_information:
+      information_type:
+      - description: Border and Transportation Security
+        confidentiality_impact:
+          base: moderate
+          selected: moderate
+        integrity_impact:
+          base: moderate
+          selected: moderate
+        availability_impact:
+          base: moderate
+          selected: moderate
+        _id: info-01
+        _nist_id: D.2.1
+      - description: Disaster Management and Prediction
+        confidentiality_impact:
+          base: low
+          selected: low
+        integrity_impact:
+          base: high
+          selected: high
+        availability_impact:
+          base: high
+          selected: low
+          adjustment_justification:
+            p: System is for research and analysis only. Access to information in
+              this system at the time of a disaster is not critical.
+        _id: info-02
+        _nist_id: D.4.1
+      - description: A Privacy Sensitive System
+        qualifiers:
+          qualifier:
+          - p: Does the ISA collect, maintain, or share PII in any identifiable form?
+            _id: pta-01
+            _response: 'yes'
+          - p: Does the ISA collect, maintain, or share PII information from or about
+              the public?
+            _id: pta-02
+            _response: 'yes'
+          - p: Has a Privacy Impact Assessment ever been performed for the ISA?
+            _id: pta-03
+            _response: 'yes'
+          - p: Is there a Privacy Act System of Records Notice (SORN) for this ISA
+              system?
+            sorn:
+              _id: "[SORN ID]"
+              __text: Sorn Name
+            _id: pta-04
+            _response: 'yes'
+        _id: info-03
+        _type: pii
+    security_impact_level:
+      security_objective_confidentiality: moderate
+      security_objective_availability: moderate
+      security_objective_integrity: moderate
+    security_eauth:
+      security_auth_ial: moderate
+      security_auth_aal: moderate
+      security_auth_fal: moderate
+      security_eauth_level: moderate
+    status: operational
+    status_other_description: N/A
+    deployment_model: saas
+    deployment_model_other_description: N/A
+    service_model: government_only_community
+    service_model_other_description: N/A
+    leveraged_authorizations:
+      leveraged_authorization:
+        leveraged_authorization_name: A Big IaaS (ABI)
+        leveraged_authorization_service_provider: A Big IaaS Provider (ABIP)
+        leveraged_authorization_date_granted:
+          _iso-date: iso-date3
+          __text: '2016-09-09'
+        _id: la-01
+    authorization_boundary:
+      boundary_diagram:
+        boundary_description:
+          p: This is optional text that provides additional, written detail to the
+            attached boundary diagram.
+        _id: dia-01
+        _attachment_id: att-003
+    network_architecture:
+      network_diagram:
+        network_description:
+          p: This is optional text that provides additional, written detail to the
+            attached network diagram.
+        _id: dia-02
+        _attachment_id: att-004
+    data_flow:
+      data_flow_diagram:
+        data_flow_description:
+          p: This is optional text that provides additional, written detail to the
+            attached data flow diagram.
+        _id: dia-03
+        _attachment_id: att-005
+    users:
+      role:
+      - privilege: Full administrative access (root)
+        function:
+        - Add/remove users and hardware
+        - Install and configure software
+        - OS updates
+        - patches and hotfixes
+        - perform backups
+        _id: ut-01
+        _name: UNIX System Administrator
+        _internal: 'yes'
+        _access: p
+        _sensitivity_level: moderate
+      - privilege: Portal administration
+        function:
+        - Add/remove client users
+        - Create, modify, and delete client applications
+        _id: ut-02
+        _name: Client Administrator
+        _external: 'yes'
+        _access: np
+        _sensitivity_level: n/a
+      - privilege: none
+        function:
+        - Reviews, approves, and enforces policy
+        _id: ut-03
+        _name: Program Director
+        _internal: 'yes'
+        _access: nla
+        _sensitivity_level: limited
+      statistics:
+        internal_user_total_current: '22'
+        internal_user_total_future: '33'
+        external_user_total_current: '75'
+        external_user_total_future: '100'
+  system_implementation:
+    ports_protocols_services:
+      service:
+      - protocol:
+        - port_range:
+            _start: '53'
+            _end: '53'
+            _transport: tcp
+          _name: dns
+        purpose: Allows name resolution of hosts.
+        used_by:
+        - external user workstations
+        - internal hosts
+        _id: svc-01
+        _name: Domain Name Service (DNS) Lookup
+      - protocol:
+        - port_range:
+            _start: '80'
+            _end: '80'
+            _transport: tcp
+          _name: http
+        - port_range:
+            _start: '443'
+            _end: '443'
+            _transport: tcp
+          _name: https
+        purpose: Provides web services for the application.
+        used_by:
+        - External users to access the application
+        _id: svc-02
+        _name: Web Services
+    system_interconnections:
+      interconnection:
+        external_system_name: Weather Server
+        external_system_org: NOAA
+        isa_authorization: M.Y. Ayaoh
+        isa_name: Weather Connection
+        isa_date:
+          _iso-date: iso-date3
+          __text: '2018-09-25'
+        _id: ic-01
+    system_inventory:
+      component:
+      - name: Linux Host
+        crypto:
+        - _crypto_id: crypto-01
+        - _crypto_id: crypto-02
+        description:
+          p: Physical and virtual linux hosts are used as the primary platform for
+            all server needs within the system, unless another platform is needed
+            to achieve a specific requirement.
+        _id: comp-01
+      - name: Web Server
+        description:
+          p: Apache is used for all web servers, and is always installed on a Linux
+            OS.
+        _id: comp-02
+      - name: SQL Server
+        description:
+          p: We use Acme BigSQL for our database needs, and always run it on a Linux
+            platform.
+        _id: comp-03
+      inventory_item:
+      - ip_address:
+        - 123.45.67.96
+        - 123.45.68.96
+        network_name: acme-web-a.a-csp.com
+        host_item:
+          netbios_name: acme-web-a
+          mac_address: '00:01:02:03:04:05'
+          authenticated_scan: 'yes'
+          baseline_template: Base Config 1
+          os_name: CentOS
+          os_version: '5.1'
+          location: Primary data center, Rack A-1
+          asset_type: Web Server
+          hardware_vendor: Acme
+          hardware_model: web-1000
+          scanned: 'yes'
+        Comments: This is a public-facing hardware-based web server
+        serial_no: aw-12345
+        network_id:
+        - _id: vlan-01
+          __text: 123.45.67.00/24
+        - _id: vlan-02
+          __text: 123.45.68.00/24
+        asset_owner: Jonathan Jacob
+        asset_administrator: Mr. L.N.X. Guru
+        _id: 123.45.67.96
+        _virtual: 'no'
+        _public: 'yes'
+        _comp_id: comp-01
+      - ip_address:
+        - 123.46.78.400
+        - 123.47.78.400
+        network_name: big-db.a-csp.com
+        software_item:
+          software_vendor: Acme
+          software_name: Big SQL
+          software_version: '7.7'
+          software_patch_level: Level 7
+          function:
+          - Houses all the data
+        Comments: All the sensitive information is stored here.
+        serial_no: asq-121212
+        network_id:
+        - _id: vlan-03
+          __text: 123.46.0.0/16
+        - _id: vlan-04
+          __text: 123.47.0.0/16
+        asset_owner: Jonathan Jacob
+        asset_administrator: Mr. L.N.X. Guru
+        _id: 123.46.78.400
+        _virtual: 'no'
+        _public: 'no'
+        _comp_id: comp-01
+  security_controls:
+    group:
+      control:
+      - responsible_role:
+        - _role_id: ut-04
+        param:
+        - value: all staff with system access
+          _id: ac-1_prm_1
+        - value: annually, and as needed
+          _id: ac-1_prm_2
+        - value: every three years, and when the system undergoes a significant change
+          _id: ac-1_prm_3
+        implementation_status: implemented
+        control_origination:
+        - service_provider_corporate
+        - service_provider_system_specific
+        control_response:
+        - p:
+            attached:
+              _id: att-101
+              __text: A-CSP Access Control Policy
+            __text: "The A-CSP CIO's office maintains the \n. This CIO's office ensures
+              this policy is disseminated to all A-CSP staff."
+          _id: ac-1_smt.a
+          _origination: service_provider_corporate
+        - p:
+            attached:
+              _id: att-102
+              __text: A-SaaS Access Control Policy
+            __text: "The A-SAAS ISSO is responsible for maintaining the \n. This ISSO
+              ensures this policy is disseminated to all individuals with logical
+              access to A-SAAS."
+          _id: ac-1_smt.a
+          _origination: service_provider_system_specific
+        - p:
+            attached:
+              _id: att-103
+              __text: A-SaaS Access Control Procedure
+            __text: "The A-SAAS ISSO maintains the \n, which is used for granting
+              all system access. This ISSO ensures this procedure is disseminated
+              to all individuals with administrative access to A-SAAS."
+          _id: ac-1_smt.b
+          _origination: service_provider_system_specific
+        _class: SP800-53
+        _id: ac-1
+        _href: https://github.com/usnistgov/OSCAL/raw/master/content/fedramp.gov/FedRAMP_MODERATE-baseline_profile.xml
+      - responsible_role:
+        - _role_id: ut-01
+        - _role_id: ut-02
+        - _role_id: ut-03
+        param:
+        - value: all system accounts
+          _id: ac-2_prm_1
+        - value: immediate supervisor or system ISSO
+          _id: ac-2_prm_2
+        - value: the A-CSP Access Control Policy
+          _id: ac-2_prm_3
+        - value: as needed
+          _id: ac-2_prm_4
+        implementation_status: implemented
+        control_origination:
+        - service_provider_system_specific
+        - customer_responsibility
+        - inherited
+        control_response:
+        - p:
+            attached:
+              _id: att-102
+              __text: A-SaaS Access Control Policy
+            __text: "In accordance with the \n, the system ISSO identifies all A-SaaS
+              system administrators to support the A-SaaS mission."
+          _id: ac-2_smt.a
+          _origination: service_provider_system_specific
+        - p: The customer must define which A-SAAS application user account types
+            support the customer's mission.
+          _id: ac-2_smt.a
+          _origination: customer_responsibility
+        - p: For the hypervisor and below, this is inherited from ABI.
+          _id: ac-2_smt.a
+          _origination: inherited
+          _inherited_from: la-01
+        subcontrol:
+          responsible_role:
+          - _role_id: ut-04
+          - _role_id: ut-02
+          - _role_id: ut-03
+          implementation_status: partially_implemented
+          planned_implementation_date: '2019-06-01'
+          control_origination:
+          - service_provider_system_specific
+          - inherited
+          control_response:
+          - p: This is where the CSP describes how they have implemented automated
+              mechanisms in the support of system account management
+            _id: ac-2.1_smt
+            _origination: service_provider_system_specific
+          - p: This where the CSP describes what they inherit from ABI in support
+              of AC-2(2).
+            _id: ac-2.1_smt
+            _origination: inherited
+            _inherited_from: la-01
+          _class: SP800-53
+          _id: ac-2.1
+          _href: https://github.com/usnistgov/OSCAL/raw/master/content/fedramp.gov/FedRAMP_MODERATE-baseline_profile.xml
+        _class: SP800-53
+        _id: ac-2
+        _href: https://github.com/usnistgov/OSCAL/raw/master/content/fedramp.gov/FedRAMP_MODERATE-baseline_profile.xml
+      _class: family
+      _id: ac
+  cryptography:
+    module:
+    - validation:
+        _type: certificate_no
+        _org: NIST Labs
+        __text: '00000001'
+      module_name: crypto_guard_supreme
+      version_number: '1.23'
+      _id: crypto-01
+    - validation:
+        _type: certificate_no
+        _org: NIST Labs
+        __text: '00000010'
+      module_name: crypto_guard_supreme
+      version_number: '1.23'
+      _id: crypto-02
+  organizations:
+    org:
+    - name: Alpha - Cloud Service Processing
+      address:
+        addr-line: 12345 S. Main Street
+        city: Star City
+        state: ST
+        postal-code: '54321'
+        country: US
+      email: main@a-csp.com
+      phone: 703-555-1212
+      url: https://www.a-csp.com
+      _id: org-01
+    - name: Three Partners Auditing Objectives (3PAO)
+      email: main@3pao.com
+      phone: 703-555-1212
+      url: https://www.3pao.com
+      _id: org-02
+    - name: Three Letter Agency (TLA)
+      email: main@tla.gov
+      phone: 703-555-1212
+      url: https://www.tla.gov
+      _id: org-03
+  individuals:
+    individual:
+    - name: I.M. DaBoss
+      title: VP Operations
+      phone:
+        _type: mobile
+        __text: 703-555-6161
+      email: imdaboss@a-csp.com
+      _id: ind-01
+      _org: org-01
+    - name: Blurry Face
+      title: Cyber Security Director
+      phone:
+        _type: mobile
+        __text: 703-555-9111
+      email: bface@a-csp.com
+      _id: ind-02
+      _org: org-01
+    - name: Buck Stops-Here
+      title: CIO
+      phone:
+        _type: office
+        __text: 703-555-0000
+      email: bstops-here@tla.gov
+      _id: ind-03
+      _org: org-03
+  parties:
+    party: ''
+  roles:
+    role:
+    - _id: role-01
+      _title: Approver
+      _individual_id: ind-01
+    - _title: Approver
+      _individual_id: ind-02
+    - _id: role-02
+      _title: System Owner
+      _individual_id: ind-01
+    - _id: role-03
+      _title: System Management POC
+      _individual_id: ind-01
+    - _id: role-04
+      _title: System Technical POC
+      _individual_id: ind-02
+    - _id: role-04
+      _title: System Technical POC
+      _individual_id: ind-04
+    - _id: role-05
+      _title: System Internal ISSO
+      _individual_id: ind-02
+    - _id: role_ao
+      _title: Authorizing Official
+      _party_id: jab
+    - _id: role-06
+      _title: Prepared By
+      _org_id: org-02
+    - _id: role-07
+      _title: Prepared For
+      _org_id: org-01
+    - _id: role-08
+      _title: Privacy POC
+      _individual_id: ind-01
+  references:
+    ref:
+    - citation:
+        _href: https://www.fedramp.gov/assets/resources/templates/SSP-A12-FedRAMP-Laws-and-Regulations-Template.xlsx
+        __text: FedRAMP Applicable Laws and Regulations
+      _id: ref-01
+      _ref_type: other
+    - citation:
+        _href: http://www.gpo.gov/fdsys/granule/CFR-2012-title5-vol2/CFR-2012-title5-vol2-sec731-106/content-detail.html
+        __text: 5 C.F.R. 731.106
+      _id: ref-02
+      _ref_type: law
+  attachments:
+    attachment:
+    - name: Rules of Behavior
+      description: The Rules of Behavior document
+      format: ".docx"
+      date:
+        _iso-date: iso-date3
+        __text: '2017-02-03'
+      version: '2.0'
+      type: MS Word
+      _id: att-001
+      _href: "./attachments/rob.docx"
+    - name: A-CSP Access Control Policy
+      description: Corporate A-CSP Access Control Policy
+      format: ".docx"
+      date:
+        _iso-date: iso-date3
+        __text: '2015-06-06'
+      version: '2.1'
+      type: MS Word
+      _id: att-101
+      _href: "./attachments/policies/01_a_csp_access_cotrol_policy.docx"
+    - name: A-SaaS Access Control Policy
+      description: System-specific A-SaaS Access Control Policy
+      format: ".docx"
+      date:
+        _iso-date: iso-date3
+        __text: '2017-12-12'
+      version: '1.1'
+      type: MS Word
+      _id: att-102
+      _href: "./attachments/policies/01_a_saas_access_cotrol_policy.docx"
+    - name: A-SaaS Access Control Process
+      description: System-specific A-SaaS Access Control Process
+      format: ".docx"
+      date:
+        _iso-date: iso-date3
+        __text: '2017-12-12'
+      version: '1.2'
+      type: MS Word
+      _id: att-103
+      _href: "./attachments/policies/01_a_saas_access_cotrol_process.docx"
+    - name: Logo
+      description: A-CSP Logo
+      format: ".png"
+      date:
+        _iso-date: iso-date3
+        __text: '2017-01-02'
+      version: '1.0'
+      type: graphic
+      base64:
+        _filename: csp_logo.png
+        __text: iVBORw0KGgoAAAANSUhEUgAAAMoAAAAtCAIAAABgRmPFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATBSURBVHhe7ZpLjqQwDIbnIL2c09SqzsKCs7RUR0F1FLjBLFAtSkhIPc4DsCGJHUikmpE/ZdFNheDYv/OA/PpRlGqovJSKqLyUiqi8lIqovJSKqLyUiqi8lIqovJSKqLyUiqi8lIqovJSKZMtr7p+v2338+v3Hldv91Q2z/5Fh7h7k3q/7eGvf3eB//p/oh+m7HW/3paemwL+v7+fc+yo5DHvXnW/KUti8KFnyGt6NMWhskBHe0HbaroD+HnvBmYvQB9sBfwkYQKyun+j689U8/Z9di/ufKNDC2BilCoXu6R9I69Hy6nx1ETb93I1j85j6NXmso7br/irLHL7LuA7CgS/OXTt+c7la2rw0Ynn1kD3m2RFfg3EPE93OBmwnLx/F+ztu9GzaNxIxT1nl5YHGaZ4dnehU7irkDKiWYQ3hVm5nXIzaiXQWortUACP9xSjD2/o85bpFZD7zk/IqbR6PTF6QFu6p+8ATIHusZVDayV8zTA1/r2VI1PQ/2RJ1Ih6NjiNokpkomNgvBLeQGvCQkckQrtpiRANMVlvpmqXNEyGQF3mevxZj6QMOz5IQonjbykEhoolS6ESBoBFYmlk3OvA8zvVUEOlNW0Ktu/SLeqaweVJYeZ3rZ0he0HlYtPmLccARF+RF/Jg1CF2S19ZHKIKQ4PohI3EvpMaYNiOeKW2eGE5eOar3mDhhm7BATbG7xcQOBS3tMR8sLzJkih5KfHLoTvrXKGBGsHJp8zJg5IVXPHKnw1KArBxJyEkx2z3hZlgmL+LKrOXXeXnR/JE9NGUntiRvegpmZmnzckjLiwyqGU7vHruNidkz46ZChe6TD0jkdT4wV+R1xkt0REll48XVT3nzcqgjrzCDERnOpGDBr9AwSXnN+MWEKfn76o+RF/1J5cUwTPtI23fQy146VEL9ic+wa7EvV83rN39LFv+SvOgTY8Vb8rnyotP2WXm9m/jkbUYd80J1e4orx/letvY6T668unYJ/OXFzW65nTM5BlYd++G/tHk5MEt78hj5Eq+HIcT/6bonGOHt1Lk+65gxHyYv2PSsncoPRjrkZLzhO0vkGBhpSpuXASMv4nSximFAQgZZW6Umrp79bHnZyihniCAEucTUz9uwY8vDfi5snhxOXlT7oieRoQtYUkHyTnV73EHKnyQvF37iDTyEcLeT4SRcGQWYz0xB5cLmSeHlBWzJxHa1f772sUcjreA7setbQEA5DjqDWF6r93fJhqOSzEOZdFB/mazmRy9DYfNkiOQFiD6amv3gMTBOXvY0RLM7e3PAfbEPRZfMF5e7fUSYsuizfSBI/JEElGywyWV6sekmsXdbzgG4kvRMYfMESOUF2BNtrg/0ZFXvD7sdxi0HWEw7sx5Uoo24F1eh75L7AznWhmJnkqD9/YGckLy27i8lPAaQA1X4gwTau8gPUVpfLa3R187WY5Cxa1Ng4cgmXlnzODLk5fCn2LCjmVOOkRcTrp21ETO8HRSDJ8RYuTKS4Wklv6SmGBd7cjTXHgdNf5mI4l/f0NbaU01ZCpsXJVteiiJH5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVOPn5y9OeK7Cv/yElwAAAABJRU5ErkJggg==
+      _id: att-002
+    - name: Signature - Chief Privacy Officer
+      description: Digital signature of the CPO
+      format: ''
+      date:
+        _iso-date: iso-date3
+        __text: '2017-01-02'
+      version: '1.0'
+      type: digital signature
+      base64: iVBORw0KGgoAAAANSUhEUgAAAMoAAAAtCAIAAABgRmPFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATBSURBVHhe7ZpLjqQwDIbnIL2c09SqzsKCs7RUR0F1FLjBLFAtSkhIPc4DsCGJHUikmpE/ZdFNheDYv/OA/PpRlGqovJSKqLyUiqi8lIqovJSKqLyUiqi8lIqovJSKqLyUkRcTrp21ETO8HRSDJ8RYuTKS4Wklv6SmGBd7cjTXHgdNf5mI4l/f0NbaU01ZCpsXJVteiiJH5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVETlpVRE5aVUROWlVOPn5y9OeK7Cv/yElwAAAABJRU5ErkJggg==
+      _id: att-003
+  _xmlns: http://fedramp.gov/ns/oscal/1.0
+  _id: uuid-a_csp-a_saas-20180925-195545

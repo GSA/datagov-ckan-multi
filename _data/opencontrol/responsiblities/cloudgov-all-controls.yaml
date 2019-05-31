@@ -1,0 +1,1625 @@
+-
+    key: AC-1
+    family: AC
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: AC-10
+    family: AC
+    implementation_status: No
+    name: 'Concurrent session control is delegated to the application owner.'
+-
+    key: AC-11
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-11 (1)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: AC-12
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: AC-14
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: AC-17
+    family: AC
+    implementation_status: No
+    name: 'The authorization is the responsibility of the application owner.'
+-
+    key: 'AC-17 (1)'
+    family: AC
+    implementation_status: Yes
+    name: 'cloud.gov logs all remote access to applications and application instances, and makes those events available for audit.'
+-
+    key: 'AC-17 (2)'
+    family: AC
+    implementation_status: Yes
+    name: 'All remote access to cloud.gov-hosted applications happens over TLS and access to application instances happens via SSH.'
+-
+    key: 'AC-17 (3)'
+    family: AC
+    implementation_status: Yes
+    name: 'All remote access to cloud.gov-hosted applications passes through virtual AWS internet gateways, whose configuration is managed by the cloud.gov operations team. For information about customer network interconnections, see CA-3 (3).'
+-
+    key: 'AC-17 (4)'
+    family: AC
+    implementation_status: No
+    name: 'The authorization is the responsibility of the application owner.'
+-
+    key: 'AC-17 (9)'
+    family: AC
+    implementation_status: Partial
+    name: 'The application owner must make the request using commands available via the cloud.gov CLI, API, and web interface.'
+-
+    key: AC-18
+    family: AC
+    implementation_status: Yes
+    name: 'Since cloud.gov is completely virtualized within AWS, there are no wireless capabilities possible.'
+-
+    key: 'AC-18 (1)'
+    family: AC
+    implementation_status: Yes
+    name: 'Since cloud.gov is completely virtualized within AWS, there are no wireless capabilities possible.'
+-
+    key: AC-19
+    family: AC
+    implementation_status: No
+    name: 'Implementation and restrictions on mobile devices is the responsibility of the customer.'
+-
+    key: 'AC-19 (5)'
+    family: AC
+    implementation_status: No
+    name: 'Implementation and restrictions on mobile devices is the responsibility of the customer.'
+-
+    key: AC-2
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts (Cloud Foundry User Account and Authentication accounts, which includes cloud.gov users who log in via agency single sign-on or the cloud.gov identity provider) used to manage applications, cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (1)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (10)'
+    family: AC
+    implementation_status: No
+    name: 'The responsibility of not requesting or permitting shared UAA or application accounts is the responsibility of the application owner.'
+-
+    key: 'AC-2 (12)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner. The delineation of higher privileged accounts in the application and their monitoring is the responsibility of the application owner.'
+-
+    key: 'AC-2 (2)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (3)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (4)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (5)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: 'AC-2 (7)'
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner. The delineation of higher privileged accounts in the application and their monitoring is the responsibility of the application owner.'
+-
+    key: 'AC-2 (9)'
+    family: AC
+    implementation_status: No
+    name: 'The responsibility of not requesting or permitting shared UAA or application accounts is the responsibility of the application owner.'
+-
+    key: AC-20
+    family: AC
+    implementation_status: No
+    name: 'Application owners are responsible for gaining approval before utilizing an external system as part of their application.'
+-
+    key: 'AC-20 (1)'
+    family: AC
+    implementation_status: No
+    name: 'Application owners are responsible for gaining approval before utilizing an external system as part of their application.'
+-
+    key: 'AC-20 (2)'
+    family: AC
+    implementation_status: No
+    name: 'Application owners are responsible for restricting the use of portable storage devices on external information systems.'
+-
+    key: AC-21
+    family: AC
+    implementation_status: No
+    name: 'The sharing agreements are the responsibility of the application owner.'
+-
+    key: AC-22
+    family: AC
+    implementation_status: No
+    name: 'Application owners must decide which content is publicly accessible.'
+-
+    key: AC-3
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner. The delineation of higher privileged accounts in the application and their monitoring is the responsibility of the application owner.'
+-
+    key: AC-4
+    family: AC
+    implementation_status: Partial
+    name: 'Routing required for outside interconnections can be handled by cloud.gov but must be requested and approved by the application owner prior to be putting into deployment.'
+-
+    key: 'AC-4 (21)'
+    family: AC
+    implementation_status: Partial
+    name: 'Routing required for outside interconnections can be handled by cloud.gov but must be requested and approved by the application owner prior to be putting into deployment.'
+-
+    key: AC-5
+    family: AC
+    implementation_status: Partial
+    name: 'UAA accounts are handle by cloud.gov. Application System Owners have the ability to assign roles in their cloud.gov Orgs and Spaces with granular levels of access, such as Org Manager and Space Developer. Application System Owners are responsible for appropriately assigning these roles.'
+-
+    key: AC-6
+    family: AC
+    implementation_status: Partial
+    name: 'The roles are defined by cloud.gov but the application owner must make the proper assignments to personnel to ensure least privilege is enforced.'
+-
+    key: 'AC-6 (1)'
+    family: AC
+    implementation_status: Partial
+    name: 'The roles are defined by cloud.gov but the application owner must make the proper assignments to personnel to ensure least privilege is enforced.'
+-
+    key: 'AC-6 (10)'
+    family: AC
+    implementation_status: Yes
+    name: 'The cloud.gov role-based access control system prevents non-privileged users from executing privileged functions.'
+-
+    key: 'AC-6 (2)'
+    family: AC
+    implementation_status: Partial
+    name: 'The roles are defined by cloud.gov but the application owner must make the proper assignments to personnel to ensure least privilege is enforced.'
+-
+    key: 'AC-6 (5)'
+    family: AC
+    implementation_status: Partial
+    name: 'The roles are defined by cloud.gov but the application owner must make the proper assignments to personnel to ensure least privilege is enforced.'
+-
+    key: 'AC-6 (9)'
+    family: AC
+    implementation_status: Yes
+    name: 'cloud.gov automatically logs privileged actions taken within cloud.gov.'
+-
+    key: AC-7
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: AC-8
+    family: AC
+    implementation_status: Partial
+    name: 'For UAA accounts used to manage the applications cloud.gov provides this control. Application accounts unless integrated with the UAA are the responsibility of the application owner.'
+-
+    key: AT-1
+    family: AT
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: AT-2
+    family: AT
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security training. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: 'AT-2 (2)'
+    family: AT
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security training. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: AT-3
+    family: AT
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security training. GSA applications can inherit cloud.gov''s implementations. Application owners must identify application personnel to receive appropriate role-based training.'
+-
+    key: AT-4
+    family: AT
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: AU-1
+    family: AU
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: AU-11
+    family: AU
+    implementation_status: Partial
+    name: 'Application owner must ensure that cloud.gov retains their audit records to their time requirements. Application owners must ensure their storage capacity meets their retention requirements.'
+-
+    key: AU-12
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov is responsible for all requirements of log generation for their monitoring tools. Application owned retention tools are the responsibility of the application owner.'
+-
+    key: AU-2
+    family: AU
+    implementation_status: Partial
+    name: 'Application owners must ensure that the auditing provided by cloud.gov meets their requirements and must provide for additional auditing if needed.'
+-
+    key: 'AU-2 (3)'
+    family: AU
+    implementation_status: Partial
+    name: 'Applications must audit the required events and ensure cloud.gov meets the requirements or put other monitoring tools in place.'
+-
+    key: AU-3
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov will capture the events details that are possible for their captured logs. Application owner must ensure their tools meet their audit content record requirements.'
+-
+    key: 'AU-3 (1)'
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov will capture the events details that are possible for their captured logs. Application owner must ensure their tools meet their audit content record requirements.'
+-
+    key: AU-4
+    family: AU
+    implementation_status: Partial
+    name: 'Application owner must ensure that cloud.gov retains their audit records to their time requirements. Application owners must ensure their storage capacity meets their retention requirements.'
+-
+    key: AU-5
+    family: AU
+    implementation_status: Partial
+    name: 'Application owners must ensure the cloud.gov audit alerts notify the proper personnel. All application owned monitoring tools muse be configured by the application owner to alert the appropriate staff.'
+-
+    key: AU-6
+    family: AU
+    implementation_status: No
+    name: 'Application owners are required to review application audit log activity and reports generated by cloud.gov.'
+-
+    key: 'AU-6 (1)'
+    family: AU
+    implementation_status: No
+    name: 'Application owners are required to review application audit log activity and reports generated by cloud.gov.'
+-
+    key: 'AU-6 (3)'
+    family: AU
+    implementation_status: No
+    name: 'Application owners are required to review application audit log activity and consolidated reports generated by cloud.gov.'
+-
+    key: AU-7
+    family: AU
+    implementation_status: Partial
+    name: 'Application owners may use the cloud.gov reduction tools but are responsible for defining the level of analysis and providing reduction techniques and technology for their application owned monitoring tools.'
+-
+    key: 'AU-7 (1)'
+    family: AU
+    implementation_status: No
+    name: 'Application owners are responsible for reviewing application logs collected by cloud.gov.'
+-
+    key: AU-8
+    family: AU
+    implementation_status: Partial
+    name: 'Timestamps are provided for cloud.gov generated and retained logs. Application owner monitoring tools must be configured by the application owner to use time stamps.'
+-
+    key: 'AU-8 (1)'
+    family: AU
+    implementation_status: Partial
+    name: 'Timestamps are provided for cloud.gov generated and retained logs. Application owner monitoring tools must be configured by the application owner to use time stamps.'
+-
+    key: AU-9
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov protects all retained logs. Application owned monitoring tools must protect their audit records.'
+-
+    key: 'AU-9 (2)'
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov backs-up all retained logs. Application owned monitoring tools must back-up their audit records.'
+-
+    key: 'AU-9 (4)'
+    family: AU
+    implementation_status: Partial
+    name: 'cloud.gov manages access to all retained logs. Application owned monitoring tools must manage access to their audit records.'
+-
+    key: CA-1
+    family: CA
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: CA-2
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for assessing the security of the system controls defined in this CRM.'
+-
+    key: 'CA-2 (1)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for defining the level of independence of security control assessors.'
+-
+    key: 'CA-2 (2)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for assessing the security of the system controls defined in this CRM.'
+-
+    key: 'CA-2 (3)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for assessing the security of the system controls defined in this CRM.'
+-
+    key: CA-3
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for authorizing, documenting, and managing interconnections implemented by their application.'
+-
+    key: 'CA-3 (3)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for authorizing, documenting, and managing interconnections implemented by their application.'
+-
+    key: 'CA-3 (5)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for authorizing, documenting, and managing interconnections implemented by their application.'
+-
+    key: CA-5
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for documenting, tracking and addressing weaknesses discovered in their application.'
+-
+    key: CA-6
+    family: CA
+    implementation_status: No
+    name: 'A customer Authorizing Official must explicitly authorize the system for processing.'
+-
+    key: CA-7
+    family: CA
+    implementation_status: Partial
+    name: 'Operating systems and DB scans are out of the boundary of application owners. The requirement is bound to the application code and is the responsibility of the application owner.'
+-
+    key: 'CA-7 (1)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for defining the level of independence of security control assessors.'
+-
+    key: CA-8
+    family: CA
+    implementation_status: Partial
+    name: 'The customer is responsible for conducting penetration tests against the application layer of their system.'
+-
+    key: 'CA-8 (1)'
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for defining the level of independence of security control assessors.'
+-
+    key: CA-9
+    family: CA
+    implementation_status: No
+    name: 'The customer is responsible for authorizing, documenting, and managing internal interconnections implemented by their application.'
+-
+    key: CM-1
+    family: CM
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: CM-10
+    family: CM
+    implementation_status: No
+    name: 'The application owner is responsible for following software usage restrictions in the application.'
+-
+    key: 'CM-10 (1)'
+    family: CM
+    implementation_status: No
+    name: 'The application owner is responsible for implementing restrictions for the use of open-source software in the application.'
+-
+    key: CM-11
+    family: CM
+    implementation_status: No
+    name: 'The application owner is responsible for controlling user-installed software in the applications.'
+-
+    key: CM-2
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for the configuration management of their applications. All operating systems, network and DB configurations are outside of the application owner boundary.'
+-
+    key: 'CM-2 (1)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for reviewing and updating the baseline configuration of their applications. All operating systems, network and DB configurations are outside of the application owner boundary.'
+-
+    key: 'CM-2 (2)'
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for utilizing an automated mechanism to manage the baseline configuration of their applications. All operating systems, network and DB configurations are outside of the application owner boundary.'
+-
+    key: 'CM-2 (3)'
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for retaining an organizationally-defined number of baseline configurations of their applications to support rollback. All operating systems, network and DB configurations are outside of the application owner boundary.'
+-
+    key: 'CM-2 (7)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for issuing and protecting devices for use in travel for their users.'
+-
+    key: CM-3
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for controlling changes to their application.'
+-
+    key: CM-4
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for assessing the security impact of changes to their application.'
+-
+    key: CM-5
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for assigning the system-provided org and space roles to their own personnel as appropriate.'
+-
+    key: 'CM-5 (1)'
+    family: CM
+    implementation_status: Yes
+    name: 'cloud.gov enforces restrictions on available actions according to the system-provided org and space roles. All actions are logged and available to customers for auditing purposes.'
+-
+    key: 'CM-5 (3)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring that software they deploy to cloud.gov corresponds to the version they approve.'
+-
+    key: 'CM-5 (5)'
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for reviewing and reevaluating the access granted to their staff via system-provided org and space roles.'
+-
+    key: CM-6
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring the configuration of software that they deploy follows published guidance, or alternative guidance that they have created where necessary.'
+-
+    key: 'CM-6 (1)'
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing automated controls to verify their intended state. They can use the cloud.gov API, Terraform, etc. to accomplish this.'
+-
+    key: CM-7
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for following least-functionality principles for the application code that they deploy to cloud.gov.'
+-
+    key: 'CM-7 (1)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for reviewing their deployed applications and disabling unnecessary or insecure functions.'
+-
+    key: 'CM-7 (2)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring the application does not permit the execution of unauthorized software.'
+-
+    key: 'CM-7 (5)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring the application does not permit the execution of unauthorized software.'
+-
+    key: CM-8
+    family: CM
+    implementation_status: Partial
+    name: 'Application owners can use the cloud.gov API, dashboard, and CLI tools to gather authoritative information about the routes, applications, and service instances in use for incorporation into their own documentation and review processes.'
+-
+    key: 'CM-8 (1)'
+    family: CM
+    implementation_status: Partial
+    name: 'Information about the routes, applications, and service instance configuration in cloud.gov is updated whenever changes are made. Application owners are responsible for updating their own documentation that refers to this state.'
+-
+    key: 'CM-8 (3)'
+    family: CM
+    implementation_status: No
+    name: 'Application owners are responsible for identifying unauthorized software running in their orgs and spaces and taking appropriate action.'
+-
+    key: 'CM-8 (5)'
+    family: CM
+    implementation_status: No
+    name: "\nCustomer applications are not part of the cloud.gov authorization boundary, so it is the responsibility of the customer to inventory their own applications appropriately."
+-
+    key: CM-9
+    family: CM
+    implementation_status: No
+    name: 'The application owner is responsible for developing and maintaining a configuration management plan for the application.'
+-
+    key: CP-1
+    family: CP
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: CP-10
+    family: CP
+    implementation_status: Yes
+    name: 'In accordance with application owner SLAs established with cloud.gov.'
+-
+    key: 'CP-10 (2)'
+    family: CP
+    implementation_status: Yes
+    name: 'In accordance with application owner SLAs established with cloud.gov.'
+-
+    key: CP-2
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for developing a contingency plan that addresses the listed items for the application.'
+-
+    key: 'CP-2 (1)'
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for coordinating application contingency plan development with other organizational elements responsible for related plans.'
+-
+    key: 'CP-2 (2)'
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring sufficient contingency communications capacity exists to support the application during contingency operations.'
+-
+    key: 'CP-2 (3)'
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for planning the resumption of essential missions and business functions performed by the application.'
+-
+    key: 'CP-2 (8)'
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for identifying critical assets supporting their application.'
+-
+    key: CP-3
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for providing contingency training to application personnel.'
+-
+    key: CP-4
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for testing the contingency plan for the application.'
+-
+    key: 'CP-4 (1)'
+    family: CP
+    implementation_status: No
+    name: 'The application owner is responsible for coordinating application contingency plan testing with other organizational elements responsible for related plans.'
+-
+    key: CP-6
+    family: CP
+    implementation_status: Partial
+    name: 'Application owners must ensure the services and SLAs offered by cloud.gov meet their operational needs. cloud.gov is responsible for the underlying system availability to meet the SLAs.'
+-
+    key: 'CP-6 (1)'
+    family: CP
+    implementation_status: Partial
+    name: 'Application owners must ensure the services and SLAs offered by cloud.gov meet their operational needs. cloud.gov is responsible for the underlying system availability to meet the SLAs.'
+-
+    key: 'CP-6 (3)'
+    family: CP
+    implementation_status: Partial
+    name: 'Application owners must ensure the services and SLAs offered by cloud.gov meet their operational needs. cloud.gov is responsible for the underlying system availability to meet the SLAs.'
+-
+    key: CP-7
+    family: CP
+    implementation_status: Partial
+    name: 'cloud.gov distributes customer workloads across availability zones. Application owners are responsible for ensuring multiple instances of their application are running in order to take advantage of multiple availability zones.'
+-
+    key: 'CP-7 (1)'
+    family: CP
+    implementation_status: Partial
+    name: 'cloud.gov distributes customer workloads across availability zones. Application owners are responsible for ensuring multiple instances of their application are running in order to take advantage of multiple availability zones.'
+-
+    key: 'CP-7 (2)'
+    family: CP
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring they''re able to access their applications in the event of a disaster.'
+-
+    key: 'CP-7 (3)'
+    family: CP
+    implementation_status: Partial
+    name: 'Application owners must ensure the services and SLAs offered by cloud.gov meet their operational needs. cloud.gov is responsible for the underlying system availability to meet the SLAs.'
+-
+    key: CP-8
+    family: CP
+    implementation_status: Yes
+    name: 'cloud.gov leverages redundant telecommunications services from AWS GovCloud.'
+-
+    key: 'CP-8 (1)'
+    family: CP
+    implementation_status: Yes
+    name: 'cloud.gov leverages redundant telecommunications services from AWS GovCloud.'
+-
+    key: 'CP-8 (2)'
+    family: CP
+    implementation_status: Yes
+    name: 'cloud.gov leverages redundant telecommunications services from AWS GovCloud.'
+-
+    key: CP-9
+    family: CP
+    implementation_status: Partial
+    name: 'cloud.gov maintains storage backups for 14 days to facilitate disaster recovery. Application owners are responsible for taking backups at non-emergency intervals that are meaningful for their application.'
+-
+    key: 'CP-9 (1)'
+    family: CP
+    implementation_status: Partial
+    name: 'cloud.gov maintains storage backups for 14 days to facilitate disaster recovery. Application owners are responsible for verifying they can restore their own backups at non-emergency intervals that are meaningful for their application.'
+-
+    key: 'CP-9 (3)'
+    family: CP
+    implementation_status: Partial
+    name: 'Application owners are responsible for ensuring that their application code and compliance materials are available from a source other than cloud.gov.'
+-
+    key: IA-1
+    family: IA
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: IA-2
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: 'IA-2 (1)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: 'IA-2 (11)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: 'IA-2 (12)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for providing a PIV-enabled MFA solution for access to their systems and resources.  cloud.gov configures login.gov to act as a PIV-enabled MFA solution for customers who request it.'
+-
+    key: 'IA-2 (2)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: 'IA-2 (3)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: 'IA-2 (5)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring that individuals are authenticated in their systems and resources when a group authenticator is used.'
+-
+    key: 'IA-2 (8)'
+    family: IA
+    implementation_status: Partial
+    name: 'Application owners are responsible for implementing a MFA solution for access to their systems and resources. cloud.gov supports customers in leveraging cloud.gov''s MFA-enabled authentication system to authenticate government users.'
+-
+    key: IA-3
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for uniquely identifying and authenticating devices before establishing connections.'
+-
+    key: IA-4
+    family: IA
+    implementation_status: No
+    name: 'For customers who do not use the cloud.gov fallback identity provider, cloud.gov delegates authentication to the customer-provided identity system. It is the responsibility of the customer to provide all relevant authorizations, both “to” and “within” cloud.'
+-
+    key: 'IA-4 (4)'
+    family: IA
+    implementation_status: No
+    name: "Customers are responsible for uniquely identifying the contractor and/or foreign national status of each user who has a role in their org or space (see Types of Users table). \n\nFor customers who do not use the cloud.gov identity provider, cloud.gov delegates the responsibility of customer identity management to the customer-provided identity system."
+-
+    key: IA-5
+    family: IA
+    implementation_status: No
+    name: "For customers who do not use the cloud.gov fallback identity provider, cloud.gov delegates customer identity verification and authenticator management to the customer-provided identity system. It is the responsibility of that system to establish identity. \nWhen those systems return identity assertions to cloud.gov, the assertions are required to be encrypted and signed by the customer-provided identity system."
+-
+    key: 'IA-5 (1)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for password complexity policies for their systems and resources.'
+-
+    key: 'IA-5 (11)'
+    family: IA
+    implementation_status: No
+    name: 'For customers who do not use the cloud.gov fallback identity provider, cloud.gov is not responsible for hardware tokens, as it delegates authentication to customer-provided identity system. It is the responsibility of those systems to implement support for hardware tokens, if applicable.'
+-
+    key: 'IA-5 (2)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for PKI-based authentication processes for their systems and resources.'
+-
+    key: 'IA-5 (3)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for authenticator management processes for their systems and resources.'
+-
+    key: 'IA-5 (4)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring authenticators are sufficiently strong for their systems and resources.'
+-
+    key: 'IA-5 (6)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring authenticators are sufficiently protected for their systems and resources.'
+-
+    key: 'IA-5 (7)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring authenticators are not embedded or stored in vulnerable locations.'
+-
+    key: IA-6
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring authentication information is obscured during the authentication process for their systems and resources.'
+-
+    key: IA-7
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring requirements for authentication to a cryptographic modules meet all  appropriate laws and regulations for their systems and resources.'
+-
+    key: IA-8
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for uniquely identifying and authenticating non-organizational users for their systems and resources.'
+-
+    key: 'IA-8 (1)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for accepting and verifying PIV credentials from other federal agencies for their systems and resources.'
+-
+    key: 'IA-8 (2)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for accepting only FICAM-approved third-party credentials for their systems and resources.'
+-
+    key: 'IA-8 (3)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for using only FICAM-approved components to accept third-party credentials for their systems and resources.'
+-
+    key: 'IA-8 (4)'
+    family: IA
+    implementation_status: No
+    name: 'Application owners are responsible for FICAM-conformance of their systems and resources.'
+-
+    key: IR-1
+    family: IR
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: IR-2
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for training users in their incident response responsibilities for the application.'
+-
+    key: IR-3
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for testing the incident response for the application.'
+-
+    key: 'IR-3 (2)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for coordinating testing of the incident response for the application with related organizational elements.'
+-
+    key: IR-4
+    family: IR
+    implementation_status: No
+    name: 'Application owners must define events and SLAs for the detection and reporting of suspicious activities. The application owner must have their own procedures and processes in place to respond to all reported incidents.'
+-
+    key: 'IR-4 (1)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for employing automated mechanisms to support the application incident handling process.'
+-
+    key: IR-5
+    family: IR
+    implementation_status: Partial
+    name: 'cloud.gov provides documentation related to incidents that have been captured in the system logs and monitoring tools upon request. Application owners must have their own system for collecting and tracking incident information.'
+-
+    key: IR-6
+    family: IR
+    implementation_status: No
+    name: 'The application owner must ensure incidents are appropriately reported for the application.'
+-
+    key: 'IR-6 (1)'
+    family: IR
+    implementation_status: Partial
+    name: 'cloud.gov trouble/incident tickets can help the application owner in being alerted however application owners must have their own reporting systems in place.'
+-
+    key: IR-7
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for identifying a point of contact for interfacing with the cloud.gov incident response team.'
+-
+    key: 'IR-7 (1)'
+    family: IR
+    implementation_status: Partial
+    name: 'The application owner must have their own system in place for reporting and establish SLAs with cloud.gov to ensure incident information.'
+-
+    key: 'IR-7 (2)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for identifying a point of contact for interfacing with the cloud.gov team during incident response.'
+-
+    key: IR-8
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for developing an IRP for their application that includes documenting their expected interaction with cloud.gov.'
+-
+    key: IR-9
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring system personnel respond appropriately in response to information spillage in the customer application.'
+-
+    key: 'IR-9 (1)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for information spillage response for the application.'
+-
+    key: 'IR-9 (2)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for information spillage response for the application.'
+-
+    key: 'IR-9 (3)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for information spillage response for the application.'
+-
+    key: 'IR-9 (4)'
+    family: IR
+    implementation_status: No
+    name: 'The application owner is responsible for information spillage response for the application.'
+-
+    key: MA-1
+    family: MA
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: MA-2
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MA-3
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MA-3 (1)'
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MA-3 (2)'
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MA-3 (3)'
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MA-4
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MA-4 (2)'
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MA-5
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MA-5 (1)'
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MA-6
+    family: MA
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-1
+    family: MP
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: MP-2
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-3
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-4
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-5
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MP-5 (4)'
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-6
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MP-6 (2)'
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: MP-7
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'MP-7 (1)'
+    family: MP
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-1
+    family: PE
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: PE-10
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-11
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-12
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-13
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'PE-13 (2)'
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'PE-13 (3)'
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-14
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'PE-14 (2)'
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-15
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-16
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-17
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-2
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-3
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-4
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-5
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-6
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'PE-6 (1)'
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-8
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PE-9
+    family: PE
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: PL-1
+    family: PL
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: PL-2
+    family: PL
+    implementation_status: No
+    name: 'The application owner is responsible for developing an SSP that addresses the security controls implemented by the application.'
+-
+    key: 'PL-2 (3)'
+    family: PL
+    implementation_status: No
+    name: 'The application owner is responsible for coordinating security activities with defined personnel to reduce the impact of those activities.'
+-
+    key: PL-4
+    family: PL
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring rules of behavior are developed and enforced for the application.'
+-
+    key: 'PL-4 (1)'
+    family: PL
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring rules of behavior for the application address the use of social media.'
+-
+    key: PL-8
+    family: PL
+    implementation_status: No
+    name: 'The application owner is responsible for the information security architecture of their application.'
+-
+    key: PS-1
+    family: PS
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: PS-2
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for establishing and executing screening requirements for application staff.'
+-
+    key: PS-3
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring application personnel are screened prior to being authorized to access the application.'
+-
+    key: 'PS-3 (3)'
+    family: PS
+    implementation_status: No
+    name: 'Application owners must ensure that application personnel have valid access authorization for any application information requiring special protection.'
+-
+    key: PS-4
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring termination policies and procedures are enforced against application users when appropriate.'
+-
+    key: PS-5
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring transfer policies and procedures are enforced against application users when appropriate.'
+-
+    key: PS-6
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for developing and implementing access agreements with application personnel.'
+-
+    key: PS-7
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that personnel security agreements are appropriately applied to third-party providers supporting the application.'
+-
+    key: PS-8
+    family: PS
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that personnel sanction policies and procedures are enforced against application users when appropriate.'
+-
+    key: RA-1
+    family: RA
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: RA-2
+    family: RA
+    implementation_status: No
+    name: 'Application owners must ensure the security categorization of the cloud.gov platform is appropriate for the information processed by the application, that the application has the appropriate security categorization, and that the information processed by the application does not exceed that categorization.'
+-
+    key: RA-3
+    family: RA
+    implementation_status: No
+    name: 'Application owners are responsible for having risk assessments performed on the application.'
+-
+    key: RA-5
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for code scanning. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (1)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring the tools used for code scanning can be readily updated. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (2)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for updating the tools used for code scanning before performing a code scan. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (3)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring the tools used for code scanning are able to demonstrate the scope of vulnerabilities scanned for. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (5)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring the tools used for code scanning are provided sufficient access to perform the full spectrum of scanning performed by the tool. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (6)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for employing automated mechanisms to identify trends demonstrated by tools used for code scanning. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: 'RA-5 (8)'
+    family: RA
+    implementation_status: No
+    name: 'The application owner is responsible for reviewing historic logs to determine if vulnerabilities identified by tools used for code scanning have been exploited. All resources including network, OS and DB are outside of the application owner boundary and are the responsibility of cloud.gov and GovCloud.'
+-
+    key: SA-1
+    family: SA
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: SA-10
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for maintaining configuration control of the application development.'
+-
+    key: 'SA-10 (1)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for maintaining configuration control of the application development.'
+-
+    key: SA-11
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security testing is performed on the application during development.'
+-
+    key: 'SA-11 (1)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security testing is performed on the application during development.'
+-
+    key: 'SA-11 (2)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security testing is performed on the application during development.'
+-
+    key: 'SA-11 (8)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security testing is performed on the application during development.'
+-
+    key: SA-2
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for identifying and allocating appropriate resources to protect the application.'
+-
+    key: SA-3
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for using a system development life cycle to manage the life cycle of the application.'
+-
+    key: SA-4
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security controls and documentation are included as part of all application acquisitions.'
+-
+    key: 'SA-4 (1)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring developers of the application follow system development processes and requirements for the application.'
+-
+    key: 'SA-4 (10)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring developers of the application follow system development processes and requirements for the application.'
+-
+    key: 'SA-4 (2)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring developers of the application follow system development processes and requirements for the application.'
+-
+    key: 'SA-4 (8)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring developers of the application follow system development processes and requirements for the application.'
+-
+    key: 'SA-4 (9)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring developers of the application follow system development processes and requirements for the application.'
+-
+    key: SA-5
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring documentation is provided for the application.'
+-
+    key: SA-8
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security engineering principles are applied during application development.'
+-
+    key: SA-9
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security requirements are documented and applied to external services procured by the application.'
+-
+    key: 'SA-9 (1)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for assessing the risk of using external services in the application.'
+-
+    key: 'SA-9 (2)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security requirements are documented and applied to external services procured by the application.'
+-
+    key: 'SA-9 (4)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security requirements are documented and applied to external services procured by the application.'
+-
+    key: 'SA-9 (5)'
+    family: SA
+    implementation_status: No
+    name: 'Application owners are responsible for ensuring security requirements are documented and applied to external services procured by the application.'
+-
+    key: SC-1
+    family: SC
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: SC-10
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for limiting access to their production environment by using the system-provided roles and disabling the ssh-allowed setting for production applications.'
+-
+    key: SC-12
+    family: SC
+    implementation_status: Partial
+    name: 'cloud.gov rotates and maintains the security of all keys used in TLS. Application owners are responsible for rotating and securing any additional cryptographic keys that their system uses.'
+-
+    key: 'SC-12 (2)'
+    family: SC
+    implementation_status: No
+    name: 'Application owners are responsible for the key management technology and process in use for any credentials they manage.'
+-
+    key: 'SC-12 (3)'
+    family: SC
+    implementation_status: No
+    name: 'If the application utilizes asymmetric keys, the application owner is responsible for ensuring this control is fully implemented.'
+-
+    key: SC-13
+    family: SC
+    implementation_status: No
+    name: 'Application owners are responsible for managing any credentials they create and use according to applicable laws and standards.'
+-
+    key: SC-15
+    family: SC
+    implementation_status: No
+    name: 'cloud.gov does not use collaborative computing devices. If the application implements collaborative computing technologies, the application owner is responsible for ensuring this control is fully implemented.'
+-
+    key: SC-17
+    family: SC
+    implementation_status: No
+    name: 'cloud.gov does not use PKI. If the application utilizes a PKI, the application owner is responsible for ensuring this control is fully implemented.'
+-
+    key: SC-18
+    family: SC
+    implementation_status: No
+    name: 'The application owner is responsible for appropriately managing mobile code in the application.'
+-
+    key: SC-19
+    family: SC
+    implementation_status: No
+    name: 'cloud.gov does not support VOIP.'
+-
+    key: SC-2
+    family: SC
+    implementation_status: No
+    name: 'For the application owner boundary, all separation of functionality is the responsibility of the application owner.'
+-
+    key: SC-20
+    family: SC
+    implementation_status: Partial
+    name: 'cloud.gov handles data origin authentication and integrity verification for *.cloud.gov domains. Application owners are responsible for selecting a name resolution service that fulfills this requirement and any requirements of their respective agency for any custom domain in use.'
+-
+    key: SC-21
+    family: SC
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: SC-22
+    family: SC
+    implementation_status: No
+    name: 'cloud.gov does not manage customer DNS.'
+-
+    key: SC-23
+    family: SC
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: SC-28
+    family: SC
+    implementation_status: Partial
+    name: 'cloud.gov has built-in encryption at rest. If desirable, customers are responsible for further encrypting any sensitive information in their customer applications before it is written to storage components or databases.'
+-
+    key: 'SC-28 (1)'
+    family: SC
+    implementation_status: Partial
+    name: 'cloud.gov has built-in cryptographic mechanisms to prevent unauthorized disclosure and modification of data. Customers are responsible for further securing/encrypting any sensitive information in their customer applications, and for auditing the permissions their users have for managing their applications.'
+-
+    key: SC-39
+    family: SC
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: SC-4
+    family: SC
+    implementation_status: Partial
+    name: 'The technical functionality of separation is provided by cloud.gov through encryption. The application owner is responsible for the operational access authorization to the appropriate repositories.'
+-
+    key: SC-5
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for provisioning enough application instances to handle legitimate traffic that reaches their application, and for responding to traffic in ways that do not prevent the application from responding to other legitimate requests.'
+-
+    key: SC-6
+    family: SC
+    implementation_status: Partial
+    name: 'The application owner must ensure they have allocated appropriate resources to their application within cloud.gov, such as setting an appropriate memory quota limit.'
+-
+    key: SC-7
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for ensuring their application does not exchange traffic with systems outside its own boundary over unsanctioned or unmonitored interfaces.'
+-
+    key: 'SC-7 (12)'
+    family: SC
+    implementation_status: Yes
+    name: 'cloud.gov uses an overlay network to restrict the communication between customer application instances and their bound service instances.'
+-
+    key: 'SC-7 (13)'
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for appropriately separating their applications from each other using system-provided spaces, application security groups, or isolation segments.'
+-
+    key: 'SC-7 (18)'
+    family: SC
+    implementation_status: Yes
+    name: 'In the event of a failure in the cloud.gov routing layer, external traffic will not reach the customer application.'
+-
+    key: 'SC-7 (3)'
+    family: SC
+    implementation_status: Yes
+    name: 'cloud.gov controls and limits the set of networks that can be used to reach the customer application.'
+-
+    key: 'SC-7 (4)'
+    family: SC
+    implementation_status: Yes
+    name: 'cloud.gov is responsible for monitoring, security, and policy enforcement for the configuration of external interfaces.'
+-
+    key: 'SC-7 (5)'
+    family: SC
+    implementation_status: Partial
+    name: 'cloud.gov allows all legitimately-directed traffic from the internet to reach the customer''s application via non-internal routes. Application owners are responsible for using an internal route or applying default deny policies (eg via route-service) where a default-deny policy is the appropriate configuration for their application.'
+-
+    key: 'SC-7 (7)'
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for ensuring their application does not tunnel client traffic to networks outside of its boundary inappropriately.'
+-
+    key: 'SC-7 (8)'
+    family: SC
+    implementation_status: Partial
+    name: 'Application owners are responsible for ensuring their traffic to cloud.gov APIs and application instances traverses their monitored agency network boundary, for example by configuring the allowed IP ranges for users from their domain.'
+-
+    key: SC-8
+    family: SC
+    implementation_status: Partial
+    name: 'HTTS is enforced on customer applications by default. The configuration of stricter encryption is the responsibility of the application owners.'
+-
+    key: 'SC-8 (1)'
+    family: SC
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: SI-1
+    family: SI
+    implementation_status: No
+    name: 'cloud.gov inherits its implementation from GSA. The application leveraging cloud.gov will need to inherit the use of their agency''s security policy. GSA applications can inherit cloud.gov''s implementations. '
+-
+    key: SI-10
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring input to the application is validated.'
+-
+    key: SI-11
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring application error messages do not reveal sensitive information to unauthorized users.'
+-
+    key: SI-12
+    family: SI
+    implementation_status: Partial
+    name: 'If the application has additional information handling and storage requirements beyond what cloud.gov provides it must establish the mechanisms to meet the requirements.'
+-
+    key: SI-16
+    family: SI
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: SI-2
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for scanning for and addressing flaws in application code.'
+-
+    key: 'SI-2 (2)'
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for employing automated mechanisms to scan for flaws in application code.'
+-
+    key: 'SI-2 (3)'
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for responding to flaws in application code within appropriate timeframes for the application ATO.'
+-
+    key: SI-3
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that application code does not introduce malicious code into the environment.'
+-
+    key: 'SI-3 (1)'
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that application code does not introduce malicious code into the environment.'
+-
+    key: 'SI-3 (2)'
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that application code does not introduce malicious code into the environment.'
+-
+    key: 'SI-3 (7)'
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring that application code does not introduce malicious code into the environment.'
+-
+    key: SI-4
+    family: SI
+    implementation_status: Partial
+    name: 'Application owners are responsible for monitoring their application logs for signs of unauthorized activity according to laws and regulations, and applying heightened scrutiny when there is an indication of increased risk.'
+-
+    key: 'SI-4 (1)'
+    family: SI
+    implementation_status: No
+    name: 'Application owners are responsible for conveying cloud.gov-collected logs to their own intrusion detection system where applicable.'
+-
+    key: 'SI-4 (14)'
+    family: SI
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'SI-4 (16)'
+    family: SI
+    implementation_status: No
+    name: 'cloud.gov supplies a real-time feed of events related to customer applications. Application owners are responsible for using correlating these events with other events gathered throughout their systems.'
+-
+    key: 'SI-4 (2)'
+    family: SI
+    implementation_status: Partial
+    name: 'cloud.gov supplies a real-time feed of events related to customer applications. Application owners are responsible for using automated tools to interpret and analyze these events.'
+-
+    key: 'SI-4 (23)'
+    family: SI
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'SI-4 (4)'
+    family: SI
+    implementation_status: Yes
+    name: 'Customer applications fully inherit this control from cloud.gov.'
+-
+    key: 'SI-4 (5)'
+    family: SI
+    implementation_status: Partial
+    name: 'Application owners must establish the SLA with cloud.gov for reporting malicious code detection that effects the application.'
+-
+    key: SI-5
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring the application personnel monitor and respond to security alerts and advisories that affect the application.'
+-
+    key: SI-6
+    family: SI
+    implementation_status: No
+    name: 'The application owner is responsible for ensuring the application verifies correct operation of the application.'
+-
+    key: SI-7
+    family: SI
+    implementation_status: No
+    name: 'Application owners are responsible for detecting unauthorized changes to their deployed application.'
+-
+    key: 'SI-7 (1)'
+    family: SI
+    implementation_status: Partial
+    name: 'cloud.gov always restarts customer applications based on the original version that the customer supplied. Application owners are responsible for making sure that their applications are restarted appropriately often.'
+-
+    key: 'SI-7 (7)'
+    family: SI
+    implementation_status: No
+    name: 'Application owners are responsible for incorporating detection of unauthorized changes into their incident response capability.'
+-
+    key: SI-8
+    family: SI
+    implementation_status: No
+    name: 'If the application processes messages, all spam protections are the responsibility of the application owner.'
+-
+    key: 'SI-8 (1)'
+    family: SI
+    implementation_status: No
+    name: 'If the application processes messages, all spam protections are the responsibility of the application owner.'
+-
+    key: 'SI-8 (2)'
+    family: SI
+    implementation_status: No
+    name: 'If the application processes messages, all spam protections are the responsibility of the application owner.'

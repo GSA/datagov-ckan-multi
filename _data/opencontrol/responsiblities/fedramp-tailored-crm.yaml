@@ -1,0 +1,675 @@
+# FedRAMP Tailored - CSP Response	
+# Provides a list of all controls that require the CSP to provide detailed descriptions of their implementation, or provide a self-attestation that their implementation meets the intent of the security requirements. All required and conditional controls must be tested by an approved assessor.
+---
+-
+    tags: 1
+    key: AC-1
+    name: Access Control Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 2
+    key: AC-2
+    name: Account Management
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 3
+    key: AC-3
+    name: Access Enforcement
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 4
+    key: AC-7
+    name: Unsuccessful Login Attempts
+    implementation_status: NSO, Attest
+    comments: NSO - for non-privileged users. Attestation - for privileged users related to multi-factor identification and authentication.
+-
+    tags: 5
+    key: AC-17
+    name: Remote Access
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 6
+    key: AC-20
+    name: Use of External Information Systems
+    implementation_status: Attest
+    comments: 
+-
+    tags: 7
+    key: AC-22
+    name: Publicly Accessible Content
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 8
+    key: AT-1
+    name: Security Awareness and Training Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 9
+    key: AT-2
+    name: Security Awareness Training
+    implementation_status: Attest
+    comments: 
+-
+    tags: 10
+    key: AT-3
+    name: Role-Based Security Training
+    implementation_status: Attest
+    comments: 
+-
+    tags: 11
+    key: AT-4
+    name: Security Training Records
+    implementation_status: Attest
+    comments: 
+-
+    tags: 12
+    key: AU-1
+    name: Audit and Accountability Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 13
+    key: AU-2
+    name: Audit Events
+    implementation_status: Attest
+    comments: 
+-
+    tags: 14
+    key: AU-3
+    name: Content of Audit Records
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 15
+    key: AU-5
+    name: Response to Audit Processing Failures
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 16
+    key: AU-6
+    name: Audit Review, Analysis, and Reporting
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 17
+    key: AU-8
+    name: Time Stamps
+    implementation_status: Attest
+    comments: 
+-
+    tags: 18
+    key: AU-9
+    name: Protection of Audit Information
+    implementation_status: Attest
+    comments: 
+-
+    tags: 19
+    key: AU-12
+    name: Audit Generation
+    implementation_status: Attest
+    comments: 
+-
+    tags: 20
+    key: CA-1
+    name: "Security Assessment and Authorization\nPolicies and Procedures"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 21
+    key: CA-2 
+    name: Security Assessments
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 22
+    key: CA-2 (1)
+    name: Security Assessments | Independent Assessors
+    implementation_status: Attest
+    comments: 
+-
+    tags: 23
+    key: CA-3
+    name: System Interconnections
+    implementation_status: Document and Assess (Conditional)
+    comments: "Condition - There are connection(s) to external systems.  Connections (if any) shall be authorized and must:\n1) Identify the interface/connection.\n2) Detail what data is involved and its sensitivity.\n3) Determine whether the connection is one-way or bi-directional.\n4) Identify how the connection is secured."
+-
+    tags: 24
+    key: CA-5
+    name: Plan of Action and Milestones
+    implementation_status: Attest
+    comments: Attestation - for compliance with FedRAMP Tailored LI-SaaS Continuous Monitoring Requirements
+-
+    tags: 25
+    key: CA-6
+    name: Security Authorization
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 26
+    key: CA-7
+    name: Continuous Monitoring
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 27
+    key: CA-9
+    name: Internal System Connections
+    implementation_status: Document and Assess (Conditional)
+    comments: "Condition - There are connection(s) to external systems.  Connections (if any) shall be authorized and must:\n1) Identify the interface/connection.\n2) Detail what data is involved and its sensitivity.\n3) Determine whether the connection is one-way or bi-directional.\n4) Identify how the connection is secured."
+-
+    tags: 28
+    key: CM-1
+    name: "Configuration Management Policy and\nProcedures"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 29
+    key: CM-2
+    name: Baseline Configuration
+    implementation_status: Attest
+    comments: 
+-
+    tags: 30
+    key: CM-4
+    name: Security Impact Analysis
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 31
+    key: CM-6
+    name: Configuration Settings
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 32
+    key: CM-7
+    name: Least Functionality
+    implementation_status: Attest
+    comments: 
+-
+    tags: 33
+    key: CM-8
+    name: Information System Component Inventory
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 34
+    key: CP-1
+    name: Contingency Planning Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 35
+    key: CP-9
+    name: Information System Backup
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 36
+    key: IA-1
+    name: Identification and Authentication Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 37
+    key: IA-2
+    name: "Identification and Authentication\n(Organizational Users)"
+    implementation_status: NSO, Attest
+    comments: NSO - for non-privileged users. Attestation - for privileged users related to multi-factor identification and authentication. Include specific description of management of service accounts.
+-
+    tags: 38
+    key: IA-2 (1)
+    name: "Identification and Authentication\n(Organizational Users) | Network Access to Privileged Accounts"
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 39
+    key: IA-2 (12)
+    name: "Identification and Authentication\n(Organizational Users) | Acceptance of Personal Identity Verification (PIV) Credentials"
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Must document and assess for privileged users. May attest to this control for non-privileged users. FedRAMP requires a minimum of multi-factor authentication for all Federal privileged users, if acceptance of PIV credentials is not supported.  The implementation status and details of how this control is implemented must be clearly defined by the CSP.
+-
+    tags: 40
+    key: IA-4
+    name: Identifier Management
+    implementation_status: Attest
+    comments: 
+-
+    tags: 41
+    key: IA-5
+    name: Authenticator Management
+    implementation_status: Attest
+    comments: 
+-
+    tags: 42
+    key: IA-5 (1)
+    name: Authenticator Management | Password-Based Authentication
+    implementation_status: Attest
+    comments: 
+-
+    tags: 43
+    key: IA-5 (11)
+    name: Authenticator Management | Hardware Token-Based Authentication
+    implementation_status: FED, Document and Assess (Conditional)
+    comments: FED - for Federal privileged users. Condition - Must document and assess for privileged users. May attest to this control for non-privileged users.
+-
+    tags: 44
+    key: IA-6
+    name: Authenticator Feedback
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 45
+    key: IA-7
+    name: Cryptographic Module Authentication
+    implementation_status: Attest
+    comments: 
+-
+    tags: 46
+    key: IA-8
+    name: Identification and Authentication (Non-Organizational Users) 
+    implementation_status: Attest
+    comments: 
+-
+    tags: 47
+    key: IA-8 (1)
+    name: Identification and Authentication (Non-Organizational Users) |  Acceptance of PIV Credentials from Other Agencies
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Must document and assess for privileged users. May attest to this control for non-privileged users. FedRAMP requires a minimum of multi-factor authentication for all Federal privileged users, if acceptance of PIV credentials is not supported.  The implementation status and details of how this control is implemented must be clearly defined by the CSP.
+-
+    tags: 48
+    key: IA-8 (2)
+    name: Identification and Authentication (Non-Organizational Users) | Acceptance of Third-Party Credentials
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Must document and assess for privileged users. May attest to this control for non-privileged users. FedRAMP requires a minimum of multi-factor authentication for all Federal privileged users, if acceptance of PIV credentials is not supported.  The implementation status and details of how this control is implemented must be clearly defined by the CSP.
+-
+    tags: 49
+    key: IA-8 (3)
+    name: Identification and Authentication (Non-Organizational Users) | Acceptance of FICAM-Approved Products
+    implementation_status: Attest
+    comments: 
+-
+    tags: 50
+    key: IA-8 (4)
+    name: Identification and Authentication (Non-Organizational Users) | Use of FICAM-Issued Profiles
+    implementation_status: Attest
+    comments: 
+-
+    tags: 51
+    key: IR-1
+    name: Incident Response Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 52
+    key: IR-2
+    name: Incident Response Training
+    implementation_status: Attest
+    comments: 
+-
+    tags: 53
+    key: IR-4
+    name: Incident Handling
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 54
+    key: IR-5
+    name: Incident Monitoring
+    implementation_status: Attest
+    comments: 
+-
+    tags: 55
+    key: IR-6
+    name: Incident Reporting
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 56
+    key: IR-7
+    name: Incident Response Assistance
+    implementation_status: Attest
+    comments: 
+-
+    tags: 57
+    key: IR-8
+    name: Incident Response Plan
+    implementation_status: Attest
+    comments: Attestation - Specifically attest to US-CERT compliance.
+-
+    tags: 58
+    key: IR-9
+    name: Information Spillage Response
+    implementation_status: Attest
+    comments: Attestation - Specifically describe information spillage response processes.
+-
+    tags: 59
+    key: MA-1
+    name: System Maintenance Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 60
+    key: MA-2
+    name: Controlled Maintenance
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 61
+    key: MA-4
+    name: Non-local Maintenance
+    implementation_status: Attest
+    comments: 
+-
+    tags: 62
+    key: MA-5
+    name: Maintenance Personnel
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 63
+    key: MP-1
+    name: Media Protection Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 64
+    key: MP-2
+    name: Media Access
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 65
+    key: MP-6
+    name: Media Sanitization
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 66
+    key: MP-7
+    name: Media Use
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 67
+    key: PE-1
+    name: "Physical and Environmental Protection\nPolicy and Procedures"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 68
+    key: PE-2
+    name: Physical Access Authorizations
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 69
+    key: PE-3
+    name: Physical Access Control
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 70
+    key: PE-6
+    name: Monitoring Physical Access
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 71
+    key: PE-8
+    name: Visitor Access Records
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 72
+    key: PE-12
+    name: Emergency Lighting
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 73
+    key: PE-13
+    name: Fire Protection
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 74
+    key: PE-14
+    name: Temperature and Humidity Controls
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 75
+    key: PE-15
+    name: Water Damage Protection
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 76
+    key: PE-16
+    name: Delivery and Removal
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - Control is not inherited from a FedRAMP-authorized PaaS or IaaS.
+-
+    tags: 77
+    key: PL-1
+    name: Security Planning Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 78
+    key: PL-2
+    name: System Security Plan
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 79
+    key: PL-4
+    name: Rules of Behavior
+    implementation_status: Attest
+    comments: 
+-
+    tags: 80
+    key: PS-1
+    name: Personnel Security Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 81
+    key: PS-3
+    name: Personnel Screening
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 82
+    key: PS-4
+    name: Personnel Termination
+    implementation_status: Attest
+    comments: 
+-
+    tags: 83
+    key: PS-5
+    name: Personnel Transfer
+    implementation_status: Attest
+    comments: 
+-
+    tags: 84
+    key: PS-6
+    name: Access Agreements
+    implementation_status: Attest
+    comments: 
+-
+    tags: 85
+    key: PS-7
+    name: Third-Party Personnel Security
+    implementation_status: Attest
+    comments: Attestation - Specifically stating that any third-party security personnel are treated as CSP employees.
+-
+    tags: 86
+    key: PS-8
+    name: Personnel Sanctions
+    implementation_status: Attest
+    comments: 
+-
+    tags: 87
+    key: RA-1
+    name: Risk Assessment Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 88
+    key: RA-2
+    name: Security Categorization
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 89
+    key: RA-3
+    name: Risk Assessment
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 90
+    key: RA-5
+    name: Vulnerability Scanning
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 91
+    key: SA-1
+    name: "System and Services Acquisition Policy and\nProcedures"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 92
+    key: SA-2
+    name: Allocation of Resources
+    implementation_status: Attest
+    comments: 
+-
+    tags: 93
+    key: SA-3
+    name: System Development Life Cycle
+    implementation_status: Attest
+    comments: 
+-
+    tags: 94
+    key: SA-4
+    name: Acquisition Process
+    implementation_status: Attest
+    comments: 
+-
+    tags: 95
+    key: SA-4 (10)
+    name: Acquisition Process | Use of Approved PIV Products
+    implementation_status: Attest
+    comments: 
+-
+    tags: 96
+    key: SA-5
+    name: Information System Documentation
+    implementation_status: Attest
+    comments: 
+-
+    tags: 97
+    key: SA-9
+    name: External Information System Services
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 98
+    key: SC-1
+    name: "System and Communications Protection\nPolicy and Procedures"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 99
+    key: SC-5
+    name: Denial of Service Protection
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - If availability is a requirement - define protections in place as per control requirement .             
+-
+    tags: 100
+    key: SC-7
+    name: Boundary Protection
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 101
+    key: SC-12
+    name: "Cryptographic Key Establishment and\nManagement "
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 102
+    key: SC-13
+    name: Conditional Cryptographic Protection  
+    implementation_status: Document and Assess (Conditional)
+    comments: Condition - If implementing need to detail how they meet it or not.
+-
+    tags: 103
+    key: SC-20
+    name: "Secure Name /Address Resolution Service\n(Authoritative Source)"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 104
+    key: SC-21
+    name: "Secure Name /Address Resolution Service\n(Recursive or Caching Resolver)"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 105
+    key: SC-22
+    name: "Architecture and Provisioning for\nName/Address Resolution Service"
+    implementation_status: Attest
+    comments: 
+-
+    tags: 106
+    key: SC-39
+    name: Process Isolation
+    implementation_status: Attest
+    comments: 
+-
+    tags: 107
+    key: SI-1
+    name: System and Information Integrity Policy and Procedures
+    implementation_status: Attest
+    comments: 
+-
+    tags: 108
+    key: SI-2
+    name: Flaw Remediation
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 109
+    key: SI-3
+    name: Malicious Code Protection
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 110
+    key: SI-4
+    name: Information System Monitoring
+    implementation_status: Document and Assess
+    comments: 
+-
+    tags: 111
+    key: SI-5
+    name: Security Alerts, Advisories, and Directives
+    implementation_status: Attest
+    comments: 
+-
+    tags: 112
+    key: SI-12
+    name: Information Handling and Retention 
+    implementation_status: Attest
+    comments: Attestation - Specifically related to US-CERT and FedRAMP communications procedures.

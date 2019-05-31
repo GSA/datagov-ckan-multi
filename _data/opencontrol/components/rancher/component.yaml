@@ -1,0 +1,33 @@
+name: Rancher
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      SecTools Twistlock customers are responsible for securing the service account username and passkey supplied by the SecOps Team as described in AC-2(a). 
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: planned
+  narrative:
+  - text: >
+      Twistlock has added updating their API authentication mechanism to their development road map. 
+- control_key: RA-5
+  standard_key: NIST SP 800-53 Revision 4
+  implementation_status: partial
+  narrative:
+  - key: a
+    text: >
+      Twistlock provides vulnerability information to developers as they deploy container images within their system.  
+- control_key: SI-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Security Operations Customer is responsible for the remediation of the flaws as identified in Part a. 
+- control_key: SI-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The customer is responsible for the installation of Twistlock Defender agents on all Docker host systems and for ensuring the Defenders stay running.

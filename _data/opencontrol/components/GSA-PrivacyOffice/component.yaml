@@ -1,0 +1,212 @@
+name: GSA Privacy Office
+schema_version: 3.0.0
+satisfies:
+- control_key: AP-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The GSA ISP is responsible for determining and documenting the legal authority
+      permitting the handling of GSA PII.  Pursuant to 5 U.S.C. §552a (e) (3) GSA
+      provides what is commonly referred to as a Privacy Act Statement to all persons
+      asked to provide personal information about themselves, which will go into a
+      system of records [i.e., the information will be stored and retrieved using
+      the individual’s name or other personal identifier such as a Social Security
+      Number (SSN)]. GSA policy is to provide a Privacy Act Statement regardless of
+      whether the collection is part of a system of records or not. All Privacy Act
+      statements must be reviewed by the GSA Privacy Office. When drafting a Privacy
+      Act Statement for review by the GSA Privacy Office, the legal authority for
+      collecting the information (statute, executive order, regulation, etc.) is included.
+- control_key: AP-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Pursuant to 5 U.S.C. §552a (e) (3) GSA provides what is commonly referred to
+      as a Privacy Act Statement to all persons asked to provide personal information
+      about themselves, which will go into a system of records (i.e., the information
+      will be stored and retrieved using the individual’s name or other personal identifier
+      such as a SSN.  GSA policy is to provide a Privacy Act Statement regardless
+      of whether the collection is part of a system of records or not. All Privacy
+      Act statements must be reviewed by the Privacy Office.
+- control_key: AR-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      GSA manages its privacy risk management process by conducting Privacy Impact
+      Analysis (PIAs) and System of Records Notices (SORNs) for information systems,
+      programs, or other activities that pose a privacy risk in accordance with applicable
+      law, OMB policy, or any existing organizational policies and procedures.  Systems
+      are categorized as low, moderate, or high risk in accordance with FIPS 199 Standards
+      for Security Categorization of Federal Information and Information Systems and
+      NIST SP 800-53 Security and Privacy Controls for Federal Information Systems
+      and Organizations.
+- control_key: AR-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  Information regarding GSA privacy roles, responsibilities, and access
+      requirements for contractors and service providers can be found in the GSA Rules
+      of Behavior for Handling Personally Identifiable Information (PII) CIO P 2180.1
+      (Appendix C), and the GSA Information Technology (IT) Security Policy 2100.1J,
+      41 CFR Part 105-64 Privacy Act Rules.
+- control_key: AR-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  GSA requires Privacy Act statements and conducts PIAs and SORNs for
+      information systems, programs, or other activities that pose a privacy risk
+      in accordance with applicable law, OMB policy, or any existing organizational
+      policies and procedures.
+- control_key: AR-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The GSA Privacy Office develops privacy policies that promote the appropriate use of automated privacy controls.
+- control_key: AR-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. GSA keeps an accurate accounting of disclosures of information held
+      in each system of records under its control including date, nature, and purpose
+      of each disclosure of a record; name and address of the person or agency to
+      which the disclosure was made; retains the accounting of disclosures for the
+      life of the record or five years after the disclosure is made (whichever is
+      longer); and makes the accounting of disclosures available to the person named
+      in the record upon request.
+- control_key: DI-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. The GSA privacy program and accompanying GSA requirements for PIAs
+      and SORNs ensure that the highest quality of data protection for PII is used
+      and is in accordance with applicable laws and NIST recommendations.
+  - key: d
+    text: >
+      The GSA Privacy Office issues guideline ensuring and maximizing the quality,
+      utility, objectivity, and integrity of disseminated information.
+- control_key: DM-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  The GSA Information Technology (IT) Security Policy 2100.1J and GSA
+      requirements for PIAs, SORNs, Privacy Act Statements, Annual Reviews of system
+      notices ensure that GSA identifies the minimum PII elements that are relevant
+      and necessary to accomplish the legally authorized purpose of collection.
+- control_key: DM-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  GSA records maintenance and disposition is performed in accordance
+      with applicable laws and NIST recommendations. For additional information, refer
+      to the GSA Records Maintenance and Disposition System OAS P 1820.1.
+- control_key: DM-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. The GSA Information Technology (IT) Security Policy 2100.1J requires
+      the use of PII for testing, training, and research only when required and absolutely
+      necessary. For additional information, refer to the GSA Privacy Act Program
+      CIO P 1878.1.
+- control_key: IP-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. The GSA Information Technology (IT) Rules of Behavior – GSA Order CIO
+      2104.1A CHGE 1 for Handling PII, the GSA Information Technology (IT) Security
+      Policy 2100.1J, and GSA requirements for PIAs, SORNs, and Privacy Act Statements
+      ensure that GSA is in accordance with applicable laws and NIST recommendations
+      with regard to consent and issues surrounding authorization of the collection,
+      use, dissemination, and retention of PII.
+- control_key: IP-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Officer offers individuals the ability to access their PII maintained
+      in GSA systems of records. For additional information, refer to the GSA Privacy
+      Act Program CIO P 1878.1.
+- control_key: IP-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office offers individuals the ability to have inaccurate PII
+      maintained by GSA corrected or amended, as appropriate. For additional information,
+      refer to the GSA Privacy Act Program CIO P 1878.1.
+- control_key: SE-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. GSA establishes, maintains, and updates list of Privacy Act notices
+      posted on the GSA.gov website. GSA also submits quarterly and annual FISMA reports
+      that contain listings of all GSA programs and information systems that collect,
+      use, maintain, or share PII.
+  - key: b
+    text: >
+      The GSA Privacy Office provides each update of the PII inventory to the CIO
+      or information security official to support the establishment of information
+      security requirements for all new or modified information systems containing
+      PII.
+- control_key: TR-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  The GSA requirements for SORNs and Privacy Act Statements ensure that
+      GSA is in accordance with applicable laws and NIST recommendations with regard
+      to privacy notice and the rights individuals have regarding their PII. For additional
+      information, refer to the GSA Privacy Act Program CIO P 1878.1.
+- control_key: TR-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  The GSA Privacy Act Rules and the GSA Privacy Training ensure that
+      GSA is in accordance with applicable laws and NIST recommendations with regard
+      to privacy notice.  GSA publishes SORNs in the Federal Register, subject to
+      required oversight processes, for systems containing PII. For addition information
+      regarding SORNs and Privacy Act Statements, refer to 41 CFR Part 105-64 Privacy
+      Act Rules.
+  - key: b
+    text: |
+      See Part a.
+  - key: c
+    text: |
+      See Part a.
+- control_key: UL-1
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program.  The GSA privacy training and the GSA requirements for PIAs and SORNs
+      ensure that GSA uses PII internally only for the authorized purpose(s) identified
+      in the Privacy Act and/or in public notices.
+- control_key: UL-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The GSA Privacy Office develops privacy policies and manages the GSA privacy
+      program. The GSA Information Technology (IT) Rules of Behavior – GSA Order CIO
+      2104.1A CHGE 1 for Handling PII, the GSA Information Technology (IT) Security
+      Policy 2100.1J, and GSA requirements for PIAs, SORNs, and Privacy Act Statements
+      ensure that GSA is in accordance with applicable laws and NIST recommendations
+      with regard to third party sharing.
