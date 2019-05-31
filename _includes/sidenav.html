@@ -6,35 +6,15 @@ _layouts/page.html layout template, or you can add "sidenav: true" in the front-
 <aside class="usa-layout-docs-sidenav desktop:grid-col-3">
   <nav>
     <ul class="usa-sidenav">
+      {% for nav in page.nav %}
       <li class="usa-sidenav__item">
-      <a href="">Parent link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="" class="usa-current">Current page</a><ul class="usa-sidenav__sublist">
-        <li class="usa-sidenav__item">
-      <a href="">Child link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="" class="usa-current">Child link</a><ul class="usa-sidenav__sublist">
-        <li class="usa-sidenav__item">
-      <a href="">Grandchild link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="">Grandchild link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="" class="usa-current">Grandchild link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="">Grandchild link</a>
+      <a href="{{ nav.href }}">{{ nav.name }}</a>
+      </li>
+      {% endfor %}
+      {% if children %}<li class="usa-sidenav__item">
+      <a href="{{ nav.children.href }}">{{ nav.children.href }}</a>
     </li>
-      </ul>
-    </li><li class="usa-sidenav__item">
-      <a href="">Child link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="">Child link</a>
-    </li><li class="usa-sidenav__item">
-      <a href="">Child link</a>
-    </li>
-      </ul>
-    </li><li class="usa-sidenav__item">
-      <a href="">Parent link</a>
-    </li>
+    {% endif %}
     </ul>
   </nav>
 </aside>

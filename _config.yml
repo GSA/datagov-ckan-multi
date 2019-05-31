@@ -18,16 +18,15 @@
 # Be sure to edit the values below
 ##########################################################################################
 
-title: Agency Name
-email:  contact@example.gov
-description: >- # this means to ignore newlines until "baseurl:"
-  Agency Name (EAC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Aenean et sapien a leo auctor scelerisque quis nec magna. Sed dictum ante a risus vehicula facilisis.
+title: Data.gov
+email:  datagovhelp@gsa.gov
+description: |
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://example.gov" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Twitter handle. Only the handle, not the URL.
-twitter: 18F
+twitter: USDATAGOV
 
 # Configuration for Google Analytics, add your UA code here:
 google_analytics_ua: UA-????????-??
@@ -39,26 +38,36 @@ dap_agency: GSA
 primary_navigation:
   - name: Home
     url: /
-  - name: Blog
+  - name: News
     url: /blog/
-  - name: Document
-    url: /document/
-  - name: Document with sidenav
-    url: /document-with-sidenav/
-  - name: Document submenu
+  - name: Introduction
+    url: /introduction/
+  - name: Roadmap
+    url: /roadmap/
+  - name: Documentation
+    url: /documentation/
+  - name: System Security   
     children:
-      - name: Navigation link
-        url: '#main-content'
-      - name: Navigation link
-        url: '#main-content'
-      - name: Navigation link
-        url: '#main-content'
+      - name: System Architecture 
+        url: /system-architecture/
+      - name: System Components
+        url: /system-components/
+      - name: System Security Plan
+        url: /system-security-plan/
+      - name: Security Controls
+        url: /security-controls/        
+      - name: Security Documents
+        url: /security-documents/
+      - name: OSCAL Catalog
+        url: /catalog/        
+      - name: OSCAL Profile
+        url: /profile/        
 
 secondary_navigation:
-  - name: Secondary link
-    url: '#main-content'
-  - name: Another secondary link
-    url: '#main-content'
+  - name: Multi-tenant Github Repo
+    url: 'https://github.com/gsa/datagov-ckan-multi'
+  - name: Production Github Repo
+    url: 'https://github.com/gsa/datagov-deploy'
 
 # Search.gov configuration
 #
@@ -143,7 +152,6 @@ pagination:
   # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # Without file extension
   indexpage: 'index.html'
-
 
 
 # # Configuration for jekyll_pages_api_search plugin gem.

@@ -1,0 +1,473 @@
+name: GSA BSP
+schema_version: 3.0.0
+satisfies:
+- control_key: AC-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The application administrators access the BSP managed Jumpbox internally within
+      the GSA network which requires two factor authentication provided by secureauth
+      by either: being on premise and connecting to the GSA Wireless network, i.e.
+      Horizon. The application administrators can only then access the jumpbox with
+      a shared SSH key.
+  - key: b
+    text: >
+      BSP identifies account managers for applications that need access to the platform.  These
+      account managers act as, and are assigned as, approvers within the service request
+      ticket within the BSP account management ticketing system.
+  - key: c
+    text: >
+      For each BSP role, there is a role description which describes the authorized
+      privileges and functions.  All users must have a job duty assigned and approved
+      before granting access to the platform.
+  - key: d
+    text: >
+      All BSP user assignments and authorizations that are entered within the BSP
+      account management ticketing system specify the approved authorizations for
+      each account.
+  - key: e
+    text: >
+      BSP identifies account approvers.  These account approvers are assigned user
+      account request tickets for their approval within the BSP account management
+      ticketing system.
+  - key: f
+    text: >
+      All GSA accounts provisioned for BSP must follow the platform’s defined processes
+      and procedures for creating, enabling, modifying, disabling, and removing of
+      the account.
+  - key: g
+    text: >
+      GSA Security provides auditing and monitoring capabilities for BSP through the
+      deployment of the GSA Enterprise SIEM tool.   BSP leverages Active Directory
+      for Infrastructure management and ForgeRock OpenDJ which catalog all user account
+      access into logs which are then digested into the GSA SIEM  for monitoring purposes.
+  - key: h
+    text: >
+      When a user account is no longer required, the data.gov PM will communicate
+      this request to the BSP account management team via their account management
+      ticketing system.
+  - key: i
+    text: >
+      When a user needs to be authorized, the BSP PM/engineering team will communicate
+      this request for approval and notification to the BSP account management team
+      via the BSP account management ticketing system.
+  - key: j
+    text: >
+      As part of the account management process, BSP completes an annual recertification
+      of all approved accounts.  The date for this annual requirement is tracked as
+      a key date within the BSP POA&M.
+  - key: k
+    text: |
+      Group/shared accounts are not authorized for BSP.
+- control_key: AC-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The BSP Platform has developed the GTD domain which provides at a minimum the
+      capability to monitor account usage for user accounts across the platform.
+- control_key: AC-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The BSP Platform does not utilize temporary or emergency accounts.
+- control_key: AC-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The BSP platform utilizes automate mechanisms which disable accounts after 90 days of inactivity for all platform users.
+- control_key: AC-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: The Data.gov PMO and its support contractors will leverage the existing
+      BSP services to manage back end privileges to the system. All BSP Platform users
+      are required to undergo the appropriate HSPD-12 security background investigations
+      and obtain Shortname accounts in accordance with GSA Policies to access the
+      BSP platform.
+- control_key: AC-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The BSP platform is designed to provide Separation of Duties (SoD) through different
+      layers of accessibility.  A role has been established for the Data.gov Application
+      Team to gain developer access to the platform.
+  - key: c
+    text: |
+      BSP authorizes users of the BSP platform through an Approved Service Catalog Request.
+- control_key: AC-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The principle of least privilege within BSP is implemented via groups. Platform
+      users are placed in groups that provide the least amount of access required
+      to complete their assigned business function and daily duties.
+- control_key: AC-6 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov team follows BSP Platform processes for requesting platform access
+      to the Data.gov enclave via a ServiceNow ticket. The Data.gov System Owner indicates
+      which individuals are to be granted access, and the level of least privilege
+      access.
+- control_key: AC-6 (5)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov team follows BSP Platform processes for requesting platform access
+      to the Data.gov enclave via a ServiceNow ticket.  The Data.gov System Owner
+      indicates which individuals are to be granted access and the level of least
+      privilege access.  In addition, the only users who are granted this level of
+      access are those who have gone through the GSA clearance process, have gsa.gov
+      email addresses and HSPD 12 badges.
+- control_key: AC-6 (10)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      All BSP Platform accounts are considered privileged.  Non-privileged accounts are not permitted to access the platform.
+- control_key: AC-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      Password lockout is set to 10 failed attempts in a 30 minutes parameter.
+  - key: b
+    text: |
+      See Part a.
+- control_key: AU-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      BSP reviews the list of GSA Security provided audited events annually and, when
+      necessary, updates logging and events creation configurations to ensure continued
+      capability to support after-the-fact investigations of security audits IAW GSA
+      policy and security guidance.
+- control_key: AU-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Server Operating Systems’ maximum security log size is set to 100 MB.
+- control_key: AU-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The BSP Platform is responsible for receiving the infrastructure and operating
+      system alerts and reporting them to the Information System Security Manager,
+      Information System Security Officer, and System Owners, if necessary.
+- control_key: AU-6(1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      BSP leverages the GSA Enterprise SIEM tool to integrate audit review, analysis, and reporting processes.
+- control_key: AU-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      BSP leverages the GSA SIEM tool to provide on-demand audit review, analysis,
+      reporting, and after-the-fact investigation support for security incidents.
+
+      The GSA SIEM tool consumes BSP specific audit logs and records as-is with no
+      modification to content. The as-is content is available for reporting and auditing
+      in its original form and chronology from within the SIEM Tool.
+- control_key: AU-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      BSP protects audit information by implementing the necessary encryption and
+      group permissions which restrict unauthorized access, modification, and deletion.
+      These permissions are enforced such that filesystem and application level restrictions
+      are in place to limit user access.
+- control_key: AU-9 (4)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The BSP system protects audit information through enforcement of least privilege
+      and role-based access. Only those users who are authorized to access audit records
+      are capable of viewing or managing the audit data.
+- control_key: AU-12
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      The BSP Platform provides audit record generation capabilities to support AU-2 requirements.
+  - key: b
+    text: >
+      The BSP ISSM, ISSO, and System Owner are responsible for selecting the auditable
+      events to be captured, as long as they are in accordance with GSA Policy.
+  - key: c
+    text: |
+      BSP generates audit records that satisfy the requirements for both AU-2 and AU-3.
+- control_key: CM-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: c
+    text: >
+      The BSP ISSO works with the Data.gov PM and the technical team to review and
+      update any necessary baselines or configurations through the BSP CM and CCB
+      process.
+- control_key: CP-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The BSP Contingency Plan has been developed in accordance with Office of Management
+      and Budget (OMB) Circular No. A-130, NIST SP-800-34 Rev 1 controls, Contingency
+      Planning Guide for Information Systems, and CIO IT Security 06-29, Contingency
+      Planning.
+- control_key: CP-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      PLANNED:
+      BSP is working to enhance the BSP Contingency Plan to include tenant CP requirements, testing, and recovery as new tenants are supported by the platform.
+- control_key: CP-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The BSP Contingency Plan establishes procedures to recover Data.gov following a disruption.
+- control_key: CP-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      All employees with CP designations are trained in their roles and responsibilities
+      relative to the emergency, disaster, and contingency plans within 30 days of
+      the designation. The BSP Contingency Plan addresses BSP contingency roles, responsibilities
+      and assigned individuals with contact information.
+  - key: b
+    text: |
+      CP training is conducted when significant changes are made to the environment.
+  - key: c
+    text: |
+      CP training is conducted on an annual basis.
+- control_key: CP-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The BSP Contingency Plan is annually tested in conjunction with the IR Plan
+      to validate the content and procedures as well as to improve the capabilities
+      to prepare for, respond to, manage, and recover from adverse events that may
+      affect GSA information systems. The most recent date for this test is tracked
+      within the BSP POA&M key dates. The GSA OCISO CP Test template is utilized and
+      upon successfully completing testing and validation, the BSP CP Director formally
+      declares recovery efforts complete, and that BSP is in normal operations.
+- control_key: CP-9
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      BSP is responsible for all relevant backups and restoration activities which are outlined within the BSP System Implementation Plan (SIP).
+  - key: d
+    text: >
+      BSP protects the confidentiality, integrity, and availability of backup information
+      within AWS storage locations. Only BSP personnel are allowed administrator access
+      to the ec2 and database backups.
+- control_key: CP-9 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Backups retained within AWS S3 are tested annually as part of the BSP CP test
+      exercise when completing a full restoration of the platform and applicable tenant
+      components. All snapshot backups provide the capability to restore virtual instances
+      to the most recent operating state.
+- control_key: IA-2
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov developers access the BSP managed Jumpbox internally within the GSA
+      Network with a SSH key that is encrypted with a passphrase; an individual keypair
+      and passphrase is granted to each developer. In addition, Google Authenticator
+      is used as the multifactor authentication mechanism to access the Jumpbox.
+- control_key: IA-2 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The Data.gov application administrators access the BSP managed Jumpbox internally
+      within the GSA network which requires two factor authentication provided by
+      secureauth by either: being on premise and connecting to the GSA Wireless network,
+      i.e. Horizon. The application administrators can only then access the jumpbox
+      with a shared SSH key.
+- control_key: IA-2 (3)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov leverages BSP existing process and GSA 2-Factor solutions or GTD 2-factor
+      implementation for all access to infrastructure/platform/backend components
+      and services. Only the web application itself will utilize Max.gov and/or Github
+      for authentication.
+- control_key: IA-2 (12)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      Data.gov leverages BSP’s GTD 2-factor implementation for all access to platform
+      components and services. Only the web application itself utilizes Max.gov and/or
+      Github for authentication.
+- control_key: IA-4
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The data.gov PMO will identify personnel that require access to the BSP platform.
+      These individuals will  require GSA Network access and multi-factor credentials.
+      Once that is obtained, the PMO will submit a ServiceNow request for creating
+      an account. Authorized user requests for platform access are obtained from BSP
+      designated account managers.
+  - key: b
+    text: |
+      All identified personnel are managed in the same group and role within the BSP environment.
+  - key: c
+    text: |
+      The BSP  account manager assigns identifiers for the BSP platform users.
+  - key: d
+    text: >
+      The BSP system utilizes unique identifiers for all groups and roles accounts.  The
+      reuse of unique identifiers is prevented through the use of GSA policies and
+      strict naming standards as well as system based qualifiers that ensure unique
+      identifiers are used.  All naming standards adhere to GSA naming standards and
+      Platform naming standards.
+  - key: e
+    text: |
+      The Data.gov PMO will notify BSP with a ServiceNow ticket when a support team member account requires disabling.
+- control_key: IA-5
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: |
+      BSP is responsible for verifying identities of individuals/devices receiving the authenticator to access the Data.gov enclave within BSP.
+  - key: b
+    text: |
+      BSP is responsible for establishing initial authenticator content for authenticators.
+  - key: c
+    text: >
+      All authenticators within the platform authenticate to Active Directory and
+      have augmented controls to provide enhanced security such as 2-Factor authentication.
+  - key: d
+    text: >
+      For platform users, the BSP system has defined procedures for authenticator
+      distribution, reissuance of lost/compromised or damaged authenticators, and
+      for revoking authenticators.
+  - key: e
+    text: >
+      All default content authenticators are updated immediately upon deployment of
+      system components and accounts via the automated mechanisms which perform deployment.
+  - key: g
+    text: |
+      BSP platform authenticators are refreshed, at a minimum, every 90 days.
+  - key: h
+    text: |
+      The BSP platform implements numerous methods to protect authenticator content primarily via one way cryptographic hashing techniques.
+  - key: i
+    text: >
+      The BSP Identity Access Management Plan describes security safeguards taken
+      by both the system and by individual users to protect authenticators.
+- control_key: IA-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      The BSP Platform ensures that all platform-provided authenticator services obscure feedback of authentication information.
+- control_key: PL-8
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The BSP architecture can be found within the BSP Platform Security and Technical
+      Architecture Guide.  This guide complies with GSA’s Enterprise Architecture
+      and includes any necessary information on external dependencies.
+  - key: b
+    text: >
+      All significant changes to the architecture are updated within the BSP Platform
+      Security and Technical Architecture Guide as well as reviewed and approved by
+      GSA Security.  This guide is reviewed, at a minimum, on an annual basis to ensure
+      it remains current and approved changes included. When changes are planned and
+      documented within this guide the relevant areas are also reviewed and update
+      in the SSP to include changes as applicable.
+  - key: c
+    text: |
+      See Part b.
+- control_key: SC-7
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: >
+      The boundary for the BSP, both external and internal, are visually represented
+      within the VPC boundary diagram within Section 9 of the BSP SSP.  To enhance
+      the monitoring performed by GSA Security, the BSP, for both the internal and
+      external boundary communications, additional monitoring takes place within Splunk.  Splunk
+      captures all of the NetScaler, TrendMicro, AWS ELB, and AWS Flow logs which
+      are used to enhance monitoring for unapproved or unexpected network activity.
+
+      External Boundaries:
+
+      To enhance the GSA Security firewall boundary protection and monitoring, BSP
+      implements Network Access Control lists within AWS.  These are used to tightly
+      control access for VPN traffic between VPC’s as well as VPN connections between
+      the GSA OCIO network and BSP.
+
+      Internal Boundaries
+
+      Key internal traffic is controlled through the use of  security groups which
+      act as internal firewalls and restrict, based on a whitelist, to only approved
+      services and ports communications capabilities between these internal boundaries.
+  - key: b
+    text: >
+      As a key component of the BSP architecture, different subnets are used for each
+      layer of the architecture as data flows deeper into the System.  A DMZ component
+      is created via the firewall layer which utilizes a public subnet while all components
+      on the back side of the firewall are contained within private subnets.  All
+      components within the Production, Test, Dev, and Lab environments, with the
+      exception of the firewalls, are assigned to internal private IP spaces.
+- control_key: SI-3
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: This control is inherited from BSP and GSA SecOps through the use of Trendmicro.
+- control_key: SI-3 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: This control is inherited from BSP and GSA SecOps through the use of Trendmicro.
+- control_key: SI-3 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: This control is inherited from BSP and GSA SecOps through the use of Trendmicro.
+- control_key: SI-3 (7)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: This control is inherited from BSP and GSA SecOps through the use of Trendmicro.
+- control_key: CP-4 (1)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: BSP coordinates CP Testing with application tenants.
+- control_key: CP-10
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: >
+      The BSP Contingency Plan, section 6 - Recovery, addresses the testing process
+      by which recovery activities are completed and normal system operations are
+      resumed.
+- control_key: AC-6 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      BSP creates the initial Jumpbox user accounts which is provisioned via a ServiceNow ticket.
+- control_key: AU-6
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - key: a
+    text: BSP audit records are fed into the GSA Security Enterprise SIEM tool.  GSA
+      Security supports the BSP in collecting, analyzing, and reporting security logs
+      on a continual basis for indications of suspicious or unapproved activities.
+  - key: b
+    text: >
+      When GSA Security detects auditing events that are of concern they report those
+      items to the BSP ISSM and ISSO.  When the audit events are identified as a security
+      incident the BSP ISSO, along with GSA Security Incident Response team, BSP ISSM,
+      BSP PM, and the BSP DevOps team complete and submit  an incident report via
+      GSA ServiceNow.  The results of this incident report are provided to the GSA
+      OCISO and all other necessary stakeholders.
+- control_key: IA-2 (2)
+  standard_key: NIST SP 800-53 Revision 4
+  narrative:
+  - text: |
+      Only privileged users have network access to the BSP platform.

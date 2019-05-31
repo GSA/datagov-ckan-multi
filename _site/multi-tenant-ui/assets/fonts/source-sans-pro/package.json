@@ -1,0 +1,56 @@
+{
+  "_from": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+  "_id": "source-sans-pro@2.20.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/source-sans-pro",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "rawSpec": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "saveSpec": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "fetchSpec": "git://github.com/adobe-fonts/source-sans-pro.git",
+    "gitCommittish": "release"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git://github.com/adobe-fonts/source-sans-pro.git#1a31ead76ead2236cf18a4198d9c618f69c9ac5f",
+  "_spec": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+  "_where": "/home/sepokroce/keitaro/datagov-ckan-multi/multi-tenant-ui",
+  "author": {
+    "name": "Paul D. Hunt"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe-fonts/source-sans-pro/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Miguel Sousa"
+    }
+  ],
+  "deprecated": false,
+  "description": "Source Sans Pro is a set of OpenType fonts that have been designed to work well in user interface (UI) environments.",
+  "homepage": "https://adobe-fonts.github.io/source-sans-pro",
+  "keywords": [
+    "font",
+    "sans-serif",
+    "Adobe",
+    "OpenType",
+    "otf",
+    "ttf",
+    "woff",
+    "woff2",
+    "eot"
+  ],
+  "license": "SIL Open Font License 1.1",
+  "name": "source-sans-pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe-fonts/source-sans-pro.git#release"
+  },
+  "version": "2.20.2"
+}
