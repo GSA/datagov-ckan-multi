@@ -1,0 +1,26 @@
+family: SYSTEM AND COMMUNICATIONS PROTECTION
+documentation_complete: false
+satisfies:
+- control_key: SC-5
+  control_name: DENIAL OF SERVICE PROTECTION
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - text: >
+      CKAN has a manual ability to block IP addresses in cases where attacks bypass
+      the hosting environment's protection. This is managed by the DevOps team.
+    implementation_status: Partially in Place
+- control_key: SC-7
+  control_name: BOUNDARY PROTECTION
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - text: >
+      CKAN, when deployed on SELinux in full enforcing mode, minimizes the number
+      of services and computing nodes that are exposed to the Internet. CKAN employs
+      both the hosting environment's platform safeguards and the CKAN logs in monitoring
+      and recording system events. All other computing nodes used in the system are
+      isolated within hosting environment.
+    implementation_status: In Place

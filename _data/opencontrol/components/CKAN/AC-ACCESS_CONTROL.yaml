@@ -1,0 +1,116 @@
+family: ACCESS CONTROL
+documentation_complete: false
+satisfies:
+- control_key: AC-2
+  control_name: ACCOUNT MANAGEMENT
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - key: a
+    text: |
+
+      CKAN’s authorization system controls which users are allowed to
+      carry out which actions on the site. All actions that users can
+      carry out on a CKAN site are controlled by the authorization
+      system. For example, the authorization system controls who can
+      register new user accounts, delete user accounts, or create,
+      edit and delete datasets, groups and organizations.
+
+      CKAN provides user accounts for individuals who participate in visiting, contributing
+      to and administering the site with the following roles:
+
+      • Anonymous user – readers of the site who either do not have an account or
+      are not logged in.
+
+      • Organizational member - This role inherits anonymous user permissions, and also can view
+      an organization's private datasets.
+
+      • Organizational editor - This role inherits organizational member permissions, and can also
+      add new datasets to the organization, and edit or delete existing organizational datasets.
+
+      • Organizational administrator - This role inherits organizational editor permissions,
+      and can also manage the user membership of an organization, make datasets public or private, and
+      edit information about the organization itself.
+
+      • Administrator - This role has all permissions enabled by default.
+
+    implementation_status: In Place
+  - key: d
+    text: >
+      CKAN has a sophisticated permissions and role-based access control built in.
+      Each role within CKAN can only access the documents and controls for which
+      their privilege allows.
+    implementation_status: In Place
+  - key: g
+    text: |
+      CKAN monitors the usage of information accounts in the watchdog.log.
+    implementation_status: In Place
+- control_key: AC-3
+  control_name: ACCESS ENFORCEMENT
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - text: >
+      Access control in CKAN is enforced by authentication via unique username/password
+      for every type of user except Anonymous user. The user’s privileges, permissions
+      and access are provided on "least privilege" principle.
+
+      The anonymous user role has the least access to the site of all roles. The website
+      does not allow anonymous users to register an account for themselves. CKAN
+      Administrators are the only user roles that can create new user accounts.
+    implementation_status: In Place
+- control_key: AC-6
+  control_name: LEAST PRIVILEGE
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - text: >
+      At the application layer, CKAN is designed with a role based user access system,
+      a least privileged approach based on assignment of privileges to roles. CKAN‘s
+      permission systems enables control of what users can do and see on the site.
+      The user roles mentioned in control AC-5 define a specific set of permission for
+      each role.
+    implementation_status: In Place
+- control_key: AC-6 (9)
+  control_name: AUDITING USE OF PRIVILEGED FUNCTIONS
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - text: >
+      All team accounts are audited quarterly based on the concept of least privilege. Each member of the developer team is assigned a role which defines access
+      needed to perform only the member’s job function.  The audit of accounts is reported and reviewed by the operations team and evaluated to determine whether
+      roles or membership within the developer team should be changed.
+    implementation_status: In Place
+- control_key: AC-7
+  control_name: UNSUCCESSFUL LOGIN ATTEMPTS
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: Hybrid
+  narrative:
+  - key: a
+    text: |
+      CKAN can be configured to lock an account after a specified number of invalid login attempts within specified time period.
+    implementation_status: In Place
+  - key: b
+    text: >
+      Lock down following unsuccessful attempts is configurable by CKAN administrators
+      to conform to defined requirements.  When a user exceeds the limit of invalid
+      logon attempts, their account is automatically locked for a specfied time and
+      requires administrator action to unlock the account before the lockout period
+      expires.
+    implementation_status: In Place
+- control_key: AC-14
+  control_name: PERMITTED ACTIONS WITHOUT IDENTIFICATION OR AUTHENTICATION
+  standard_key: NIST SP 800-53 Revision 4
+  covered_by: []
+  security_control_type: System Specific Control
+  narrative:
+  - text: >
+      The anonymous user role has the least access to the site of all roles. The website
+      does not allow anonymous users to register an account for themselves.
+    implementation_status: In Place
+  summary: The website does not allow anonymous users to register an account for themselves.
