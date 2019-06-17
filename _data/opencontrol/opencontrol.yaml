@@ -9,16 +9,13 @@ metadata:
     abbreviation: GSA
   repository: https://github.com/GSA/datagov-ckan-multi
 components:
-- ./components/BSP
-- ./components/BSP-Data.gov
-- ./components/BSPGSA
+- ./components/CKAN
 - ./components/Data.gov
-- ./components/Jenkins-fake
-- ./components/FY18ATOAssessmentFinding
-- ./components/GSABSP
-- ./components/GSAOCISO
-- ./components/GSAPrivacyOffice
-- ./components/GSASecurity
+- ./components/FY18-FISMA-Audit-Findings
+- ./components/GSA-BSP
+- ./components/GSA-OCISO
+- ./components/GSA-PrivacyOffice
+- ./components/GSA-Security
 - ./components/ossec-hids
 - ./components/rancher
 - ./components/twistlock
