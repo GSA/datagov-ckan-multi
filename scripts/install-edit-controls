@@ -1,0 +1,6 @@
+# /bin/bash
+
+rm -rf hypergrc
+git clone https://github.com/GovReady/hyperGRC.git hypergrc
+docker image pull centos:7
+docker image build --tag hypergrc:latest hypergrc
