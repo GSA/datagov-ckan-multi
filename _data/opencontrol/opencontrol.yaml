@@ -20,6 +20,7 @@ components:
 - ./components/rancher
 - ./components/twistlock
 - ./components/Other
+- components/FY19-FISMA-Assessment
 standards:
 - ./standards/NIST-SP-800-53-rev4.yaml
 certifications:

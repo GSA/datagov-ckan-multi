@@ -1,0 +1,121 @@
+schema_version: 3.0.0
+name: FY19-FISMA-Assessment
+satisfies:
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: AC-2
+  narrative:
+  - text: >
+      * A list of active users (including creation date) and provide access authorization
+      for three (3) of those individuals.
+
+      * A report showing no accounts with inactivity over ninety (90) days
+
+      * A list of users that have been terminated within the past 6 months.
+
+      * Documentation verifying that all user accounts still require access (i.e.
+      Annual User Recertification)
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: AC-7
+  narrative:
+  - text: Screenshot of the configuration setting of the information system’s capability
+      to lockout user accounts for 30 minutes after 10 unsuccessful logon attempts
+      in a 30 minute time period
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: AC-11
+  narrative:
+  - text: >
+      * Provide evidence of the configuration setting to initiate a session lock after
+      15 minutes of inactivity.
+
+      * Screenshot of information system preventing further access when session is
+      locked after 15 minutes of inactivity.
+
+      * Provide evidence that the user has to re-establish the identification and
+      authentication to regain access to the information system
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: CM-2
+  narrative:
+  - text: Configuration baseline documentation (i.e. SLAM documentation and screenshots
+      of the repository)
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: CP-9
+  narrative:
+  - text: |
+      * Screenshots identifying weekly backups have been conducted.
+      * Documentation containing backup processes, including what occurs when backups fail.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: IA-2 (1)
+  narrative:
+  - text: Screenshot showing MFA is used for privileged account access to any component
+      of the network
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: IA-2 (2)
+  narrative:
+  - text: Screenshot showing MFA is used for non-privileged account access to any
+      component of the network.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: IA-4
+  narrative:
+  - text: |
+      * Documentation explaining the process of approving user accounts.
+      * A list of active users (including creation date) and provide access authorization for three (3) of those individuals.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: PL-2
+  narrative:
+  - text: |
+      * Evidence the SSP is reviewed and updated annually.
+      * All annual documentation for FY19 (include the google drive link).
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: PL-4
+  narrative:
+  - text: >
+      * Show that all users have agreed and signed the Rules of Behavior within the
+      last year.
+
+      * Show all new users who were granted access within the last year were initially
+      required to agree and sign the Rules of Behavior.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: PS-4
+  narrative:
+  - text: |
+      * A list of active users (including creation date).
+      * A list of users that have been terminated within the past 6 months.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: RA-5
+  narrative:
+  - text: |
+      * Emails documenting all identified vulnerabilities from applicable scans (OS, DB, Web Application, Compliance, Pen Test).
+      * Latest OS, DB, Web Application, and Pen Test Scan Reports.
+      * Latest Compliance Scan.
+      * Scan review log backend spreadsheet to show evidence the scans were reviewed in a timely manner.
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: SA-22
+  narrative:
+  - text: |
+      * A report that shows Data.gov does not have any unsupported system components.
+      * Approval of continued use of unsupported system components (i.e. AOR).
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: SC-13
+  narrative:
+  - text: '* Screenshot showing Data.gov implements FIPS-validated or NSA-approved
+      cryptography for data transmissions.'
+    implementation_status: In Place
+- standard_key: NIST SP 800-53 Revision 4
+  control_key: SC-28 (1)
+  narrative:
+  - text: '* Screenshot showing sensitive information (PII, PCI, authenticators) is
+      encrypted in all system components, including databases and applications'
+    implementation_status: In Place
