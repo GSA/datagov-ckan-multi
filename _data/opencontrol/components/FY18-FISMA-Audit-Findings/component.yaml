@@ -187,9 +187,8 @@ satisfies:
   standard_key: NIST SP 800-53 Revision 4
   narrative:
   - key: b
-    text: >
-      DATA-C-2018-19: Establish and implement a process for testing firmware and software
-      updates prior to being pushed to the production environment.
+    text: 'DATA-C-2018-19: Establish and implement a process for testing firmware
+      and software updates prior to being pushed to the production environment.'
 - control_key: SI-2 (3)
   standard_key: NIST SP 800-53 Revision 4
   narrative:

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}
+  hyperGRC - {{project.title}} - {{standard.name}} - {{control.number}}: {{control.name}}
+{% endblock %}
+
+{% block content %}
+<div id="components" style="overflow: auto; width: 3600px; overflow: auto;">
+
+<div class="page-info-card-container">
+
+  <div>{{standard.name}}</div>
+  <h2 style="margin: 0 0 18px 0;">{{control.number}}: {{control.name}}</h2>
+
+  <!-- button row -->
+  <div class="row" style="margin-bottom: 8px;">
+    <div class="col-md-4">
+      <!-- <button type="button" class="btn btn-outline-secondary" style="">Guide me</button> -->
+    </div>
+    <div class="col-md-2">
+      &nbsp;
+    </div>
+    <div class="col-md-4">
+      <a href="{{control.url}}/combined" style="color: black;" onclick="loading();">
+        <button type="button" class="btn btn-link" style="opacity: 1.0; color: black;">Show combined</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- control guidance -->
+  <div class="card-control-guidance">
+    <span style="color: #999;font-weight: bold;">Guidance</span><br/>
+    <div class="page-info-card" style="max-height: 40%; overflow-y: auto;">{{ control.description | nl2br | safe  }}</div>
+  </div>
+
+  <!-- assessment links -->
+  <div style="background-color: #fff; border-bottom: 1.5px solid #aaa; margin-bottom: 8px;padding:12px; border-radius: 5px;">
+    <span style="color: #999;font-weight: bold;">{{ control.number }} assessment</span><br/>
+    <div style="max-height: 10%; overflow-y: auto;">Assessment summary here</div>
+  </div>
+</div>
+
+{% for component_info in components %}
+    <div class="card-control-container">
+
+      <div style="font-size: .9em;">{{ project.title }}</div>
+      <h3 style="margin-top: 0px;">{{component_info.component.name}}</h3>
+      <a class="btn btn-default" style="margin-bottom: 8px;" href="{{component_info.component.url}}/guide">Guide me</a>
+
+      {% set outer_loop = loop %}
+      {% for impl in component_info.controls %}
+          <div class="card-control"
+               title="{{ impl.narrative }}"
+               data-variable="control_{{outer_loop.index}}_{{loop.index}}">
+              <script async>
+                var control_{{outer_loop.index}}_{{loop.index}} = {{impl|tojson}};
+              </script>
+
+              <div class="card-control-textlink">
+                  {{ impl.control.number }}
+                  {% if impl.control_part %}<span>Part {{ impl.control_part }} </span>{% endif %}
+                  {% if impl.control.name %}&middot; {{ impl.control.name | truncate(60, true, "...") }}{% endif %}
+              </div>
+
+              {% set css_class = implementation_status_css_classes.get(impl.implementation_status) %}
+              <div class="ctl-i7r">
+                <span class="{% if css_class %}{{css_class}}{% else %}implementation_status_css_classes['']{% endif %}" title="{{ impl.implementation_status }}"></span>
+              </div>
+        </div>
+      {% endfor %}
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  $('.card-control[data-variable]').click(function() {
+    // Show this element as active.
+    var elem = $(this);
+    $('.card-control').removeClass('active');
+    elem.addClass('active');
+
+    // Show editor. Then update the object that holds the current
+    // information for this control.
+    var controldata = window[elem.attr('data-variable')];
+    edit_control(controldata, function (new_control_data) {
+      update_control(new_control_data, elem, controldata);
+    });
+  })
+
+  // Update tool tip after a control is edited.
+  function update_control(new_control_data, elem, control) {
+    // Update our local control object with the updated data from the server.
+    control.narrative = new_control_data.narrative;
+    control.implementation_status = new_control_data.implementation_status;
+
+    // Update the UI.
+    elem.attr('title', control.narrative);
+    var implementation_status_css_classes = {{implementation_status_css_classes|tojson}};
+    var classes = implementation_status_css_classes[new_control_data.implementation_status] || implementation_status_css_classes[''];
+    elem.find('.ctl-i7r span')
+      .attr('class', classes)
+      .attr('title', new_control_data.implementation_status);
+  }
+</script>
+{% endblock %}

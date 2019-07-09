@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="static-page-content" class="container">
+    <div class="row item-ctl">
+        <div class="col-md-10">&nbsp;</div>
+        <div class="col-md-2" style="text-align: right;" onclick="alert('{{ modify_msg }}')">
+          MODIFY <span class="glyphicon glyphicon-cog"></span>
+        </div>
+    </div>
+    <h3>{{ project.title }} documents</h3>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: right;"><a href="{{project.url}}/ssp.md" class="btn btn-link" target="_blank">View SSP in Markdown format &raquo;</a></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: right;"><a href="{{project.url}}/ssp.csv" class="btn btn-link">Export controls in CSV format &raquo;</a></div>
+    </div>
+
+    {% if documents|length == 0 %}
+        {% if message %}
+        <p style="max-height: 90%; overflow-y: auto;">{{ message }}</p>
+        {% endif %}
+    {% else %}
+        <p>{{documents|length}} project documents</p>
+
+        {% for document in documents %}
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 8px;"><a href="{{project.url}}/documents/?f={{ document.rel_file_path|replace('/', '>') }}" target="_blank" style="color:black;"><span class="glyphicon glyphicon-file" style="color: #444;"></span> {{ document.rel_file_path }}</a></div>
+        </div>
+        {% endfor %}
+    {% endif %}
+        <div class="col-md-12">
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

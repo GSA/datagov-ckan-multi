@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}
+  hyperGRC - {{project.title}} - {{standard.name}} - {{control.number}}: {{control.name}}
+{% endblock %}
+
+{% block content %}
+<div id="components" style="overflow: auto; width: 3600px; overflow: auto;">
+
+<div class="page-info-card-container">
+  <div>{{standard.name}}</div>
+  <h2 style="margin: 0 0 18px 0;">{{control.number}}: {{control.name}}</h2>
+
+  <!-- button row -->
+  <div class="row" style="margin-bottom: 8px;">
+    <div class="col-md-4">
+      <!-- <button type="button" class="btn btn-outline-secondary" style="">Guide me</button> -->
+    </div>
+    <div class="col-md-2">
+      &nbsp;
+    </div>
+    <div class="col-md-4">
+      <a href="{{control.url}}/grid" style="color: black;" onclick="loading();">
+        <button type="button" class="btn btn-link" style="opacity: 1.0; color: black;">Show grid</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- control guidance -->
+  <div class="card-control-guidance">
+    <span style="color: #999;font-weight: bold;">Guidance</span><br/>
+    <div style="max-height: 40%; overflow-y: auto;">{{ control.description | nl2br | safe  }}</div>
+  </div>
+
+  <!-- assessment links -->
+  <div style="background-color: #fff; border-bottom: 1.5px solid #aaa; margin-bottom: 8px;padding:12px; border-radius: 5px;">
+    <span style="color: #999;font-weight: bold;">{{ control.number }} assessment</span><br/>
+    <div style="max-height: 10%; overflow-y: auto;">Assessment summary here</div>
+  </div>
+</div>
+
+<div class="container" style="width: 660px; margin-left: 18px; background-color: white; padding: 0 30px 10px 30px;border-radius: 5px;max-height: 95%; overflow-y: auto; opacity: 0.97; font-size: 0.85em;">
+  <div class="row" style="">
+    <div id="narrative" style="">
+
+      <h2>Control Implementation Narrative</h2>
+
+      {% for narrative in narratives %}
+          {% if loop.changed(narrative.part) %}
+            {% if narrative.part %}
+              {# there are null parts meaning the whole control, not a part #}
+              <h3>Part {{ narrative.part }}</h3>
+            {% endif %}
+          {% endif %}
+
+          <h4>{{ narrative.component.name }}</h4>
+
+          <div style='margin: auto auto 8px auto;'>{{ narrative.text | nl2br | safe }}</div>
+
+          {% if covered_by|length > 0 %}
+          <div style='margin: auto auto 8px auto;'>(Evidence: {% for cb in covered_by %} <a href="{{ cb.path }}" style="color: #333;">{{ cb.name }}</a>{%- if not loop.last -%}, {% endif %}{% if loop.last %}.{% endif %}{% endfor %})</div>
+          {% endif %}
+
+        {% endfor %}
+
+    </div><!-- /narrative -->
+  </div><!-- /row -->
+</div><!-- /containter -->
+{% endblock %}

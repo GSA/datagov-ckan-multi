@@ -17,6 +17,7 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-paginate-v2', "2.0"  
   gem 'jekyll-sitemap'
+  gem 'jekyll-plantuml'
   # gem 'jekyll_pages_api_search'
 end
 

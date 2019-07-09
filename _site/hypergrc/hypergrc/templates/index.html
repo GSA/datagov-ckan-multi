@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+	hyperGRC
+{% endblock %}
+
+{% block content %}
+<div id="static-page-content" class="container" style="">
+	<div class="row item-ctl" style="margin-bottom: 12px;">
+		<div class="col-md-10">&nbsp;</div>
+		<div class="col-md-2" style="text-align: right;" onclick="alert('{{ modify_msg }}')">
+		  MODIFY <span class="glyphicon glyphicon-cog"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6"><h1>Your projects</h1></div>
+		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-4" style="text-align: right;"><a href="/create-system" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Create New Project</a></div>
+	</div>
+
+	{% for organization in organizations %}
+		<div class="row">
+			<div class="col-md-12"><h3>{{organization.name}}</h3></div>
+		</div>
+
+		{% for project in organization.projects %}
+		<div class="row">
+			<div class="col-md-12"><b><a href="{{project.url}}" onclick="loading();">
+				{{project.title}} {% if project.authorization_id and project.authorization_id != "Unassigned" %}({{ project.authorization_id }}){% endif %}</a></b>
+				<small><p>{{project.description}}</p></small>
+			</div>
+		</div>
+		{% endfor %}
+	{% endfor %}
+
+</div>
+{% endblock %}

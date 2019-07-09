@@ -1,0 +1,5 @@
+#! /bin/bash
+
+OPENCONTROL=$PWD/_data/opencontrol
+docker run -v $OPENCONTROL:/opencontrol -p 8000:8000 --rm -it hypergrc:latest
+

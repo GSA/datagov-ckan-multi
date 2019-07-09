@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+  hyperGRC - {{project.title}} - Components
+{% endblock %}
+
+{% block content %}
+<div id="static-page-content" class="container">
+  <div class="row item-ctl" style="margin-bottom: 12px;">
+    <div class="col-md-10">&nbsp;</div>
+    <div class="col-md-2" style="text-align: right;" onclick="alert('{{ modify_msg }}')">
+      MODIFY <span class="glyphicon glyphicon-cog"></span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9"><h1>{{project.title}} components</h1></div>
+    <div class="col-md-3" style="text-align: right;"><a href="{{project.url}}/add-component" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add Component</a></div>
+  </div>
+
+    {% for component in components %}
+      <div class="row" style="margin-bottom: 0.5em;">
+        <div class="col-md-12"><b><a href="{{component.url}}" onclick="loading();"><span class="glyphicon glyphicon-link"></span> {{ component.name }}</a></b></div>
+      </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

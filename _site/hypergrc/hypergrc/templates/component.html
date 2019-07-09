@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}
+  hyperGRC - {{project.title}} - {{component.name}}
+{% endblock %}
+
+{% block content %}
+<div id="components" style="overflow: auto; width: {{ (control_families|length+2) * 360 + 50 | int }}px;">
+
+<div class="page-info-card-container" style="width:290px;">
+  
+  <div>{{ project.title }} component</div>
+  <h3 style="margin: 0 0 18px 0;">{{ component.name }}</h3>
+
+  <div class="page-info-card">
+    <h4>Component impact</h4>
+    <div id="control-implementation-statistics">
+    </div>
+
+    <h4>Current control-parts status:</h4>
+    <div id="control-parts-by-status">
+    </div>
+
+    <h4>Language analysis:</h4>
+    <div id="language-statistics">
+    </div>
+  </div>
+
+  <p>
+    <a href="{{component.url}}/guide" class="btn btn-primary">Guide Me</a>
+  </p>
+  <div>
+    <a href="{{component.url}}/app.yaml" style="color: black;">GovReady-Q app.yaml export</a>
+  </div>
+
+</div>
+
+  {% for control_family in control_families %}
+    <div class="card-control-container">
+
+      <div>{{control_family.standard.name}}</div>
+      <h3 style="margin: 0 0 18px 0;">
+        {% if control_family.name != control_family.abbrev %}
+          {{control_family.abbrev}}:
+        {% endif %}
+        {{ control_family.name }}
+      </h3>
+
+      <div class="containerx">
+        <div style="overflow-x: auto; margin-left:2px; margin-right: 2px;">
+
+      {% set outer_loop = loop %}
+
+      {% for impl in control_family.controls %}
+          <div class="card-control"
+               title="{{ impl.narrative }}"
+               data-variable="control_{{outer_loop.index}}_{{loop.index}}">
+              <script async>
+                var control_{{outer_loop.index}}_{{loop.index}} = {{impl|tojson}};
+              </script>
+
+              <div class="card-control-textlink">
+                  {{ impl.control.number }}
+                  {% if impl.control_part %}<span>Part {{ impl.control_part }} </span>{% endif %}
+                  {% if impl.control.name %}&middot; {{ impl.control.name | truncate(60, true, "...") }}{% endif %}
+              </div>
+
+              {% set css_class = implementation_status_css_classes.get(impl.implementation_status) %}
+              <div class="ctl-i7r">
+                <span class="{% if css_class %}{{css_class}}{% else %}implementation_status_css_classes['']{% endif %}" title="{{ impl.implementation_status }}"></span>
+              </div>
+          </div>
+      {% endfor %}
+
+      <div class="card-control" style="background-color: #DDD;">
+        <a href="#" style="display: block; background: none; color: #555; text-decoration: none;" onclick='new_control({ component: { id: {{component.id|tojson}}, name: {{component.name|tojson}} }, standard: { id: {{ control_family.standard.id|tojson }} }, family: { id: {{ control_family.id|tojson }} } }, function() { loading(); window.location.reload(); }); return false;'>
+          Add a control...
+        </a>
+      </div>
+
+    </div>
+  </div><!-- /row -->
+  </div><!-- /container -->
+{% endfor %}
+
+    <div style="width:280px; background-color: #fff; border:2px dashed #aaa; margin-right: 12px; float: left; padding: 18px; border-radius: 5px; color: #999; opacity: 0.6;">
+        <a href="#" style="display: block; background: none; color: #555; text-decoration: none;" onclick='new_control({ component: { id: {{component.id|tojson}}, name: {{component.name|tojson}} } }, function() { loading(); window.location.reload(); }); return false;'>
+          Add another group...
+        </a>
+    </div>
+
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Load and display the statistics.
+  function show_control_implementation_statistics(stats) {
+        function add_stats(node, stats, keys) {
+          node.text(''); // clear on update
+          keys.forEach(function(item) {
+            var n = $('<div class="row"><div class="col-md-3" style="text-align: right;"></div><div class="col-md-9"></div></div>');
+            node.append(n);
+            n.find(".col-md-3").text(stats[item.key].format(0));
+            n.find(".col-md-9").text(item.label);
+          })
+        }
+
+        add_stats($('#control-implementation-statistics'), stats, [
+          { key: "control_families_count", label: "control families" },
+          { key: "control_count", label: "controls" },
+          { key: "control_part_count", label: "control parts" }
+        ]);
+
+        add_stats($('#control-parts-by-status'), stats.implementation_status_counts, Object.keys(stats.implementation_status_counts).map(function(status) { return { key: status, label: status } } ));
+
+        add_stats($('#language-statistics'), stats, [
+          { key: "total_words", label: "total words" },
+          { key: "average_words_per_controlpart", label: "average words per control-part " }
+        ]);
+  }
+
+  function update_control_implementation_statistics() {
+    $.ajax({
+      url: {{component.url|tojson}}+"/statistics.json",
+      success: show_control_implementation_statistics
+    });
+  }
+
+  /**
+   * Number.prototype.format(demical_places, s, c).
+   * https://stackoverflow.com/a/14428340
+   */
+  Number.prototype.format = function(demical_places) {
+      var n = demical_places;
+      var x = 3; // thousands grouping
+      var s = ','; // thousands separator
+      var c = '.'; // demical marker
+      var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+          num = this.toFixed(Math.max(0, ~~n));
+
+      return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+  };
+
+  $('.card-control[data-variable]').click(function() {
+    // Show this element as active.
+    var elem = $(this);
+    $('.card-control').removeClass('active');
+    elem.addClass('active');
+
+    // Show editor. Then update the object that holds the current
+    // information for this control.
+    var controldata = window[elem.attr('data-variable')];
+    edit_control(controldata, function (new_control_data) {
+      update_control(new_control_data, elem, controldata);
+    });
+  })
+
+  // Update tool tip after a control is edited.
+  function update_control(new_control_data, elem, control) {
+    // Update our local control object with the updated data from the server.
+    control.narrative = new_control_data.narrative;
+    control.implementation_status = new_control_data.implementation_status;
+
+    // Update the UI.
+    elem.attr('title', control.narrative);
+    var implementation_status_css_classes = {{implementation_status_css_classes|tojson}};
+    var classes = implementation_status_css_classes[new_control_data.implementation_status] || implementation_status_css_classes[''];
+    elem.find('.ctl-i7r span')
+      .attr('class', classes)
+      .attr('title', new_control_data.implementation_status);
+
+    // Update stats.
+    update_control_implementation_statistics();
+  }
+
+  $(function() {
+    show_control_implementation_statistics({{stats|tojson}});
+  })
+</script>
+{% endblock %}

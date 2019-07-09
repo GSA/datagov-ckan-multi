@@ -81,7 +81,6 @@ searchgov_affiliate: federalist
 # changed if you know what they do
 ##########################################################################################
 
-
 collections:
   pages:
     output: true
@@ -94,6 +93,12 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-plantuml
+
+plantuml:
+  plantuml_jar: uml/plantuml.jar
+  plantuml_background_color: white
+  tmp_folder: uml
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem

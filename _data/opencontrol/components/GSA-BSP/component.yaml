@@ -151,8 +151,7 @@ satisfies:
   standard_key: NIST SP 800-53 Revision 4
   narrative:
   - key: a
-    text: >
-      The BSP Platform is responsible for receiving the infrastructure and operating
+    text: The BSP Platform is responsible for receiving the infrastructure and operating
       system alerts and reporting them to the Information System Security Manager,
       Information System Security Officer, and System Owners, if necessary.
 - control_key: AU-6(1)
@@ -202,10 +201,9 @@ satisfies:
   standard_key: NIST SP 800-53 Revision 4
   narrative:
   - key: c
-    text: >
-      The BSP ISSO works with the Data.gov PM and the technical team to review and
-      update any necessary baselines or configurations through the BSP CM and CCB
-      process.
+    text: The BSP ISSO works with the Data.gov PM and the technical team to review
+      and update any necessary baselines or configurations through the BSP CM and
+      CCB process.
 - control_key: CP-2
   standard_key: NIST SP 800-53 Revision 4
   narrative:
@@ -459,13 +457,12 @@ satisfies:
       Security supports the BSP in collecting, analyzing, and reporting security logs
       on a continual basis for indications of suspicious or unapproved activities.
   - key: b
-    text: >
-      When GSA Security detects auditing events that are of concern they report those
-      items to the BSP ISSM and ISSO.  When the audit events are identified as a security
-      incident the BSP ISSO, along with GSA Security Incident Response team, BSP ISSM,
-      BSP PM, and the BSP DevOps team complete and submit  an incident report via
-      GSA ServiceNow.  The results of this incident report are provided to the GSA
-      OCISO and all other necessary stakeholders.
+    text: When GSA Security detects auditing events that are of concern they report
+      those items to the BSP ISSM and ISSO.  When the audit events are identified
+      as a security incident the BSP ISSO, along with GSA Security Incident Response
+      team, BSP ISSM, BSP PM, and the BSP DevOps team complete and submit  an incident
+      report via GSA ServiceNow.  The results of this incident report are provided
+      to the GSA OCISO and all other necessary stakeholders.
 - control_key: IA-2 (2)
   standard_key: NIST SP 800-53 Revision 4
   narrative:

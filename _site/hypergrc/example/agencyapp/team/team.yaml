@@ -1,0 +1,18 @@
+name: Agency App Team
+schema_version: 3.0.0
+team:
+- name: Khalil Mack
+  role: System Owner
+  reference:
+  - name: https://agency.atlassian.net/wiki/spaces/SO/pages/88047664/agencyapp/team
+    date: 2018-11-30
+- name: Jane Doe
+  role: ISSO
+  reference:
+  - name: https://agency.atlassian.net/wiki/spaces/SO/pages/88047664/agencyapp/team
+    date: 2018-11-30
+- name: Navin Rhu
+  role: CISO
+  reference:
+  - name: https://agency.atlassian.net/wiki/spaces/SO/pages/88047664/agencyapp/team
+    date: 2018-11-30
