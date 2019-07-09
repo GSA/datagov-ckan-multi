@@ -1,7 +1,16 @@
 ---
 title: Document
 layout: page
-sidenav: false
+sidenav: true
+nav:
+  - name: Infrastructure
+    href: #infrastructure
+  - name: Rancher
+    href: #rancher
+  - name: Kubernetes
+    href: #kubernetes
+  - name: Open Policy
+    href: #open-policy-agent
 ---
 # System Components
 

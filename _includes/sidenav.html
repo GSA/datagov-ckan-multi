@@ -8,11 +8,11 @@ _layouts/page.html layout template, or you can add "sidenav: true" in the front-
     <ul class="usa-sidenav">
       {% for nav in page.nav %}
       <li class="usa-sidenav__item">
-      <a href="{{ nav.href }}">{{ nav.name }}</a>
+      <a href="{{ page.url}}{{ nav.href }}">{{ nav.name }}</a>
       </li>
       {% endfor %}
       {% if children %}<li class="usa-sidenav__item">
-      <a href="{{ nav.children.href }}">{{ nav.children.href }}</a>
+      <a href="{{ page.url}}{{ nav.children.href }}">{{ nav.children.href }}</a>
     </li>
     {% endif %}
     </ul>
