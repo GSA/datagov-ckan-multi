@@ -2,7 +2,7 @@
 
 The Data.gov multi-tenant CKAN platform
 
-![CKAN multi-tenant Architecture](images/Architecture.png)
+![CKAN multi-tenant Architecture](assets/images/Architecture.png)
 
 [CKAN multi-tenant Setup Instructions](https://github.com/ViderumGlobal/ckan-cloud-cluster/tree/master/docs)
 
