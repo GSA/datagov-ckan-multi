@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/GSA/datagov-ckan-multi.svg?style=svg)](https://circleci.com/gh/GSA/datagov-ckan-multi)
+
 # datagov-ckan-multi
 
 The Data.gov multi-tenant CKAN platform
