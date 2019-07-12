@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-bundler-{{ checksum "Gemfile.lock" }}
+            - v1-bundler-
+      - run:
+          name: install dependencies
+          command: bundle install --path vendor/bundle
+      - save_cache:
+          key: v1-bundler-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: build
+          command: bundle exec jekyll build
+
+
+workflows:
+  version: 2
+  jobs:
+    - build
