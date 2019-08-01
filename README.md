@@ -23,6 +23,30 @@ The Data.gov multi-tenant CKAN platform
 * [USMetadata](https://github.com/ViderumGlobal/USMetadata)
 * [ckanext-datagovtheme](https://github.com/ViderumGlobal/ckanext-datagovtheme)
 
+
+## OpenControl and compliance-as-code
+
+We're documenting our security controls using
+[OpenControl](https://open-control.org/) in order to make the work we've done to
+meet security standards transparent and reusable. We're using
+[HyperGRC](https://github.com/GovReady/hyperGRC) to provide an in-browser tool
+for managing our compliance-as-code repositories.
+
+### Usage
+
+You can use HyperGRC locally to view and edit controls. This is a work in
+progress. First, follow the instructions to [install
+dependencies](#installation-of-this-static-site).
+
+Start HyperGRC for editing.
+
+```
+npm run edit-controls
+```
+
+Then open your web browser to [localhost:8000](http://localhost:8000/).
+
+
 ## Installation of this static site
 
 Clone the repository.
@@ -53,5 +77,5 @@ Note that when built by Federalist, `npm run federalist` is used instead of the 
 ###  Technologies used for this static site
 - [Jekyll](https://jekyllrb.com/docs/) - The primary site engine that builds your code and content.
 - [Front Matter](https://jekyllrb.com/docs/frontmatter) - The top of each page/post includes keywords within `--` tags. This is meta data that helps Jekyll build the site, but you can also use it to pass custom variables.
-- [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) 
+- [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov)
 - [Jekyll Search](https://github.com/18F/jekyll_pages_api_search/)
