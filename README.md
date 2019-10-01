@@ -17,6 +17,7 @@ The Data.gov multi-tenant CKAN platform
 * [ckan-cloud-provisioning-api](https://github.com/ViderumGlobal/ckan-cloud-provisioning-api)
 * [ckan-cloud-provisioning-ui](https://github.com/ViderumGlobal/ckan-cloud-provisioning-ui)
 * [Viderium Project Management](https://github.com/ViderumGlobal/PM-datagov)
+* [ckan-ng-harvest](https://gitlab.com/datopian/ckan-ng-harvest)
 
 ## Forks of Data.gov CKAN Extensions (to be merged back)
 * [ckanext-datajson](https://github.com/ViderumGlobal/ckanext-datajson)
