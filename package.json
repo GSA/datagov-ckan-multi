@@ -20,6 +20,6 @@
   "author": "",
   "license": "CC0-1.0",
   "dependencies": {
-    "uswds": "^2.0.1"
+    "uswds": "^2.2.1"
   }
 }
