@@ -1,5 +1,4 @@
 Gemfile.lock
 hypergrc
 node_modules
-_site/feed.xml
-_site/sitemap.xml
+_site
