@@ -235,6 +235,3 @@ reviewed with the team as part of the Sprint Review.
 - The work is user-visible and announceable at any time.
 - The work has been demoed at the Sprint Review.
 - GitHub issue is marked Closed.
-
-
-## Han
