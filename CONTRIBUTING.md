@@ -235,3 +235,25 @@ reviewed with the team as part of the Sprint Review.
 - The work is user-visible and announceable at any time.
 - The work has been demoed at the Sprint Review.
 - GitHub issue is marked Closed.
+
+
+## Additional Practices
+
+### Use of branch protection
+
+Branch protection affords the following advantages:
+
+- branch commit history can not be rewritten
+- pushes to significant branches can be restricted to a subset of maintainers
+- merges to protected branches can require a status check (e.g., passing tests, pull request reviews, etc.)
+
+Both GitHub and GitLab have support for protected branches:
+
+- https://help.github.com/en/github/administering-a-repository/configuring-protected-branches
+- https://docs.gitlab.com/ee/user/project/protected_branches.html
+
+#### Recommendations
+
+- Enable branch protection on master (or any deployable branch.)
+- Enable "require pull request reviews before merging" on master
+- Enable commit signature verification
