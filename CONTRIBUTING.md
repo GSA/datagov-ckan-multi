@@ -243,7 +243,7 @@ reviewed with the team as part of the Sprint Review.
 
 Branch protection affords the following advantages:
 
-- branch commit history can not be rewritten
+- branch commit history cannot be rewritten
 - pushes to significant branches can be restricted to a subset of maintainers
 - merges to protected branches can require a status check (e.g., passing tests, pull request reviews, etc.)
 
@@ -256,4 +256,4 @@ Both GitHub and GitLab have support for protected branches:
 
 - Enable branch protection on master (or any deployable branch.)
 - Enable "require pull request reviews before merging" on master
-- Enable commit signature verification
+- Enable require automated CI and security checks to pass before merging
