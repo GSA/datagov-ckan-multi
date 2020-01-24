@@ -7,21 +7,14 @@ The goal is supporting compliance-as-code practices beginning with managing reus
 ## Install using Docker
 
 ```sh
-git clone https://github.com/GovReady/hyperGRC.git hypergrc
-cd hypergrc
-docker image pull centos:7
-docker image build --tag hypergrc:latest .
-```
-
-Next you will start a container using the image. When running the container, you will need to
-
-* Provide the container with access to an OpenControl repository on your workstation by mounting a volume using the docker `-v` option. The workstation path must be an [absolute directory](https://docs.docker.com/engine/reference/run/#volume-shared-filesystems), and the container path must be `/opencontrol`. In the example start command below, we use `` `pwd` `` to help form the absolute path to the example OpenControl data in this repository, but you can just set `REPOSITORY` to any absolute path.
-* Map a port on your workstation to the container using the Docker `-p` option, such as `-p 127.0.0.1:8000:8000`.
-* Start hyperGRC in ephemeral `--rm` and interactive mode `-it` so that you can end it by typing CTRL+C.
-
-```sh
-REPOSITORY=`pwd`/example/agencyapp
-docker container run -v $REPOSITORY:/opencontrol -p 127.0.0.1:8000:8000 --rm -it hypergrc:latest 
+$ git clone https://github.com/GSA/datagov-ckan-multi
+$ cd _data/opencontrol
+$ git clone https://github.com/GovReady/hyperGRC.git hypergrc
+$ cd hypergrc
+$ docker image build --tag hypergrc:latest .
+$ cd ..
+$ export REPOSITORY=`pwd`
+$ docker container run -v $REPOSITORY:/opencontrol -p 127.0.0.1:8000:8000 --rm -it hypergrc:latest
 ```
 
 The visit hyperGRC at `http://127.0.0.1:8000`.
