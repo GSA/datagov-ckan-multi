@@ -237,7 +237,9 @@ reviewed with the team as part of the Sprint Review.
 - GitHub issue is marked Closed.
 
 
-## Additional Practices
+## Security Practices
+
+Security should be treated as part of development, and not as an afterthought.  We integrate security practices into our work and pipelines, "shifting left" and automating whenever possible.
 
 ### Use of branch protection
 
@@ -257,3 +259,15 @@ Both GitHub and GitLab have support for protected branches:
 - Enable branch protection on master (or any deployable branch.)
 - Enable "require pull request reviews before merging" on master
 - Enable require automated CI and security checks to pass before merging
+
+### Static vulnerability detection in dependencies
+
+### Static code analysis
+
+Static code analysis can help find security issues in code before deployment.
+
+#### Recommendations
+
+- For Python code, we recommend the [Bandit](https://bandit.readthedocs.io/en/latest/) security linter.
+- A static code analysis should be run as part of the CI/CD pipeline on every pull request.
+- See https://github.com/drydockcloud/ci-bandit for an example integration of Bandit into a Docker image, which simplifies use from a CI/CD pipeline.
