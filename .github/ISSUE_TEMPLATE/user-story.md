@@ -8,11 +8,11 @@ assignees: ''
 ---
 ## User Story
 
-
-
-## Details / tasks
-
+As a [user description], I want [behavior description] so that [goal achieved].
 
 
 ## Acceptance Criteria
-- [ ] Something
+- [ ] 
+
+
+## Details / tasks
