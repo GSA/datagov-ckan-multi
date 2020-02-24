@@ -237,7 +237,11 @@ reviewed with the team as part of the Sprint Review.
 - GitHub issue is marked Closed.
 
 
-## Additional Practices
+## Security Practices
+
+Security should be treated as part of development, and not as an
+afterthought.  We integrate security practices into our work and
+pipelines, "shifting left" and automating whenever possible.
 
 ### Use of branch protection
 
@@ -257,3 +261,33 @@ Both GitHub and GitLab have support for protected branches:
 - Enable branch protection on master (or any deployable branch.)
 - Enable "require pull request reviews before merging" on master
 - Enable require automated CI and security checks to pass before merging
+
+### Static vulnerability detection in application dependencies
+
+By inspecting dependencies for known vulnerabilties, we can prevent
+the unintended injection of security issues.
+
+#### Recommendations
+
+- As a precursor to static vulnerability detection, application
+  dependencies should be frozen so that builds can be repeatable.  For
+  Python applications, *pip freeze* can be used to generate a frozen
+  requirements file.  Using tools such as *pip-compile* (from
+  [pip-tools](https://github.com/jazzband/pip-tools/)),
+  [pipenv](https://github.com/pypa/pipenv), or
+  [poetry](https://github.com/python-poetry/poetry) can also be used
+  to both manage dependences and generate frozen requirements.
+- Use a vulnerability scanner such as
+  [safety](https://github.com/pyupio/safety-db) or
+  [snyk](https://snyk.io)
+
+### Static code analysis
+
+Static code analysis can help find security issues in code before deployment.
+
+#### Recommendations
+
+- For Python code, we recommend the
+  [Bandit](https://bandit.readthedocs.io/en/latest/) security linter.
+- A static code analysis should be run as part of the CI/CD pipeline on every pull request.
+- See https://github.com/drydockcloud/ci-bandit for an example integration of Bandit into a Docker image, which simplifies use from a CI/CD pipeline.
