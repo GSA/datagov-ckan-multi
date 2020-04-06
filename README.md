@@ -80,3 +80,7 @@ Note that when built by Federalist, `npm run federalist` is used instead of the 
 - [Front Matter](https://jekyllrb.com/docs/frontmatter) - The top of each page/post includes keywords within `--` tags. This is meta data that helps Jekyll build the site, but you can also use it to pass custom variables.
 - [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov)
 - [Jekyll Search](https://github.com/18F/jekyll_pages_api_search/)
+
+###  Team Charter
+- https://docs.google.com/document/d/1yFA-Mo3eoYW7kiHq2Rn0RdMAK78eB1S4p_L4wikzqdI/edit#heading=h.dcxtuiayu45i
+
