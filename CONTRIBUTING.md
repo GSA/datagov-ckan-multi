@@ -291,3 +291,37 @@ Static code analysis can help find security issues in code before deployment.
   [Bandit](https://bandit.readthedocs.io/en/latest/) security linter.
 - A static code analysis should be run as part of the CI/CD pipeline on every pull request.
 - See https://github.com/drydockcloud/ci-bandit for an example integration of Bandit into a Docker image, which simplifies use from a CI/CD pipeline.
+
+
+## Pull requests
+
+Developers should feel empowered to review each others code, even if you're not
+an expert on a particular application or feature. Any developer on the team can
+review any PR.
+
+What should you do when you review a PR?
+
+- Review the code for quality and consistency
+- Call out any breaking changes
+- Assert the **Definition of Done** (above) is met
+  - Tests are written and running in CI
+  - Documentation is written, if applicable
+  - Code is in a deployable state
+
+Any critical CI checks should be enforced by GitHub on protected branches
+(`master`), so it's not required that CI checks are passing in
+order to approve a PR. Instead, it's important that tests have been added and
+they are running in CI.
+
+Data.gov encompasses many technologies (too many, in fact) and it's not
+practical to have everyone be an expert at everything nor to have only a single
+expert review all code in a specific domain e.g. PHP. Any developer should be
+able to follow the README in order to get a working system and should post on
+the PR if that doesn't seem to be the case.
+
+Ideally, our tests should give us good confidence that changes are working
+correctly. Even though that is currently not the case (we are working on
+building up our test coverage), it's not required to try out the code locally.
+
+If approved, you may merge immediately or leave it to the author. A single
+approval is all that is needed to merge.
