@@ -155,7 +155,7 @@ Work we are queuing up for the next sprint. Work in this column should be
 well-defined and ready to begin work.
 
 
-#### Exit criteria
+##### Exit criteria
 
 - During sprint planning, work is reviewed with the team and any questions or
   clarifications are made.
@@ -224,16 +224,24 @@ Work is ready for QA.
   additional issues are created in New.
 
 
-#### Closed
+#### Done
 
-Task has been applied to production and is considered done and should be
-reviewed with the team as part of the Sprint Review.
+Task has been applied to production and is considered done and should be reviewed with the team as part of the Sprint Review.
 
 
 ##### Exit criteria
 
 - The work is user-visible and announceable at any time.
 - The work has been demoed at the Sprint Review.
+
+
+#### Closed
+
+Task is done and has been reviewed by the team as part of Sprint Review.
+
+
+##### Exit criteria
+
 - GitHub issue is marked Closed.
 
 
