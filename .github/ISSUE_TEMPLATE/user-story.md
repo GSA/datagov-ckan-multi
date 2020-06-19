@@ -16,3 +16,7 @@ As a [user description], I want [behavior description] so that [goal achieved].
 
 
 ## Details / tasks
+- [ ]
+
+
+## Resources
