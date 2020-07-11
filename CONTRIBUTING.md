@@ -198,6 +198,11 @@ Work that is currently in progress.
 - Relevant tasks complete, irrelevant checklists removed or captured on a new
   story.
 - Follows documented coding conventions.
+- Application and test code is linted as part of Continuous Integration.
+  - Ansible (ansible-lint, flake8 provided by molecule)
+  - Python (flake8)
+  - Bash (TBD)
+  - PHP (TBD)
 - Automated tests have been added and are included in Continuous Integration.
 - Pair-programmed or peer-reviewed (e.g., use pull-requests).
 - Test coverage exists and overall coverage hasn't been reduced.
