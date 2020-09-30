@@ -33,6 +33,7 @@ google_analytics_ua: UA-????????-??
 
 # Configuration for DAP, add your agency ID here:
 dap_agency: GSA
+dap_subagency: TTS
 
 # Site Navigation
 primary_navigation:
