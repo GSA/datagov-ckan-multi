@@ -1,5 +1,9 @@
 [![CircleCI](https://circleci.com/gh/GSA/datagov-ckan-multi.svg?style=svg)](https://circleci.com/gh/GSA/datagov-ckan-multi)
 
+# This project is no longer maintained.
+
+All information left as historical record, but may be incorrect/missing/incomplete.
+
 # datagov-ckan-multi
 
 The Data.gov multi-tenant CKAN platform
