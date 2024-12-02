@@ -8,15 +8,15 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.0.0"
+gem "jekyll", "~> 4.0.1"
 
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12", ">= 0.12.0"
-  gem 'jekyll-redirect-from', '>= 0.15.0'
+  gem "jekyll-feed", "~> 0.15", ">= 0.15.0"
+  gem 'jekyll-redirect-from', '>= 0.16.0'
   gem 'jekyll-paginate-v2', '3.0.0'
-  gem 'jekyll-sitemap', '>= 1.3.0'
+  gem 'jekyll-sitemap', '>= 1.4.0'
   # gem 'jekyll_pages_api_search'
 end
 
